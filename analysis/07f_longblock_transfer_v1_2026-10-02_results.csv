@@ -1,0 +1,2 @@
+﻿set,auc,auc_p2_5,auc_p97_5,n_reps,null_mean,null_p2_5,null_p97_5,n_perm,p_perm,decision,frac_sg2_offender_24,interpretation
+07f_longblock_transfer,0.5817228535353535,0.5263825757575757,0.6311363636363636,20,0.5043356313131313,0.3850871212121212,0.6210795454545454,200,0.1044776119402985,"p ≥ 0,05",0.2975,transfer kanıtı yok → iddia beş modelin hepsi için geçerli

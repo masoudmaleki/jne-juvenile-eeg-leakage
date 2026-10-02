@@ -1,0 +1,46 @@
+2026-10-02 10:12:28  07f başladı
+2026-10-02 10:12:34  sg2 uzun blok öznitelikleri: 24 denek
+2026-10-02 10:12:34  [tr_real] toplam 20, checkpoint'te 0, kalan 20
+2026-10-02 10:12:41  [tr_real] 1/20; geçen 0.1 dk, kalan ~2.1 dk
+2026-10-02 10:12:41  [tr_real] 2/20; geçen 0.1 dk, kalan ~1.0 dk
+2026-10-02 10:12:41  [tr_real] 3/20; geçen 0.1 dk, kalan ~0.6 dk
+2026-10-02 10:12:41  [tr_real] 4/20; geçen 0.1 dk, kalan ~0.4 dk
+2026-10-02 10:12:41  [tr_real] 5/20; geçen 0.1 dk, kalan ~0.3 dk
+2026-10-02 10:12:41  [tr_real] 6/20; geçen 0.1 dk, kalan ~0.3 dk
+2026-10-02 10:12:41  [tr_real] 7/20; geçen 0.1 dk, kalan ~0.2 dk
+2026-10-02 10:12:41  [tr_real] 8/20; geçen 0.1 dk, kalan ~0.2 dk
+2026-10-02 10:12:41  [tr_real] 9/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 10:12:41  [tr_real] 10/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 10:12:41  [tr_real] 11/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 10:12:41  [tr_real] 12/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 10:12:41  [tr_real] 13/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 10:12:41  [tr_real] 14/20; geçen 0.1 dk, kalan ~0.0 dk
+2026-10-02 10:12:41  [tr_real] 15/20; geçen 0.1 dk, kalan ~0.0 dk
+2026-10-02 10:12:44  [tr_real] 16/20; geçen 0.2 dk, kalan ~0.0 dk
+2026-10-02 10:12:44  [tr_real] 17/20; geçen 0.2 dk, kalan ~0.0 dk
+2026-10-02 10:12:44  [tr_real] 18/20; geçen 0.2 dk, kalan ~0.0 dk
+2026-10-02 10:12:44  [tr_real] 19/20; geçen 0.2 dk, kalan ~0.0 dk
+2026-10-02 10:12:45  [tr_real] 20/20; geçen 0.2 dk, kalan ~0.0 dk
+2026-10-02 10:12:45  07f gerçek transfer AUC: 0.582
+2026-10-02 10:12:45  [tr_null] toplam 200, checkpoint'te 0, kalan 200
+2026-10-02 10:13:19  [tr_null] 10/200; geçen 0.6 dk, kalan ~10.9 dk
+2026-10-02 10:13:53  [tr_null] 20/200; geçen 1.1 dk, kalan ~10.2 dk
+2026-10-02 10:13:55  [tr_null] 30/200; geçen 1.2 dk, kalan ~6.7 dk
+2026-10-02 10:14:28  [tr_null] 40/200; geçen 1.7 dk, kalan ~6.9 dk
+2026-10-02 10:15:03  [tr_null] 50/200; geçen 2.3 dk, kalan ~6.9 dk
+2026-10-02 10:15:08  [tr_null] 60/200; geçen 2.4 dk, kalan ~5.6 dk
+2026-10-02 10:15:39  [tr_null] 70/200; geçen 2.9 dk, kalan ~5.4 dk
+2026-10-02 10:16:10  [tr_null] 80/200; geçen 3.4 dk, kalan ~5.1 dk
+2026-10-02 10:16:16  [tr_null] 90/200; geçen 3.5 dk, kalan ~4.3 dk
+2026-10-02 10:16:49  [tr_null] 100/200; geçen 4.1 dk, kalan ~4.1 dk
+2026-10-02 10:17:18  [tr_null] 110/200; geçen 4.6 dk, kalan ~3.7 dk
+2026-10-02 10:17:24  [tr_null] 120/200; geçen 4.7 dk, kalan ~3.1 dk
+2026-10-02 10:17:58  [tr_null] 130/200; geçen 5.2 dk, kalan ~2.8 dk
+2026-10-02 10:18:27  [tr_null] 140/200; geçen 5.7 dk, kalan ~2.4 dk
+2026-10-02 10:18:35  [tr_null] 150/200; geçen 5.8 dk, kalan ~1.9 dk
+2026-10-02 10:19:07  [tr_null] 160/200; geçen 6.4 dk, kalan ~1.6 dk
+2026-10-02 10:19:35  [tr_null] 170/200; geçen 6.8 dk, kalan ~1.2 dk
+2026-10-02 10:19:46  [tr_null] 180/200; geçen 7.0 dk, kalan ~0.8 dk
+2026-10-02 10:20:15  [tr_null] 190/200; geçen 7.5 dk, kalan ~0.4 dk
+2026-10-02 10:20:35  [tr_null] 200/200; geçen 7.8 dk, kalan ~0.0 dk
+2026-10-02 10:20:35  SONUÇ: transfer AUC 0.582 (tekrarlar 0.526–0.631), sıfır 0.504 [0.385–0.621], p 0.1045 → transfer kanıtı yok → iddia beş modelin hepsi için geçerli
