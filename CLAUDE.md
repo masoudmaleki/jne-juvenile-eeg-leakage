@@ -144,6 +144,15 @@ Dayanak: 03 batch negatif kontrolü (analysis/03_batch_negcontrol_v1_2026-10-01_
     07d transfer AUC: A tüm 0,549 (p 0,22), B tüm 0,589 (p 0,19), B açık 0,553 (p 0,29) → hiçbiri transfer etmiyor →
     "genellenmiyor" iddiası KORUNUR (tespit sınırı ≈ 0,60–0,65; ifade: "sg2'ye genellendiğine dair kanıt yok").
     07e uzun blok AUC 0,746 (p ≤ 0,005) → kanal düzeyi ayrışma uzun blokta da var → 06 null ROI/model seçimine ÖZGÜ (açıkça yazılacak).
+- **07f (KEŞİFSEL; 2026-10-02'de SONUÇ GÖRÜLMEDEN tanımlandı; kaynak: analysis/DENETIM_RAPORU_2_2026-10-02.md bölüm 4).**
+  Amaç: 07e uzun blok modeli (0,746) en güçlü modellerden biri; transferi test edilmedi.
+  - Model: 07e modeli (B seti, uzun göz kapalı blok, 4 × 116,25 s, kanal dışlaması yok; sg 45 + cg 55 ile eğitim; P pipeline aynen).
+  - Test kümesi: sg2'nin uzun bloğu, 24 denek (sub-1084sg2'nin uzun bloğu yok → dahil değil).
+  - Yöntem: 07c kat-içi transfer AUC'si aynen (her dış katta held-out cg vs sg2, aynı model; 100 kat ortalaması);
+    20 tekrar; sıfır: eğitim sg/cg etiketleri denek düzeyinde karıştırılır, 200 permütasyon × 5 tekrar; checkpoint.
+  - Karar (tek ölçüt): p < 0,05 → "transfer ediyor"; makaledeki iddia daraltılır. Aksi halde "transfer kanıtı yok" iddiası beş modelin hepsi için geçerli.
+    Çoklu karşılaştırma düzeltmesi yok ("transfer kanıtı yok" iddiası açısından tutucu).
+  - Zaman kaydı: bu tanım, analiz çalıştırılmadan önce ayrı bir git commit'i ile kaydedildi.
 - DENETIM_RAPORU_2026-10-02.md D1–D12 uygulandı: v2 raporlar (04b, 06, 07, 07abc), 08 v2 şekiller, 09 Tablo 1 / Tablo S-n, iskelet v3.
 - 04-B GD eki tamam (analysis/04b_leakage_gd_v1_2026-10-02_results.csv; AUC'ler kayıtlıyla aynı, maks fark 1e-16).
 - **05 SONUÇ (birincil, 2026-10-02):** n = 136 (suçlu 70, cg 66); ARI medyanı 0,636 vs 0,678; Mann-Whitney p = 0,395;
