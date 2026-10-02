@@ -146,6 +146,9 @@ Dayanak: 03 batch negatif kontrolü (analysis/03_batch_negcontrol_v1_2026-10-01_
   - **SONUÇ (2026-10-02, analysis/07de_transfer_longblock_rapor_v1_2026-10-02.md):**
     07d transfer AUC: A tüm 0,549 (p 0,22), B tüm 0,589 (p 0,19), B açık 0,553 (p 0,29) → hiçbiri transfer etmiyor →
     "genellenmiyor" iddiası KORUNUR (tespit sınırı ≈ 0,60–0,65; ifade: "sg2'ye genellendiğine dair kanıt yok").
+    [Not 2026-10-02 (DENETIM_RAPORU_3, F2): "tespit sınırı ≈ 0,60–0,65" anlamlılık eşiği ile dışlanabilen etkiyi karıştırıyor.
+    Anlamlılık eşiği (sıfırın tek yönlü %95'i) 0,586–0,638; 07g %95 GA: A tüm 0,439–0,662, B tüm 0,475–0,702, B açık 0,446–0,660
+    → veri "transfer yok" ile "orta düzeyde transfer" arasındaki her şeyle uyumlu. "Transfer etmiyor" = kural etiketi (= transfer kanıtı yok).]
     07e uzun blok AUC 0,746 (p ≤ 0,005) → kanal düzeyi ayrışma uzun blokta da var → 06 null ROI/model seçimine ÖZGÜ (açıkça yazılacak).
 - **07f (KEŞİFSEL; 2026-10-02'de SONUÇ GÖRÜLMEDEN tanımlandı; kaynak: analysis/DENETIM_RAPORU_2_2026-10-02.md bölüm 4).**
   Amaç: 07e uzun blok modeli (0,746) en güçlü modellerden biri; transferi test edilmedi.
@@ -159,6 +162,9 @@ Dayanak: 03 batch negatif kontrolü (analysis/03_batch_negcontrol_v1_2026-10-01_
   - **SONUÇ (2026-10-02; tanım commit 6a4439c, sonuç commit 11790e8; analysis/07f_longblock_transfer_rapor_v1_2026-10-02.md):**
     transfer AUC 0,582 (tekrarlar 0,526–0,631), sıfır 0,504, p = 0,104 → transfer kanıtı YOK →
     "no evidence of transfer" iddiası beş modelin hepsi için geçerli (07c, 07d × 3, 07f).
+    [Not 2026-10-02 (DENETIM_RAPORU_3, F2): anlamlılık eşiği 0,601; 07g %95 GA 0,463–0,704 → AUC > 0,70 yaklaşık dışlanır;
+    orta düzeyde transfer dışlanamaz. "İmza sg'ye özgü" ve "kaynak ile transfer arasında açık fark" ifadeleri desteklenmiyor (fark test edilmedi).
+    Commit içerikleri doğrulandı: analysis/git_show_07f.txt (6a4439c yalnız CLAUDE.md, +9 satır).]
 - **07g (YALNIZ NİCELENDİRME, karar kuralı YOK; 2026-10-02'de SONUÇ GÖRÜLMEDEN tanımlandı; kaynak: analysis/DENETIM_RAPORU_3_2026-10-02.md bölüm 3).**
   Amaç: keşifsel AUC'ler için %95 GA; F2'deki yaklaşık GA'ların yerine kesin değerler. Hiçbir iddia bu sonuca göre güçlendirilmez.
   - Kaynak modeller (6): 07 A_log_abs, 07 B_relative (tüm epoklar), 07a kapalı, 07a açık, 07b (kapalı, C bloğu çıkarılmış), 07e uzun blok.
@@ -178,8 +184,19 @@ Dayanak: 03 batch negatif kontrolü (analysis/03_batch_negcontrol_v1_2026-10-01_
   - Raporlama biçimi: "AUC (GA L–U); AUC > U yaklaşık olarak dışlanır". Sınırlılık: GA yalnız denek örneklemesini içerir; model eğitimindeki
     (seed/katlama) oynaklık dahil değildir.
   - Zaman kaydı: bu tanım, analiz çalıştırılmadan önce ayrı bir git commit'i ile kaydedildi.
+  - **SONUÇ (2026-10-02; tanım commit e81e61b, sonuç commit e5dfeb6; analysis/07g_auc_ci_rapor_v1_2026-10-02.md, analysis/07g_auc_ci_v1_2026-10-02_results.csv):**
+    Doğrulama GEÇTİ: 1120 AUC (120 kaynak tekrarı + 1000 transfer katı) kayıtlıyla aynı (maks |fark| 5,55e-17).
+    Kaynak (ortalama skordan AUC, GA; tekrar ortalaması): 07 A 0,771 (0,672–0,860; 0,754), 07 B 0,800 (0,706–0,886; 0,734),
+    07a kapalı 0,709 (0,604–0,809; 0,645), 07a açık 0,767 (0,669–0,859; 0,709), 07b 0,609 (0,495–0,725; 0,582), 07e 0,781 (0,685–0,867; 0,746).
+    Transfer (GA): 07c 0,569 (0,439–0,688), 07d A 0,549 (0,439–0,662), 07d B 0,589 (0,475–0,702), 07d B açık 0,553 (0,446–0,660),
+    07f 0,582 (0,463–0,704). Atipik 2 sg2 hariç (betimsel): 0,534–0,566. Hiçbir iddia güçlendirilmedi.
 - 07e betimsel öznitelik haritası (test yok): analysis/07e_feature_map_v1_2026-10-02.csv, figures/FigS_07e_feature_map_v1.*
   (|g| ≤ 0,58; sg'de göreli delta ↑ (C, D blokları), teta ↓ (en belirgin C bloğu), alfa ≈ 0).
+  [Not 2026-10-02 (DENETIM_RAPORU_3, F4): en büyük 10 etkinin 10'u, en büyük 20'nin 18'i C bloğunda (frontopolar/ön-frontal); beta ↓ da var;
+  A bloğu alfa medyan g = 0,015. |g| ≤ 0,58 "küçük–orta". Uzun blok göz kapalı olsa da oküler/deri kaynaklı açıklama DIŞLANMAZ (EOG yok).]
+- DENETIM_RAPORU_3_2026-10-02.md F1–F7 uygulandı (2026-10-02): 06 v4, 07 v4, 07abc v4, 07de v3, 07f v2, figures/FIGURE_CAPTIONS_v4.md,
+  09 v2 (Tablo S-n v2, Tablo S4 v1), iskelet v5 (Tablo S2 satır 25–34). "Tespit sınırı", "subgroup-specific", "sg'ye özgü" ifadeleri kullanılmaz.
+  Denetimler "bağımsız" DEĞİL: aynı yapay zekâ modelinin (Claude) ayrı oturumu (F6).
 - DENETIM_RAPORU_2026-10-02.md D1–D12 uygulandı: v2 raporlar (04b, 06, 07, 07abc), 08 v2 şekiller, 09 Tablo 1 / Tablo S-n, iskelet v3.
 - 04-B GD eki tamam (analysis/04b_leakage_gd_v1_2026-10-02_results.csv; AUC'ler kayıtlıyla aynı, maks fark 1e-16).
 - **05 SONUÇ (birincil, 2026-10-02):** n = 136 (suçlu 70, cg 66); ARI medyanı 0,636 vs 0,678; Mann-Whitney p = 0,395;
@@ -187,7 +204,7 @@ Dayanak: 03 batch negatif kontrolü (analysis/03_batch_negcontrol_v1_2026-10-01_
 - [Not 2026-10-02 (D2): doğru ifade "AUC 0,54 [%95 GA 0,44–0,63]; tekrar ortalaması 0,51"; dışlama yaklaşık.]
 - **06 SONUÇ (2026-10-02):** suçlu (69) vs cg (66), 14 öznitelik: AUC 0,511 (tekrarlar 0,46–0,57); bootstrap GA 0,44–0,63
   (DeLong 0,44–0,64) → AUC > 0,63 (Cohen d ≈ 0,48) %95 güvenle dışlanır.
-- Makale iskeleti: analysis/MAKALE_ISKELETI_v1.md. [Not 2026-10-02: güncel sürüm analysis/MAKALE_ISKELETI_v4.md.]
+- Makale iskeleti: analysis/MAKALE_ISKELETI_v1.md. [Not 2026-10-02: güncel sürüm analysis/MAKALE_ISKELETI_v4.md.] [Not 2026-10-02 (DENETIM_RAPORU_3): güncel sürüm analysis/MAKALE_ISKELETI_v5.md; başlık: "High accuracy without demonstrated generalization: data leakage and recording confounds in resting-state EEG classification of juvenile offenders".]
 - **GD:** analysis/metrics_gd.py (referans koddan uyarlandı; 7 örnekte fark 0). Girdi [ACC, Duyarlılık, Özgüllük, F1], pozitif = suçlu.
   04-B ve 07 tablolarına ek sütun; ana metrik AUC. NAoSP şimdilik yok.
 - **05 Alfa reaktivitesi: TEK birincil hipotez testi.** Posterior ROI, (göz kapalı alfa − göz açık alfa) / (kapalı + açık),
