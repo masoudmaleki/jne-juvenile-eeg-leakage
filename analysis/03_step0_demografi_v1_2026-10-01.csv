@@ -1,0 +1,17 @@
+﻿variable,type,sg,sg2,sg_pct,sg2_pct,test,p,p_mannwhitney
+Violent crime (primary),binary,39/45,6/24,86.7,25.0,Fisher exact,4.987074045608102e-07,
+Violent crime (any),binary,39/45,6/24,86.7,25.0,Fisher exact,4.987074045608102e-07,
+Alcohol,binary,22/45,19/24,48.9,79.2,Fisher exact,0.02043150668538392,
+Marijuana,binary,31/45,20/24,68.9,83.3,Fisher exact,0.25522701841163986,
+Cocaine,binary,26/45,19/24,57.8,79.2,Fisher exact,0.11142278202012693,
+Consumer of psychoactive substances,binary,32/45,20/24,71.1,83.3,Fisher exact,0.3808960145379464,
+School dropout,binary,38/45,18/24,84.4,75.0,Fisher exact,0.3522718021098568,
+Gang member,binary,17/45,4/24,37.8,16.7,Fisher exact,0.09986795522626654,
+Recidivist,binary,16/45,6/24,35.6,25.0,Fisher exact,0.42659861044509706,
+Domestic violence,binary,5/45,4/24,11.1,16.7,Fisher exact,0.7091053843964563,
+Displaced by violence,binary,5/45,2/24,11.1,8.3,Fisher exact,1.0,
+Stratum 1,binary,40/45,24/24,88.9,100.0,Fisher exact,0.1550412407762486,
+Type of crime 1 (all categories),categorical,Abduction:1; Homicide:20; Illegal:1; Illegal_Carrying_of_Weapons/Narcotics:2; Illegal_Possession_of_Weapons/Narcotics:2; Kidnapping:1; Sexual_Abuse:13; Theft:1; Violence:4,Homicide:1; Illegal_Carrying_of_Weapons/Narcotics:1; Illegal_Possession_of_Weapons/Narcotics:10; Sexual_Abuse:4; Theft:7; Violence:1,,,chi-square (expected<5 cells; descriptive),4.706212889739039e-05,
+Age,continuous,17.20 ± 1.14 (n=45),16.62 ± 1.06 (n=24),,,Welch t,0.04119801648020178,0.05379089229004169
+Years of education,continuous,7.87 ± 2.54 (n=45),7.33 ± 2.58 (n=24),,,Welch t,0.4151941763775626,0.5172792344824133
+Age of first use,continuous,13.34 ± 2.16 (n=32),13.95 ± 1.19 (n=20),,,Welch t,0.19946392999543758,0.4220347406770196

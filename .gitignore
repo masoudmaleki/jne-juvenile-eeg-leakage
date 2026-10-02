@@ -1,0 +1,8 @@
+# Ham veri (OpenNeuro ds006923 v1.0.0) — depoya girmez
+v1.0.0/
+v1.0.0.zip
+
+# Python önbelleği ve IDE
+__pycache__/
+*.pyc
+.idea/

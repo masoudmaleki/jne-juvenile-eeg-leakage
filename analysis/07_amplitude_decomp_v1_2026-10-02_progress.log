@@ -1,0 +1,48 @@
+2026-10-02 06:50:04  öznitelikler hesaplandı: A (400, 512), B (400, 512); sg 45, cg 55
+2026-10-02 06:50:25  07 başladı
+2026-10-02 06:50:25  öznitelikler checkpoint'ten okundu: 07_amplitude_decomp_v1_2026-10-02_features.npz
+2026-10-02 06:50:25  [real] toplam 40, checkpoint'te 0, kalan 40
+2026-10-02 06:50:34  [real] 2/40 bitti; geçen 0.1 dk, kalan ~2.8 dk
+2026-10-02 06:50:34  [real] 4/40 bitti; geçen 0.1 dk, kalan ~1.3 dk
+2026-10-02 06:50:34  [real] 6/40 bitti; geçen 0.1 dk, kalan ~0.8 dk
+2026-10-02 06:50:34  [real] 8/40 bitti; geçen 0.1 dk, kalan ~0.6 dk
+2026-10-02 06:50:34  [real] 10/40 bitti; geçen 0.1 dk, kalan ~0.4 dk
+2026-10-02 06:50:34  [real] 12/40 bitti; geçen 0.1 dk, kalan ~0.3 dk
+2026-10-02 06:50:34  [real] 14/40 bitti; geçen 0.2 dk, kalan ~0.3 dk
+2026-10-02 06:50:40  [real] 16/40 bitti; geçen 0.3 dk, kalan ~0.4 dk
+2026-10-02 06:50:41  [real] 18/40 bitti; geçen 0.3 dk, kalan ~0.3 dk
+2026-10-02 06:50:41  [real] 20/40 bitti; geçen 0.3 dk, kalan ~0.3 dk
+2026-10-02 06:50:41  [real] 22/40 bitti; geçen 0.3 dk, kalan ~0.2 dk
+2026-10-02 06:50:41  [real] 24/40 bitti; geçen 0.3 dk, kalan ~0.2 dk
+2026-10-02 06:50:41  [real] 26/40 bitti; geçen 0.3 dk, kalan ~0.1 dk
+2026-10-02 06:50:41  [real] 28/40 bitti; geçen 0.3 dk, kalan ~0.1 dk
+2026-10-02 06:50:41  [real] 30/40 bitti; geçen 0.3 dk, kalan ~0.1 dk
+2026-10-02 06:50:46  [real] 32/40 bitti; geçen 0.3 dk, kalan ~0.1 dk
+2026-10-02 06:50:46  [real] 34/40 bitti; geçen 0.3 dk, kalan ~0.1 dk
+2026-10-02 06:50:46  [real] 36/40 bitti; geçen 0.3 dk, kalan ~0.0 dk
+2026-10-02 06:50:46  [real] 38/40 bitti; geçen 0.3 dk, kalan ~0.0 dk
+2026-10-02 06:50:46  [real] 40/40 bitti; geçen 0.4 dk, kalan ~0.0 dk
+2026-10-02 06:50:46  gerçek değerler: A_log_abs AUC 0.754; B_relative AUC 0.734
+2026-10-02 06:50:46  [null] toplam 400, checkpoint'te 0, kalan 400
+2026-10-02 06:51:56  [null] 20/400 bitti; geçen 1.2 dk, kalan ~22.1 dk
+2026-10-02 06:52:32  [null] 40/400 bitti; geçen 1.8 dk, kalan ~15.9 dk
+2026-10-02 06:53:11  [null] 60/400 bitti; geçen 2.4 dk, kalan ~13.7 dk
+2026-10-02 06:54:15  [null] 80/400 bitti; geçen 3.5 dk, kalan ~14.0 dk
+2026-10-02 06:54:52  [null] 100/400 bitti; geçen 4.1 dk, kalan ~12.3 dk
+2026-10-02 06:55:31  [null] 120/400 bitti; geçen 4.8 dk, kalan ~11.1 dk
+2026-10-02 06:56:34  [null] 140/400 bitti; geçen 5.8 dk, kalan ~10.8 dk
+2026-10-02 06:57:10  [null] 160/400 bitti; geçen 6.4 dk, kalan ~9.6 dk
+2026-10-02 06:57:53  [null] 180/400 bitti; geçen 7.1 dk, kalan ~8.7 dk
+2026-10-02 06:58:51  [null] 200/400 bitti; geçen 8.1 dk, kalan ~8.1 dk
+2026-10-02 06:59:30  [null] 220/400 bitti; geçen 8.7 dk, kalan ~7.1 dk
+2026-10-02 07:00:11  [null] 240/400 bitti; geçen 9.4 dk, kalan ~6.3 dk
+2026-10-02 07:01:12  [null] 260/400 bitti; geçen 10.4 dk, kalan ~5.6 dk
+2026-10-02 07:01:52  [null] 280/400 bitti; geçen 11.1 dk, kalan ~4.8 dk
+2026-10-02 07:02:36  [null] 300/400 bitti; geçen 11.8 dk, kalan ~3.9 dk
+2026-10-02 07:03:35  [null] 320/400 bitti; geçen 12.8 dk, kalan ~3.2 dk
+2026-10-02 07:04:16  [null] 340/400 bitti; geçen 13.5 dk, kalan ~2.4 dk
+2026-10-02 07:05:00  [null] 360/400 bitti; geçen 14.2 dk, kalan ~1.6 dk
+2026-10-02 07:05:57  [null] 380/400 bitti; geçen 15.2 dk, kalan ~0.8 dk
+2026-10-02 07:06:33  [null] 400/400 bitti; geçen 15.8 dk, kalan ~0.0 dk
+2026-10-02 07:06:33  SONUÇ: A_log_abs: AUC 0.754, sıfır 0.479, p 0.0050, GD 0.573 | B_relative: AUC 0.734, sıfır 0.479, p 0.0050, GD 0.611
+2026-10-02 07:06:33  KURAL: A ve B var → DUR, kullanıcıya dön

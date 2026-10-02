@@ -1,0 +1,90 @@
+2026-10-02 07:48:11  07a–c başladı
+2026-10-02 07:48:16  sg2 öznitelikleri: 25 denek
+2026-10-02 07:48:16  [real] toplam 60, checkpoint'te 0, kalan 60
+2026-10-02 07:48:19  [real] 3/60; geçen 0.1 dk, kalan ~1.2 dk
+2026-10-02 07:48:19  [real] 6/60; geçen 0.1 dk, kalan ~0.6 dk
+2026-10-02 07:48:19  [real] 9/60; geçen 0.1 dk, kalan ~0.4 dk
+2026-10-02 07:48:19  [real] 12/60; geçen 0.1 dk, kalan ~0.3 dk
+2026-10-02 07:48:19  [real] 15/60; geçen 0.1 dk, kalan ~0.2 dk
+2026-10-02 07:48:23  [real] 18/60; geçen 0.1 dk, kalan ~0.3 dk
+2026-10-02 07:48:23  [real] 21/60; geçen 0.1 dk, kalan ~0.2 dk
+2026-10-02 07:48:23  [real] 24/60; geçen 0.1 dk, kalan ~0.2 dk
+2026-10-02 07:48:23  [real] 27/60; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 07:48:23  [real] 30/60; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 07:48:26  [real] 33/60; geçen 0.2 dk, kalan ~0.1 dk
+2026-10-02 07:48:26  [real] 36/60; geçen 0.2 dk, kalan ~0.1 dk
+2026-10-02 07:48:26  [real] 39/60; geçen 0.2 dk, kalan ~0.1 dk
+2026-10-02 07:48:26  [real] 42/60; geçen 0.2 dk, kalan ~0.1 dk
+2026-10-02 07:48:26  [real] 45/60; geçen 0.2 dk, kalan ~0.1 dk
+2026-10-02 07:48:29  [real] 48/60; geçen 0.2 dk, kalan ~0.1 dk
+2026-10-02 07:48:30  [real] 51/60; geçen 0.2 dk, kalan ~0.0 dk
+2026-10-02 07:48:30  [real] 54/60; geçen 0.2 dk, kalan ~0.0 dk
+2026-10-02 07:48:30  [real] 57/60; geçen 0.2 dk, kalan ~0.0 dk
+2026-10-02 07:48:30  [real] 60/60; geçen 0.2 dk, kalan ~0.0 dk
+2026-10-02 07:48:30  gerçek: 07a_closed 0.645; 07a_open 0.709; 07b_closed_noC 0.582
+2026-10-02 07:48:30  [tr_real] toplam 20, checkpoint'te 0, kalan 20
+2026-10-02 07:48:33  [tr_real] 1/20; geçen 0.1 dk, kalan ~1.1 dk
+2026-10-02 07:48:33  [tr_real] 2/20; geçen 0.1 dk, kalan ~0.6 dk
+2026-10-02 07:48:33  [tr_real] 3/20; geçen 0.1 dk, kalan ~0.4 dk
+2026-10-02 07:48:33  [tr_real] 4/20; geçen 0.1 dk, kalan ~0.2 dk
+2026-10-02 07:48:33  [tr_real] 5/20; geçen 0.1 dk, kalan ~0.2 dk
+2026-10-02 07:48:33  [tr_real] 6/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 07:48:33  [tr_real] 7/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 07:48:33  [tr_real] 8/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 07:48:33  [tr_real] 9/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 07:48:33  [tr_real] 10/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 07:48:33  [tr_real] 11/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 07:48:34  [tr_real] 12/20; geçen 0.1 dk, kalan ~0.0 dk
+2026-10-02 07:48:34  [tr_real] 13/20; geçen 0.1 dk, kalan ~0.0 dk
+2026-10-02 07:48:34  [tr_real] 14/20; geçen 0.1 dk, kalan ~0.0 dk
+2026-10-02 07:48:34  [tr_real] 15/20; geçen 0.1 dk, kalan ~0.0 dk
+2026-10-02 07:48:36  [tr_real] 16/20; geçen 0.1 dk, kalan ~0.0 dk
+2026-10-02 07:48:36  [tr_real] 17/20; geçen 0.1 dk, kalan ~0.0 dk
+2026-10-02 07:48:36  [tr_real] 18/20; geçen 0.1 dk, kalan ~0.0 dk
+2026-10-02 07:48:36  [tr_real] 19/20; geçen 0.1 dk, kalan ~0.0 dk
+2026-10-02 07:48:36  [tr_real] 20/20; geçen 0.1 dk, kalan ~0.0 dk
+2026-10-02 07:48:36  07c gerçek transfer AUC (sg2=24): 0.569
+2026-10-02 07:48:36  [null] toplam 600, checkpoint'te 0, kalan 600
+2026-10-02 07:49:11  [null] 30/600; geçen 0.6 dk, kalan ~11.1 dk
+2026-10-02 07:49:46  [null] 60/600; geçen 1.2 dk, kalan ~10.4 dk
+2026-10-02 07:50:21  [null] 90/600; geçen 1.7 dk, kalan ~9.8 dk
+2026-10-02 07:50:55  [null] 120/600; geçen 2.3 dk, kalan ~9.3 dk
+2026-10-02 07:51:31  [null] 150/600; geçen 2.9 dk, kalan ~8.7 dk
+2026-10-02 07:52:08  [null] 180/600; geçen 3.5 dk, kalan ~8.2 dk
+2026-10-02 07:52:43  [null] 210/600; geçen 4.1 dk, kalan ~7.6 dk
+2026-10-02 07:53:18  [null] 240/600; geçen 4.7 dk, kalan ~7.0 dk
+2026-10-02 07:53:53  [null] 270/600; geçen 5.3 dk, kalan ~6.4 dk
+2026-10-02 07:54:29  [null] 300/600; geçen 5.9 dk, kalan ~5.9 dk
+2026-10-02 07:55:05  [null] 330/600; geçen 6.5 dk, kalan ~5.3 dk
+2026-10-02 07:55:41  [null] 360/600; geçen 7.1 dk, kalan ~4.7 dk
+2026-10-02 07:56:18  [null] 390/600; geçen 7.7 dk, kalan ~4.1 dk
+2026-10-02 07:56:51  [null] 420/600; geçen 8.2 dk, kalan ~3.5 dk
+2026-10-02 07:57:23  [null] 450/600; geçen 8.8 dk, kalan ~2.9 dk
+2026-10-02 07:57:56  [null] 480/600; geçen 9.3 dk, kalan ~2.3 dk
+2026-10-02 07:58:28  [null] 510/600; geçen 9.9 dk, kalan ~1.7 dk
+2026-10-02 07:59:01  [null] 540/600; geçen 10.4 dk, kalan ~1.2 dk
+2026-10-02 07:59:34  [null] 570/600; geçen 11.0 dk, kalan ~0.6 dk
+2026-10-02 08:00:06  [null] 600/600; geçen 11.5 dk, kalan ~0.0 dk
+2026-10-02 08:00:06  [tr_null] toplam 200, checkpoint'te 0, kalan 200
+2026-10-02 08:00:24  [tr_null] 10/200; geçen 0.3 dk, kalan ~5.7 dk
+2026-10-02 08:00:42  [tr_null] 20/200; geçen 0.6 dk, kalan ~5.4 dk
+2026-10-02 08:00:43  [tr_null] 30/200; geçen 0.6 dk, kalan ~3.5 dk
+2026-10-02 08:01:00  [tr_null] 40/200; geçen 0.9 dk, kalan ~3.6 dk
+2026-10-02 08:01:18  [tr_null] 50/200; geçen 1.2 dk, kalan ~3.6 dk
+2026-10-02 08:01:20  [tr_null] 60/200; geçen 1.2 dk, kalan ~2.9 dk
+2026-10-02 08:01:36  [tr_null] 70/200; geçen 1.5 dk, kalan ~2.8 dk
+2026-10-02 08:01:54  [tr_null] 80/200; geçen 1.8 dk, kalan ~2.7 dk
+2026-10-02 08:01:56  [tr_null] 90/200; geçen 1.8 dk, kalan ~2.2 dk
+2026-10-02 08:02:12  [tr_null] 100/200; geçen 2.1 dk, kalan ~2.1 dk
+2026-10-02 08:02:30  [tr_null] 110/200; geçen 2.4 dk, kalan ~2.0 dk
+2026-10-02 08:02:33  [tr_null] 120/200; geçen 2.4 dk, kalan ~1.6 dk
+2026-10-02 08:02:49  [tr_null] 130/200; geçen 2.7 dk, kalan ~1.5 dk
+2026-10-02 08:03:06  [tr_null] 140/200; geçen 3.0 dk, kalan ~1.3 dk
+2026-10-02 08:03:10  [tr_null] 150/200; geçen 3.1 dk, kalan ~1.0 dk
+2026-10-02 08:03:25  [tr_null] 160/200; geçen 3.3 dk, kalan ~0.8 dk
+2026-10-02 08:03:42  [tr_null] 170/200; geçen 3.6 dk, kalan ~0.6 dk
+2026-10-02 08:03:46  [tr_null] 180/200; geçen 3.7 dk, kalan ~0.4 dk
+2026-10-02 08:04:02  [tr_null] 190/200; geçen 3.9 dk, kalan ~0.2 dk
+2026-10-02 08:04:15  [tr_null] 200/200; geçen 4.1 dk, kalan ~0.0 dk
+2026-10-02 08:04:15  SONUÇ: 07a_closed: AUC 0.645, p 0.015 | 07a_open: AUC 0.709, p 0.005 | 07b_closed_noC: AUC 0.582, p 0.050 | 07c_transfer: AUC 0.569, p 0.264
+2026-10-02 08:04:15  KURAL: BELİRSİZ (kapsanmayan durum)  → DUR (05 kullanıcı onayı bekliyor)
