@@ -238,3 +238,13 @@ Dayanak: 03 batch negatif kontrolü (analysis/03_batch_negcontrol_v1_2026-10-01_
   4. sg ve sg2 karşılaştırması (olası batch etkisi).
 - Raporlama: Dengesiz sınıflarda Golden Distance / NAoSP kullanılır, ama ana katkı olarak sunulmaz.
 - Literatür: Aynı kohortla nöropsikoloji (Data 2023, BA 0,885) ve MRI (Data 2024, doğruluk ~0,52–0,66) çalışmaları var. Bu veri setiyle yapılmış bir EEG yayını 2026-09 itibarıyla bulunmadı. Veri 2025-11-11'den beri açık.
+
+## YAZIM AŞAMASI KARARLARI
+- 2026-10-02: Hedef dergi Journal of Neural Engineering (IOP Publishing, hibrit). JCR 2026: Engineering, Biomedical Q2 (53/130); Neurosciences Q2 (109/330). Kaynak: LetPub/Peeref; Clarivate'ten teyit edilecek.
+- Makale türü: Paper. Uzunluk normalde ≤12.000 kelime (≈14 dergi sayfası). Hedef ana metin ~9.400 kelime. Ana görseller: Şekil 1–5, Tablo 1–4.
+- Özet: Objective / Approach / Main results / Significance başlıkları, ≤300 kelime.
+- Kaynak stili: Vancouver (numaralı).
+- Hakemlik: tek-kör (single-anonymous). Analiz günlüğü ve depo bağlantıları anonimleştirilmez.
+- Ekler varsayılan olarak hakemliğe girmez. İddiayı taşıyan içerik ana metinde kalır: 07d/07f karar kuralları, beş transfer AUC'si, p değerleri ve GA'lar. Ek dosya başına ≤50 MB, toplam ≤150 MB.
+- YZ beyanı: Teşekkür bölümünde IOP şablonuyla ayrı beyan. Yöntem'de analizlerde kullanılan araç ve model adları yazılır: Claude Code, model Claude Opus 5.5 (git Co-Authored-By kaydı: 15 commit'in 15'inde; ilk c325305, son 591d126; başka model adı yok). Sohbet tarafındaki denetimlerin modelleri yazar tarafından eklenecek.
+- Açık erişim: TÜBİTAK–IOP Oku-Yayımla 2026–2028 (EKUAL). Sorumlu yazarın kurumu EKUAL üyesi olmalı.
