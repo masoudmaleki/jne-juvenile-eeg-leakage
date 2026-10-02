@@ -1,0 +1,41 @@
+09_info_v1_2026-10-02 — Yöntem bölümü için bilgi dökümü (yeni hesap yok; kaynak kodu ve kayıtlı CSV'ler okundu)
+
+a) ROI tanımları
+Kaynak: analysis/02_features_v2_2026-10-01.py, satır 52–56 (ROIS sözlüğü).
+Betikteki yorum: "Biosemi 128 ABCD -> 10-20 yaklaşığı (channels.tsv açıklamalarından)". 10-20 karşılıkları
+betikteki satır içi yorumlardan alındı; yaklaşık karşılıklardır, ayrıca doğrulanmadı.
+  posterior (9): A15 A23 A28 A10 B7 A21 A17 A30 A19
+                 ≈ O1  Oz  O2  PO7 PO8 POz PO3 PO4 Pz
+  central   (6): A1 D19 B22 A3  D14 B20
+                 ≈ Cz C3  C4  CPz C1  C2
+  frontal   (7): C21 D4 C4 C23 C25 C12 C19
+                 ≈ Fz  F3 F4 FCz F1  F2  AFz
+  global       : ROIS["global"] = None -> 128 kanalın tamamı (kanal dışlaması sonrası kalanlar).
+ROI öznitelikleri her denekte dışlanmayan kanalların ortalama spektrumundan hesaplanır (CLAUDE.md satır 55).
+Not: 07b'de çıkarılan "frontal C bloğu" (C1–C32) bu ROI'lerden ayrı bir tanımdır (CLAUDE.md, 07b).
+
+b) Python ve paket sürümleri
+Kaynak: bu makinede kurulu ortam, 2026-10-02'de okundu (python.exe: C:\Users\...\Python313).
+Analizler bu tek ortamda çalıştırıldı; betiklerde ya da raporlarda analiz anındaki sürüm kaydı yok.
+Tek istisna: 02 pilot raporu (02_features_pilot_rapor_v1_2026-10-01.md, satır 5) "fooof 1.1" kurulu olduğunu yazıyor.
+  python        3.13.3
+  numpy         2.3.2
+  scipy         1.16.1
+  pandas        2.3.1
+  scikit-learn  1.7.1
+  fooof         1.1.1   (specparam kurulu değil)
+  statsmodels   0.14.6  (05_alpha_reactivity: OLS, HC3)
+  mne           1.10.0  (yalnız şekil: mne.viz.plot_topomap; 02_features_qcfig_v1, 07e_feature_map_v1. EEG okuma mne ile yapılmadı)
+  matplotlib    3.10.8
+EEG .set dosyaları scipy.io.loadmat ile okundu (01_data_audit_v2_2026-10-01.py, satır 15, 23–24).
+
+c) Kayıt tarihi ve saati
+Kaynak alan: EEGLAB .set yapısındaki EEG.etc.T0 (6 elemanlı [yıl ay gün saat dakika saniye]).
+  - Okuma: 01_data_audit_v2_2026-10-01.py, satır 63 (t0 = E["etc"].get("T0")) ve satır 90 (rec_datetime biçimlendirme).
+  - Dosyalar: her denek için hem *_acq-epochs_eeg.set hem *_desc-preprocessed_eeg.set (v1.0.0/sub-*/eeg/).
+  - Kayıt: analysis/01_data_audit_v2_2026-10-01.csv, sütun rec_datetime. 140 deneğin hepsinde dolu;
+    iki dosya türünde 140/140 aynı.
+  - Tablo 1 (kayıt saati, 14:00 sonrası) ve kayıt dönemleri preprocessed satırlarını kullanır
+    (09_tables_v1_2026-10-02.py, satır 20: query("file=='preprocessed'")).
+  - Saat dilimi bilgisi alanda yok; değerler kayıt bilgisayarının yerel saati olarak yorumlanmalı (doğrulanmadı).
+  - Yan JSON dosyalarındaki üstveri şablon hâlinde (CLAUDE.md) ve tarih kaynağı olarak kullanılmadı.

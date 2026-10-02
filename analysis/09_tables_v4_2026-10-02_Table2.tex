@@ -1,0 +1,28 @@
+\begin{table}[htbp]
+\centering
+\caption{[CAPTION]}
+\label{tab:Table2}
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llllcccccc}
+\toprule
+Pipeline & CV unit & Feature selection & Row AUC & Subject AUC & Subject balanced accuracy & Subject GD & Shuffled-label null: metric & Null mean [2.5--97.5] & p \\
+\midrule
+N1 RF & row-wise 10-fold & whole data & 0.87 & 0.91 & 0.80 & 0.38 & row AUC & 0.78 [0.69--0.84] & $\leq$ 0.005 \\
+N1 SVM & row-wise 10-fold & whole data & 0.85 & 0.89 & 0.76 & 0.44 & row AUC & 0.73 [0.67--0.80] & $\leq$ 0.005 \\
+N2 RF & row-wise 10-fold & within CV & 0.86 & 0.91 & 0.79 & 0.39 & -- & -- & -- \\
+N2 SVM & row-wise 10-fold & within CV & 0.83 & 0.87 & 0.74 & 0.46 & -- & -- & -- \\
+N3 RF & subject-wise 5-fold & whole data & 0.68 & 0.70 & 0.60 & 0.68 & -- & -- & -- \\
+N3 SVM & subject-wise 5-fold & whole data & 0.71 & 0.74 & 0.63 & 0.62 & -- & -- & -- \\
+N4 RF & subject-wise 5-fold & within CV & 0.64 & 0.66 & 0.58 & 0.71 & -- & -- & -- \\
+N4 SVM & subject-wise 5-fold & within CV & 0.62 & 0.64 & 0.57 & 0.71 & -- & -- & -- \\
+P RF & subject-wise 5-fold $\times$ 20, nested & inner loop (k, C) & 0.70 & 0.73 [0.67--0.79] & 0.64 & 0.64 & -- & -- & -- \\
+P SVM & subject-wise 5-fold $\times$ 20, nested & inner loop (k, C) & 0.64 & 0.66 [0.59--0.75] & 0.59 & 0.68 & subject AUC & 0.48 [0.40--0.58] & 0.010 \\
+\bottomrule
+\end{tabular}
+}
+\par\smallskip
+\begin{minipage}{\textwidth}\raggedright\scriptsize
+Notes. Published Excel-derived features (CAR\_FREC\_DATS.mat), 112 subjects (cg 66, sg 46); one row per subject $\times$ epoch. N1--N4: 10 CV repeats; P: 20 repeats. Subject AUC/balanced accuracy/GD: row decision values averaged per subject. For P, the bracket gives the 2.5th--97.5th percentile across CV repeats (not a sampling CI). Shuffled-label null: labels permuted at subject level, 200 permutations; smallest attainable p = 1/201 (shown as $\leq$ 0.005). No permutation was run for the remaining cells (--). GD = Golden Distance on [accuracy, sensitivity, specificity, F1], positive class sg; lower is better. The naive pipelines were built in this study to represent a common error; they are not attributed to the data owners.
+\end{minipage}
+\end{table}

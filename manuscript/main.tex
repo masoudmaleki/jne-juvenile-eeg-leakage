@@ -1,0 +1,114 @@
+% main.tex — Journal of Neural Engineering (IOP iopjournal sınıfı). Taslak iskelet v1 (2026-10-02).
+% Bölümler sections/ altında; tablolar PyCharm'ın ürettiği tables/*.tex dosyaları; şekiller figures/ altında.
+\documentclass{iopjournal}
+
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+\begin{document}
+
+\articletype{Paper}
+
+\title{High accuracy without demonstrated generalization: data leakage and recording confounds in resting-state EEG classification of juvenile offenders}
+
+\author{Mesut Melek$^{1,*}$\orcid{0000-0000-0000-0000}}
+
+\affil{$^1$Department of Software Engineering, G\"um\"u\c{s}hane University, G\"um\"u\c{s}hane, T\"urkiye}
+
+\affil{$^*$Author to whom any correspondence should be addressed.}
+
+\email{[E-MAIL]}
+
+\keywords{EEG, data leakage, cross-validation, juvenile offenders, confounds, resting state, generalization}
+
+\begin{abstract}
+[ABSTRACT: Objective, Approach, Main results, Significance; at most 300 words. Written last.]
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+[INTRODUCTION: written after the Methods, Results and Discussion.]
+
+\input{sections/methods}
+
+\section{Results}
+\label{sec:results}
+[RESULTS]
+
+\section{Discussion}
+\label{sec:discussion}
+[DISCUSSION]
+
+% ---------------------------------------------------------------- Figures (draft placement)
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figures/Fig1_leakage_v2}
+  \caption{[CAPTION: Figure 1, leakage.]}
+  \label{fig:leakage}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figures/Fig2_exploratory_cascade_v4}
+  \caption{[CAPTION: Figure 2, exploratory cascade and transfer.]}
+  \label{fig:cascade}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figures/Fig3_primary_alpha_reactivity_v2}
+  \caption{[CAPTION: Figure 3, primary test.]}
+  \label{fig:primary}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figures/Fig4_prespecified_null_v2}
+  \caption{[CAPTION: Figure 4, ROI-level null.]}
+  \label{fig:roi}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figures/Fig5_cohort_v2}
+  \caption{[CAPTION: Figure 5, cohort and samples.]}
+  \label{fig:cohort}
+\end{figure}
+
+% ---------------------------------------------------------------- Tables (generated from saved CSV files)
+\input{tables/09_tables_v3_2026-10-02_Table1}
+\input{tables/09_tables_v3_2026-10-02_Table2}
+\input{tables/09_tables_v3_2026-10-02_Table3}
+\input{tables/09_tables_v3_2026-10-02_Table4}
+
+% ---------------------------------------------------------------- Supplementary material (moves to a separate file at submission)
+\clearpage
+\section*{Supplementary material (draft placement)}
+\input{tables/09_tables_v3_2026-10-02_TableSn}
+\input{tables/09_tables_v3_2026-10-02_TableS3}
+\input{tables/09_tables_v3_2026-10-02_TableS4}
+\input{tables/09_tables_v3_2026-10-02_TableS5}
+\input{tables/09_tables_v3_2026-10-02_TableS_leak}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figures/FigS_07e_feature_map_v1}
+  \caption{[CAPTION: Figure S1, 07e feature map.]}
+  \label{fig:S07e}
+\end{figure}
+
+% ---------------------------------------------------------------- Back matter
+\ack{[ACKNOWLEDGEMENTS. AI statement (IOP template): During the preparation of this manuscript, the author used Claude Code (Anthropic; model Claude Opus 5.5) to write and run the analysis code and Claude ([MODEL VERSIONS]) to audit the analyses and to support the writing. The author reviewed, validated and critically assessed all AI-assisted outputs and takes full responsibility for the content of the manuscript.]}
+
+\funding{[FUNDING]}
+
+\roles{[AUTHOR CONTRIBUTIONS, CRediT]}
+
+\data{The EEG data are openly available on OpenNeuro (ds006923, version 1.0.0) \cite{Polo2025ds006923}. The analysis code, analysis log and result files are available at [REPOSITORY / ZENODO DOI].}
+
+\suppdata{[SUPPLEMENTARY FILES: tables S1--S5, figure S1, analysis log (table S2), commit records.]}
+
+\bibliographystyle{unsrt}
+\bibliography{refs}
+
+\end{document}
