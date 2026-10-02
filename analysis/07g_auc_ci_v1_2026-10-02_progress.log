@@ -1,0 +1,11 @@
+2026-10-02 12:09:29  07g başladı
+2026-10-02 12:09:29  220 iş başlıyor (15 işçi)
+2026-10-02 12:11:01  yeniden çalıştırma bitti; 1.5 dk
+2026-10-02 12:11:02  doğrulama, set başına maks |fark|: 07_A_log_abs 0.00e+00; 07_B_relative 0.00e+00; 07a_closed 0.00e+00; 07a_open 0.00e+00; 07b_closed_noC 0.00e+00; 07c_B_closed 5.55e-17; 07d_A_all 5.55e-17; 07d_B_all 5.55e-17; 07d_B_open 5.55e-17; 07e_longblock 0.00e+00; 07f_B_longblock 5.55e-17
+2026-10-02 12:11:02  doğrulama: 1120 değer karşılaştırıldı (kaynak 120, transfer kat 1000)
+2026-10-02 12:11:28  07g başladı
+2026-10-02 12:11:28  skorlar checkpoint'ten okundu
+2026-10-02 12:11:28  doğrulama, set başına maks |fark|: 07_A_log_abs 0.00e+00; 07_B_relative 0.00e+00; 07a_closed 0.00e+00; 07a_open 0.00e+00; 07b_closed_noC 0.00e+00; 07c_B_closed 5.55e-17; 07d_A_all 5.55e-17; 07d_B_all 5.55e-17; 07d_B_open 5.55e-17; 07e_longblock 0.00e+00; 07f_B_longblock 5.55e-17
+2026-10-02 12:11:28  doğrulama: 1120 değer karşılaştırıldı (kaynak 120, transfer kat 1000)
+2026-10-02 12:11:28  doğrulama GEÇTİ: tüm AUC'ler kayıtlı değerlerle birebir aynı (≤ 1e-12)
+2026-10-02 12:12:09  SONUÇ: 07_A_log_abs: 0.754 (GA 0.672–0.860) | 07_B_relative: 0.734 (GA 0.706–0.886) | 07a_closed: 0.645 (GA 0.604–0.809) | 07a_open: 0.709 (GA 0.669–0.859) | 07b_closed_noC: 0.582 (GA 0.495–0.725) | 07e_longblock: 0.746 (GA 0.685–0.867) | 07c_B_closed: 0.569 (GA 0.439–0.688) | 07d_A_all: 0.549 (GA 0.439–0.662) | 07d_B_all: 0.589 (GA 0.475–0.702) | 07d_B_open: 0.553 (GA 0.446–0.660) | 07f_B_longblock: 0.582 (GA 0.463–0.704)
