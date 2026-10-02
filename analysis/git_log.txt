@@ -1,4 +1,8 @@
-﻿6a7379a 2026-10-02 10:23:38 +0300 DENETIM_RAPORU_2: E1–E8 düzeltmeleri, 07e betimsel harita, Şekil 2 v3, başlıklar v3, iskelet v4, 07f raporu
+﻿8a0931a 2026-10-02 12:16:35 +0300 DENETIM_RAPORU_3: F1–F7 düzeltmeleri, 07g GA'ları metne, Tablo S-n v2, Tablo S4, başlıklar v4, iskelet v5
+e5dfeb6 2026-10-02 12:12:25 +0300 07g sonucu: keşifsel AUC'lerin %95 GA'ları; yeniden üretilen AUC'ler kayıtlıyla birebir aynı
+e81e61b 2026-10-02 12:08:23 +0300 07g tanımı (sonuç görülmeden): keşifsel AUC'lerin %95 GA'ları, yalnız nicelendirme, karar kuralı yok
+5b9195e 2026-10-02 10:23:38 +0300 git_log.txt güncellendi
+6a7379a 2026-10-02 10:23:38 +0300 DENETIM_RAPORU_2: E1–E8 düzeltmeleri, 07e betimsel harita, Şekil 2 v3, başlıklar v3, iskelet v4, 07f raporu
 11790e8 2026-10-02 10:21:09 +0300 07f sonucu: uzun blok modelinin sg2'ye transferi AUC 0,582, p = 0,104 → transfer kanıtı yok
 6a4439c 2026-10-02 10:11:48 +0300 07f tanımı (sonuç görülmeden): uzun blok modelinin sg2'ye transferi, karar kuralı p < 0,05
 1196c06 2026-10-02 09:51:49 +0300 git_log.txt: commit geçmişi (tarihli)
