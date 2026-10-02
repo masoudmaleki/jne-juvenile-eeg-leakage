@@ -1,3 +1,7 @@
-﻿cbedc41 2026-10-02 09:51:38 +0300 07d–e (transfer ve uzun blok), D1–D12 düzeltmeleri, v2 raporlar/şekiller, Tablo 1 ve S-n, iskelet v3
+﻿6a7379a 2026-10-02 10:23:38 +0300 DENETIM_RAPORU_2: E1–E8 düzeltmeleri, 07e betimsel harita, Şekil 2 v3, başlıklar v3, iskelet v4, 07f raporu
+11790e8 2026-10-02 10:21:09 +0300 07f sonucu: uzun blok modelinin sg2'ye transferi AUC 0,582, p = 0,104 → transfer kanıtı yok
+6a4439c 2026-10-02 10:11:48 +0300 07f tanımı (sonuç görülmeden): uzun blok modelinin sg2'ye transferi, karar kuralı p < 0,05
+1196c06 2026-10-02 09:51:49 +0300 git_log.txt: commit geçmişi (tarihli)
+cbedc41 2026-10-02 09:51:38 +0300 07d–e (transfer ve uzun blok), D1–D12 düzeltmeleri, v2 raporlar/şekiller, Tablo 1 ve S-n, iskelet v3
 7dcdbad 2026-10-02 08:48:26 +0300 Şekil 1–5 (300 dpi PNG + PDF), şekil başlık taslakları ve şekil betiği
 c325305 2026-10-02 08:43:40 +0300 Analiz günlüğü ve betikleri: 01–07c, raporlar, planlar, makale iskeleti v2
