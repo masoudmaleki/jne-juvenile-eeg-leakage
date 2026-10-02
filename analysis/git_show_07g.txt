@@ -1,0 +1,115 @@
+$ git show --stat e81e61b e5dfeb6 8a0931a
+commit e81e61b4848f062a34ac0c1c6837a785c975463a
+Author: Mesut Melek <masoud.maleki1361@gmail.com>
+Date:   Fri Oct 2 12:08:23 2026 +0300
+
+    07g tanımı (sonuç görülmeden): keşifsel AUC'lerin %95 GA'ları, yalnız nicelendirme, karar kuralı yok
+    
+    Bu commit yalnız tanımı içerir; analiz henüz çalıştırılmadı. Kaynak: DENETIM_RAPORU_3 bölüm 3.
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+ CLAUDE.md | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+
+commit e5dfeb622568b70578ba37863aa6eee36eee558f
+Author: Mesut Melek <masoud.maleki1361@gmail.com>
+Date:   Fri Oct 2 12:12:25 2026 +0300
+
+    07g sonucu: keşifsel AUC'lerin %95 GA'ları; yeniden üretilen AUC'ler kayıtlıyla birebir aynı
+    
+    Tanım commit e81e61b'de (analizden önce). 1120 AUC değeri (120 kaynak tekrarı, 1000 transfer katı)
+    kayıtlı değerlerle aynı (maks |fark| 5,55e-17). Transfer GA'ları: 07c 0,569 (0,439–0,688), 07d A 0,549 (0,439–0,662),
+    07d B 0,589 (0,475–0,702), 07d B açık 0,553 (0,446–0,660), 07f 0,582 (0,463–0,704).
+    İlk çalıştırma doğrulamadan sonra konsol kodlama hatasıyla (≤ karakteri) durdu; kayıtlı skorlarla
+    PYTHONIOENCODING=utf-8 ile yeniden çalıştırıldı (ilerleme kaydında iki başlangıç var). Betikte yalnız
+    docstring'deki çıktı adı (scores.npz → scores.pkl) sonradan düzeltildi.
+    Ek: analysis/git_show_07f.txt (07f commit içerik doğrulaması, DENETIM_RAPORU_3 §1.1).
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+ analysis/07g_auc_ci_v1_2026-10-02.py           |  212 +++++
+ analysis/07g_auc_ci_v1_2026-10-02_progress.log |   11 +
+ analysis/07g_auc_ci_v1_2026-10-02_results.csv  |   12 +
+ analysis/07g_auc_ci_v1_2026-10-02_scores.pkl   |  Bin 0 -> 850267 bytes
+ analysis/07g_auc_ci_v1_2026-10-02_verify.csv   | 1121 ++++++++++++++++++++++++
+ analysis/git_show_07f.txt                      |   64 ++
+ 6 files changed, 1420 insertions(+)
+
+commit 8a0931addf3c1d518d5d718fb8a1d7bed18d6445
+Author: Mesut Melek <masoud.maleki1361@gmail.com>
+Date:   Fri Oct 2 12:16:35 2026 +0300
+
+    DENETIM_RAPORU_3: F1–F7 düzeltmeleri, 07g GA'ları metne, Tablo S-n v2, Tablo S4, başlıklar v4, iskelet v5
+    
+    - F1: 06 v4, 07de v3 (sg2 gerekçesi kaldırıldı)
+    - F2: 07f v2, 07de v3, Şekil 2b başlığı, iskelet; "tespit sınırı" yerine anlamlılık eşiği + 07g kesin GA'ları
+    - F3: başlık "High accuracy without demonstrated generalization: ..."; "subgroup-specific" kaldırıldı
+    - F4: 07 v4, 07de v3, Şekil S1 ve 2c başlıkları, iskelet Tartışma (frontopolar; oküler açıklama dışlanmaz)
+    - F5: 07abc v4, 07de v3 (satır içi tarihli notlar)
+    - F6: Tablo S-n v2 (07f, 07g), Tablo S4 (07–07f + 07g GA), Tablo S2 satır 25–34, denetim tanımı
+    - F7: analiz seçimlerine özgü; küçük–orta; yaş/madde notları; 100 denek gerekçesi
+    Eski sürümler korundu; sayılar değişmedi (07g GA'ları dışında).
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+ CLAUDE.md                                          |  19 +-
+ .../06_null_quantification_rapor_v4_2026-10-02.md  |  54 ++++++
+ .../07_amplitude_decomp_rapor_v4_2026-10-02.md     |  67 +++++++
+ .../07abc_source_decomp_rapor_v4_2026-10-02.md     |  72 +++++++
+ .../07de_transfer_longblock_rapor_v3_2026-10-02.md |  96 +++++++++
+ .../07f_longblock_transfer_rapor_v2_2026-10-02.md  |  57 ++++++
+ analysis/09_tables_v2_2026-10-02.py                |  91 +++++++++
+ analysis/09_tables_v2_2026-10-02_TableS4.csv       |  12 ++
+ analysis/09_tables_v2_2026-10-02_TableS4.md        |  19 ++
+ analysis/09_tables_v2_2026-10-02_TableSn.csv       |  13 ++
+ analysis/09_tables_v2_2026-10-02_TableSn.md        |  16 ++
+ analysis/DENETIM_RAPORU_3_2026-10-02.md            | 215 +++++++++++++++++++++
+ analysis/MAKALE_ISKELETI_v5.md                     | 179 +++++++++++++++++
+ analysis/figures/FIGURE_CAPTIONS_v4.md             |  23 +++
+ 14 files changed, 932 insertions(+), 1 deletion(-)
+
+$ git show e81e61b -- CLAUDE.md
+commit e81e61b4848f062a34ac0c1c6837a785c975463a
+Author: Mesut Melek <masoud.maleki1361@gmail.com>
+Date:   Fri Oct 2 12:08:23 2026 +0300
+
+    07g tanımı (sonuç görülmeden): keşifsel AUC'lerin %95 GA'ları, yalnız nicelendirme, karar kuralı yok
+    
+    Bu commit yalnız tanımı içerir; analiz henüz çalıştırılmadı. Kaynak: DENETIM_RAPORU_3 bölüm 3.
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+diff --git a/CLAUDE.md b/CLAUDE.md
+index 196ddf4..ac57d5d 100644
+--- a/CLAUDE.md
++++ b/CLAUDE.md
+@@ -159,6 +159,25 @@ Dayanak: 03 batch negatif kontrolü (analysis/03_batch_negcontrol_v1_2026-10-01_
+   - **SONUÇ (2026-10-02; tanım commit 6a4439c, sonuç commit 11790e8; analysis/07f_longblock_transfer_rapor_v1_2026-10-02.md):**
+     transfer AUC 0,582 (tekrarlar 0,526–0,631), sıfır 0,504, p = 0,104 → transfer kanıtı YOK →
+     "no evidence of transfer" iddiası beş modelin hepsi için geçerli (07c, 07d × 3, 07f).
++- **07g (YALNIZ NİCELENDİRME, karar kuralı YOK; 2026-10-02'de SONUÇ GÖRÜLMEDEN tanımlandı; kaynak: analysis/DENETIM_RAPORU_3_2026-10-02.md bölüm 3).**
++  Amaç: keşifsel AUC'ler için %95 GA; F2'deki yaklaşık GA'ların yerine kesin değerler. Hiçbir iddia bu sonuca göre güçlendirilmez.
++  - Kaynak modeller (6): 07 A_log_abs, 07 B_relative (tüm epoklar), 07a kapalı, 07a açık, 07b (kapalı, C bloğu çıkarılmış), 07e uzun blok.
++    Gerçek çalıştırma aynı seed'lerle (M7.SEED + r, r = 0–19) aynı fonksiyonlarla (M7.nested'in birebir kopyası, denek skoru da döner)
++    tekrarlanır. Her tekrarın denek AUC'si checkpoint'teki kayıtlı değerle |fark| ≤ 1e-12 olmalı; değilse çalışma DURUR.
++    Denek skoru = 20 tekrardaki (denek ortalaması) karar değerlerinin ortalaması. GA: sınıf içi tabakalı denek bootstrap'ı
++    (06 ile aynı: sg ve cg ayrı ayrı yerine koyarak; 2000 yineleme; rng = default_rng(20261001), model başına yeniden başlatılır; percentile).
++    Raporda hem kayıtlı nokta tahmini (tekrar AUC ortalaması) hem ortalama skordan AUC verilir.
++  - Transfer modelleri (5): 07c (B kapalı), 07d A tüm, 07d B tüm, 07d B açık, 07f (B uzun blok). Aynı seed'ler, aynı transfer yöntemi
++    (07abc transfer'in birebir kopyası; ek olarak her katın held-out cg denek kimlikleri ve skorları ile 25 sg2 deneğinin skorları kaydedilir).
++    Her katın auc_sg2_24 (ve varsa auc_sg2_25) değeri kayıtlı transfer_folds CSV'siyle |fark| ≤ 1e-12 olmalı; değilse DURUR.
++    GA: ağırlıklı denek bootstrap'ı. Her yinelemede cg (55) ve sg2 (24) için çok terimli çarpanlar çekilir (w ~ Multinomial(n, 1/n));
++    aynı çarpanlar o yinelemedeki tüm katlarda kullanılır. Kat AUC'si = ΣΣ wᵢwⱼ[1(sⱼ > sᵢ) + ½·1(sⱼ = sᵢ)] / (Σwᵢ · Σwⱼ)
++    (i held-out cg, j sg2). Held-out cg ağırlık toplamı 0 olan katlar o yinelemede ortalamaya alınmaz. 100 katın ortalaması; 2000 yineleme;
++    rng = default_rng(20261001), model başına yeniden başlatılır; percentile GA. Nokta tahmini = kayıtlı kat AUC ortalaması.
++  - Betimsel duyarlılık (yeniden eğitim yok, GA yok): atipik spektrumlu sg2 denekleri sub-1105sg2 ve sub-1114sg2 hariç (22 sg2) transfer AUC'leri.
++  - Raporlama biçimi: "AUC (GA L–U); AUC > U yaklaşık olarak dışlanır". Sınırlılık: GA yalnız denek örneklemesini içerir; model eğitimindeki
++    (seed/katlama) oynaklık dahil değildir.
++  - Zaman kaydı: bu tanım, analiz çalıştırılmadan önce ayrı bir git commit'i ile kaydedildi.
+ - 07e betimsel öznitelik haritası (test yok): analysis/07e_feature_map_v1_2026-10-02.csv, figures/FigS_07e_feature_map_v1.*
+   (|g| ≤ 0,58; sg'de göreli delta ↑ (C, D blokları), teta ↓ (en belirgin C bloğu), alfa ≈ 0).
+ - DENETIM_RAPORU_2026-10-02.md D1–D12 uygulandı: v2 raporlar (04b, 06, 07, 07abc), 08 v2 şekiller, 09 Tablo 1 / Tablo S-n, iskelet v3.
+
+$ git diff e5dfeb6 -- analysis/07g_auc_ci_v1_2026-10-02.py
+(çıktı sonu; boşsa betik e5dfeb6 ile aynı — docstring düzeltmesi e5dfeb6 içinde commit'lenmişti)
