@@ -159,6 +159,25 @@ Dayanak: 03 batch negatif kontrolü (analysis/03_batch_negcontrol_v1_2026-10-01_
   - **SONUÇ (2026-10-02; tanım commit 6a4439c, sonuç commit 11790e8; analysis/07f_longblock_transfer_rapor_v1_2026-10-02.md):**
     transfer AUC 0,582 (tekrarlar 0,526–0,631), sıfır 0,504, p = 0,104 → transfer kanıtı YOK →
     "no evidence of transfer" iddiası beş modelin hepsi için geçerli (07c, 07d × 3, 07f).
+- **07g (YALNIZ NİCELENDİRME, karar kuralı YOK; 2026-10-02'de SONUÇ GÖRÜLMEDEN tanımlandı; kaynak: analysis/DENETIM_RAPORU_3_2026-10-02.md bölüm 3).**
+  Amaç: keşifsel AUC'ler için %95 GA; F2'deki yaklaşık GA'ların yerine kesin değerler. Hiçbir iddia bu sonuca göre güçlendirilmez.
+  - Kaynak modeller (6): 07 A_log_abs, 07 B_relative (tüm epoklar), 07a kapalı, 07a açık, 07b (kapalı, C bloğu çıkarılmış), 07e uzun blok.
+    Gerçek çalıştırma aynı seed'lerle (M7.SEED + r, r = 0–19) aynı fonksiyonlarla (M7.nested'in birebir kopyası, denek skoru da döner)
+    tekrarlanır. Her tekrarın denek AUC'si checkpoint'teki kayıtlı değerle |fark| ≤ 1e-12 olmalı; değilse çalışma DURUR.
+    Denek skoru = 20 tekrardaki (denek ortalaması) karar değerlerinin ortalaması. GA: sınıf içi tabakalı denek bootstrap'ı
+    (06 ile aynı: sg ve cg ayrı ayrı yerine koyarak; 2000 yineleme; rng = default_rng(20261001), model başına yeniden başlatılır; percentile).
+    Raporda hem kayıtlı nokta tahmini (tekrar AUC ortalaması) hem ortalama skordan AUC verilir.
+  - Transfer modelleri (5): 07c (B kapalı), 07d A tüm, 07d B tüm, 07d B açık, 07f (B uzun blok). Aynı seed'ler, aynı transfer yöntemi
+    (07abc transfer'in birebir kopyası; ek olarak her katın held-out cg denek kimlikleri ve skorları ile 25 sg2 deneğinin skorları kaydedilir).
+    Her katın auc_sg2_24 (ve varsa auc_sg2_25) değeri kayıtlı transfer_folds CSV'siyle |fark| ≤ 1e-12 olmalı; değilse DURUR.
+    GA: ağırlıklı denek bootstrap'ı. Her yinelemede cg (55) ve sg2 (24) için çok terimli çarpanlar çekilir (w ~ Multinomial(n, 1/n));
+    aynı çarpanlar o yinelemedeki tüm katlarda kullanılır. Kat AUC'si = ΣΣ wᵢwⱼ[1(sⱼ > sᵢ) + ½·1(sⱼ = sᵢ)] / (Σwᵢ · Σwⱼ)
+    (i held-out cg, j sg2). Held-out cg ağırlık toplamı 0 olan katlar o yinelemede ortalamaya alınmaz. 100 katın ortalaması; 2000 yineleme;
+    rng = default_rng(20261001), model başına yeniden başlatılır; percentile GA. Nokta tahmini = kayıtlı kat AUC ortalaması.
+  - Betimsel duyarlılık (yeniden eğitim yok, GA yok): atipik spektrumlu sg2 denekleri sub-1105sg2 ve sub-1114sg2 hariç (22 sg2) transfer AUC'leri.
+  - Raporlama biçimi: "AUC (GA L–U); AUC > U yaklaşık olarak dışlanır". Sınırlılık: GA yalnız denek örneklemesini içerir; model eğitimindeki
+    (seed/katlama) oynaklık dahil değildir.
+  - Zaman kaydı: bu tanım, analiz çalıştırılmadan önce ayrı bir git commit'i ile kaydedildi.
 - 07e betimsel öznitelik haritası (test yok): analysis/07e_feature_map_v1_2026-10-02.csv, figures/FigS_07e_feature_map_v1.*
   (|g| ≤ 0,58; sg'de göreli delta ↑ (C, D blokları), teta ↓ (en belirgin C bloğu), alfa ≈ 0).
 - DENETIM_RAPORU_2026-10-02.md D1–D12 uygulandı: v2 raporlar (04b, 06, 07, 07abc), 08 v2 şekiller, 09 Tablo 1 / Tablo S-n, iskelet v3.
