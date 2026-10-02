@@ -1,0 +1,3 @@
+﻿cbedc41 2026-10-02 09:51:38 +0300 07d–e (transfer ve uzun blok), D1–D12 düzeltmeleri, v2 raporlar/şekiller, Tablo 1 ve S-n, iskelet v3
+7dcdbad 2026-10-02 08:48:26 +0300 Şekil 1–5 (300 dpi PNG + PDF), şekil başlık taslakları ve şekil betiği
+c325305 2026-10-02 08:43:40 +0300 Analiz günlüğü ve betikleri: 01–07c, raporlar, planlar, makale iskeleti v2
