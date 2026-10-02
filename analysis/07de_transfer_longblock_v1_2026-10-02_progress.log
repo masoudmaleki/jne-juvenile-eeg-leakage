@@ -1,0 +1,91 @@
+2026-10-02 09:12:41  07d–e başladı
+2026-10-02 09:12:45  sg2 A/B öznitelikleri: 25 denek
+2026-10-02 09:12:58  uzun blok öznitelikleri: (400, 512)
+2026-10-02 09:12:58  [tr_real] toplam 60, checkpoint'te 0, kalan 60
+2026-10-02 09:13:05  [tr_real] 3/60; geçen 0.1 dk, kalan ~2.2 dk
+2026-10-02 09:13:05  [tr_real] 6/60; geçen 0.1 dk, kalan ~1.0 dk
+2026-10-02 09:13:05  [tr_real] 9/60; geçen 0.1 dk, kalan ~0.7 dk
+2026-10-02 09:13:05  [tr_real] 12/60; geçen 0.1 dk, kalan ~0.5 dk
+2026-10-02 09:13:05  [tr_real] 15/60; geçen 0.1 dk, kalan ~0.4 dk
+2026-10-02 09:13:11  [tr_real] 18/60; geçen 0.2 dk, kalan ~0.5 dk
+2026-10-02 09:13:11  [tr_real] 21/60; geçen 0.2 dk, kalan ~0.4 dk
+2026-10-02 09:13:11  [tr_real] 24/60; geçen 0.2 dk, kalan ~0.3 dk
+2026-10-02 09:13:11  [tr_real] 27/60; geçen 0.2 dk, kalan ~0.3 dk
+2026-10-02 09:13:12  [tr_real] 30/60; geçen 0.2 dk, kalan ~0.2 dk
+2026-10-02 09:13:15  [tr_real] 33/60; geçen 0.3 dk, kalan ~0.2 dk
+2026-10-02 09:13:18  [tr_real] 36/60; geçen 0.3 dk, kalan ~0.2 dk
+2026-10-02 09:13:18  [tr_real] 39/60; geçen 0.3 dk, kalan ~0.2 dk
+2026-10-02 09:13:18  [tr_real] 42/60; geçen 0.3 dk, kalan ~0.1 dk
+2026-10-02 09:13:18  [tr_real] 45/60; geçen 0.3 dk, kalan ~0.1 dk
+2026-10-02 09:13:19  [tr_real] 48/60; geçen 0.4 dk, kalan ~0.1 dk
+2026-10-02 09:13:21  [tr_real] 51/60; geçen 0.4 dk, kalan ~0.1 dk
+2026-10-02 09:13:21  [tr_real] 54/60; geçen 0.4 dk, kalan ~0.0 dk
+2026-10-02 09:13:21  [tr_real] 57/60; geçen 0.4 dk, kalan ~0.0 dk
+2026-10-02 09:13:21  [tr_real] 60/60; geçen 0.4 dk, kalan ~0.0 dk
+2026-10-02 09:13:21  07d gerçek: 07d_A_all 0.549; 07d_B_all 0.589; 07d_B_open 0.553
+2026-10-02 09:13:21  [real] toplam 20, checkpoint'te 0, kalan 20
+2026-10-02 09:13:28  [real] 1/20; geçen 0.1 dk, kalan ~2.1 dk
+2026-10-02 09:13:28  [real] 2/20; geçen 0.1 dk, kalan ~1.0 dk
+2026-10-02 09:13:28  [real] 3/20; geçen 0.1 dk, kalan ~0.6 dk
+2026-10-02 09:13:28  [real] 4/20; geçen 0.1 dk, kalan ~0.5 dk
+2026-10-02 09:13:28  [real] 5/20; geçen 0.1 dk, kalan ~0.3 dk
+2026-10-02 09:13:28  [real] 6/20; geçen 0.1 dk, kalan ~0.3 dk
+2026-10-02 09:13:28  [real] 7/20; geçen 0.1 dk, kalan ~0.2 dk
+2026-10-02 09:13:28  [real] 8/20; geçen 0.1 dk, kalan ~0.2 dk
+2026-10-02 09:13:28  [real] 9/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 09:13:28  [real] 10/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 09:13:28  [real] 11/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 09:13:28  [real] 12/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 09:13:28  [real] 13/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 09:13:28  [real] 14/20; geçen 0.1 dk, kalan ~0.1 dk
+2026-10-02 09:13:28  [real] 15/20; geçen 0.1 dk, kalan ~0.0 dk
+2026-10-02 09:13:32  [real] 16/20; geçen 0.2 dk, kalan ~0.0 dk
+2026-10-02 09:13:32  [real] 17/20; geçen 0.2 dk, kalan ~0.0 dk
+2026-10-02 09:13:32  [real] 18/20; geçen 0.2 dk, kalan ~0.0 dk
+2026-10-02 09:13:32  [real] 19/20; geçen 0.2 dk, kalan ~0.0 dk
+2026-10-02 09:13:32  [real] 20/20; geçen 0.2 dk, kalan ~0.0 dk
+2026-10-02 09:13:32  07e gerçek: 0.746
+2026-10-02 09:13:32  [tr_null] toplam 600, checkpoint'te 0, kalan 600
+2026-10-02 09:14:47  [tr_null] 30/600; geçen 1.2 dk, kalan ~23.6 dk
+2026-10-02 09:16:02  [tr_null] 60/600; geçen 2.5 dk, kalan ~22.4 dk
+2026-10-02 09:17:15  [tr_null] 90/600; geçen 3.7 dk, kalan ~21.1 dk
+2026-10-02 09:18:30  [tr_null] 120/600; geçen 5.0 dk, kalan ~19.8 dk
+2026-10-02 09:19:46  [tr_null] 150/600; geçen 6.2 dk, kalan ~18.7 dk
+2026-10-02 09:21:01  [tr_null] 180/600; geçen 7.5 dk, kalan ~17.4 dk
+2026-10-02 09:22:19  [tr_null] 210/600; geçen 8.8 dk, kalan ~16.3 dk
+2026-10-02 09:23:30  [tr_null] 240/600; geçen 10.0 dk, kalan ~14.9 dk
+2026-10-02 09:24:40  [tr_null] 270/600; geçen 11.1 dk, kalan ~13.6 dk
+2026-10-02 09:25:51  [tr_null] 300/600; geçen 12.3 dk, kalan ~12.3 dk
+2026-10-02 09:27:02  [tr_null] 330/600; geçen 13.5 dk, kalan ~11.0 dk
+2026-10-02 09:28:13  [tr_null] 360/600; geçen 14.7 dk, kalan ~9.8 dk
+2026-10-02 09:29:23  [tr_null] 390/600; geçen 15.9 dk, kalan ~8.5 dk
+2026-10-02 09:30:05  [tr_null] 420/600; geçen 16.5 dk, kalan ~7.1 dk
+2026-10-02 09:30:42  [tr_null] 450/600; geçen 17.2 dk, kalan ~5.7 dk
+2026-10-02 09:31:19  [tr_null] 480/600; geçen 17.8 dk, kalan ~4.4 dk
+2026-10-02 09:31:57  [tr_null] 510/600; geçen 18.4 dk, kalan ~3.2 dk
+2026-10-02 09:32:34  [tr_null] 540/600; geçen 19.0 dk, kalan ~2.1 dk
+2026-10-02 09:33:11  [tr_null] 570/600; geçen 19.6 dk, kalan ~1.0 dk
+2026-10-02 09:33:44  [tr_null] 600/600; geçen 20.2 dk, kalan ~0.0 dk
+2026-10-02 09:33:44  [null] toplam 200, checkpoint'te 0, kalan 200
+2026-10-02 09:34:19  [null] 10/200; geçen 0.6 dk, kalan ~11.1 dk
+2026-10-02 09:34:53  [null] 20/200; geçen 1.2 dk, kalan ~10.4 dk
+2026-10-02 09:34:56  [null] 30/200; geçen 1.2 dk, kalan ~6.8 dk
+2026-10-02 09:35:29  [null] 40/200; geçen 1.7 dk, kalan ~7.0 dk
+2026-10-02 09:36:02  [null] 50/200; geçen 2.3 dk, kalan ~6.9 dk
+2026-10-02 09:36:07  [null] 60/200; geçen 2.4 dk, kalan ~5.5 dk
+2026-10-02 09:36:39  [null] 70/200; geçen 2.9 dk, kalan ~5.4 dk
+2026-10-02 09:37:12  [null] 80/200; geçen 3.5 dk, kalan ~5.2 dk
+2026-10-02 09:37:17  [null] 90/200; geçen 3.6 dk, kalan ~4.3 dk
+2026-10-02 09:37:48  [null] 100/200; geçen 4.1 dk, kalan ~4.1 dk
+2026-10-02 09:38:21  [null] 110/200; geçen 4.6 dk, kalan ~3.8 dk
+2026-10-02 09:38:28  [null] 120/200; geçen 4.7 dk, kalan ~3.1 dk
+2026-10-02 09:38:58  [null] 130/200; geçen 5.2 dk, kalan ~2.8 dk
+2026-10-02 09:39:30  [null] 140/200; geçen 5.8 dk, kalan ~2.5 dk
+2026-10-02 09:39:39  [null] 150/200; geçen 5.9 dk, kalan ~2.0 dk
+2026-10-02 09:40:07  [null] 160/200; geçen 6.4 dk, kalan ~1.6 dk
+2026-10-02 09:40:39  [null] 170/200; geçen 6.9 dk, kalan ~1.2 dk
+2026-10-02 09:40:49  [null] 180/200; geçen 7.1 dk, kalan ~0.8 dk
+2026-10-02 09:41:16  [null] 190/200; geçen 7.5 dk, kalan ~0.4 dk
+2026-10-02 09:41:39  [null] 200/200; geçen 7.9 dk, kalan ~0.0 dk
+2026-10-02 09:41:39  SONUÇ: 07d_A_all: AUC 0.549, p 0.224 → transfer etmiyor | 07d_B_all: AUC 0.589, p 0.194 → transfer etmiyor | 07d_B_open: AUC 0.553, p 0.289 → transfer etmiyor | 07e_longblock: AUC 0.746, p 0.005 → uzun blokta da ayrışma var → 06 null ROI/model seçimine özgü
+2026-10-02 09:41:39  BAŞLIK KURALI: hiçbir model transfer etmiyor → 'genellenmiyor' iddiası korunur

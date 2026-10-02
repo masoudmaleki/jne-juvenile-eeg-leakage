@@ -1,0 +1,14 @@
+# Table S-n. Sample used in each analysis
+
+| Analysis | Data segment | cg | sg | sg2 | Total | Exclusions / notes |
+|---|---|---|---|---|---|---|
+| 01 Data audit | all files | 66 | 49 | 25 | 140 | – |
+| 02 Features / 03 / 06 | long eyes-closed block, 465 s | 66 | 45 | 24 | 135 | 4 sg (~157 s, no long block), sub-1084sg2 (data file missing) |
+| 03 (a) sg vs sg2 | long block | 0 | 45 | 24 | 69 | as 02 |
+| 03 (b) sg+cg → sg2 transfer | long block | 66 | 45 | 24 | 135 | as 02 |
+| 04-A / 04-B Excel features | Excel C_1, O_1, C_2, O_2 (derived) | 66 | 46 | 0 | 112 | Excel cohort: 12 IDs not in published data; sg2 absent |
+| 04-B sensitivity (ID-verified) | Excel | 55 | 45 | 0 | 100 | 12 unverified Excel IDs |
+| 05 Alpha reactivity (primary) | 4 × 50 s eyes-closed/open epochs | 66 | 45 | 25 | 136 | 4 sg with 2 epochs (included only in n = 140 sensitivity) |
+| 06 Offenders vs cg | long block | 66 | 45 | 24 | 135 | as 02 |
+| 07 / 07a / 07b / 07e | epochs (07–07b) or long block (07e) | 55 | 45 | 0 | 100 | restricted to Excel ∩ published, ID-verified |
+| 07c / 07d transfer test set | same epochs as training | 0 | 0 | 24 | 24 | sub-1084sg2 excluded (25 in extra row) |

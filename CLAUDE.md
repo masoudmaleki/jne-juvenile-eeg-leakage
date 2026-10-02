@@ -125,6 +125,26 @@ Dayanak: 03 batch negatif kontrolü (analysis/03_batch_negcontrol_v1_2026-10-01_
     tanımsızdı; eşik sonradan DEĞİŞTİRİLMEZ). Keşifsel ayrıştırma burada BİTTİ; yeni öznitelik/analiz yok.**
     07a kapalı 0,645 (p 0,015; eşiğin hemen altı), 07a açık 0,709 (p 0,005), 07b 0,582 (p 0,050), 07c transfer 0,569 (p 0,26).
     Betimsel (göz kapalı): göreli delta ↑ yalnız sg'de (sg2 ≈ cg); alfa ↓ sg2'de de (daha güçlü). Ayrışma açık > kapalı > kapalı-frontalsız.
+- **07d–e (KEŞİFSEL; 2026-10-02'de SONUÇ GÖRÜLMEDEN tanımlandı; kaynak: DENETIM_RAPORU_2026-10-02.md bölüm 7).**
+  Ortak: 07 ile aynı 100 denek (sg 45, cg 55) ve aynı P pipeline (SVM; k ∈ {10, 50, 100, 500}, C ∈ {0,1, 1, 10}),
+  dış 5-fold × 20 tekrar, 200 permütasyon × 5 tekrar, checkpoint ve ilerleme kaydı. Karar: TEK ölçüt, permütasyon p < 0,05 (eşik boşluğu yok).
+  Düzeltme yok; keşifsel p değerleri düzeltmesiz raporlanır (D9).
+  - 07d (en güçlü modellerin sg2'ye transferi): 07c'nin kat-içi transfer yöntemi aynen (her dış katta held-out cg vs sg2, aynı model;
+    kat AUC'leri ortalanır; sıfır: eğitim sg/cg etiketleri denek düzeyinde karıştırılır). sg2 = 24 (1084sg2 hariç; 25 ek satır).
+    Üç model: (1) A log10 mutlak güç, tüm epoklar; (2) B göreli güç, tüm epoklar; (3) B göreli güç, göz açık (O1 + O2).
+    sg2 için eğitimdekiyle aynı epoklar; sg2'nin A öznitelikleri de hesaplanır.
+    Karar (model başına): p < 0,05 → "transfer ediyor"; aksi halde "transfer etmiyor".
+    Herhangi bir model transfer ederse makale başlığındaki "genellenmiyor" iddiası daraltılır.
+  - 07e (kayıt kesitinin etkisi): aynı 100 denek; 02 ile aynı 465 s'lik uzun göz kapalı blok (3. C işareti + 5 s),
+    4 ardışık örtüşmesiz 116,25 s parçaya bölünür (satır = denek × parça, 400 satır). B seti (128 kanal × 4 bant;
+    Welch 4 s Hann %50; payda 1–30 Hz); kanal dışlaması YOK.
+    Karar: p < 0,05 → kanal düzeyindeki ayrışma uzun blokta da var; 06'daki null sonuç ROI ve model seçimine özgüdür (açıkça yazılır).
+    p ≥ 0,05 → ayrışma oturum başındaki kapalı/açık epoklarla sınırlı.
+  - **SONUÇ (2026-10-02, analysis/07de_transfer_longblock_rapor_v1_2026-10-02.md):**
+    07d transfer AUC: A tüm 0,549 (p 0,22), B tüm 0,589 (p 0,19), B açık 0,553 (p 0,29) → hiçbiri transfer etmiyor →
+    "genellenmiyor" iddiası KORUNUR (tespit sınırı ≈ 0,60–0,65; ifade: "sg2'ye genellendiğine dair kanıt yok").
+    07e uzun blok AUC 0,746 (p ≤ 0,005) → kanal düzeyi ayrışma uzun blokta da var → 06 null ROI/model seçimine ÖZGÜ (açıkça yazılacak).
+- DENETIM_RAPORU_2026-10-02.md D1–D12 uygulandı: v2 raporlar (04b, 06, 07, 07abc), 08 v2 şekiller, 09 Tablo 1 / Tablo S-n, iskelet v3.
 - 04-B GD eki tamam (analysis/04b_leakage_gd_v1_2026-10-02_results.csv; AUC'ler kayıtlıyla aynı, maks fark 1e-16).
 - **05 SONUÇ (birincil, 2026-10-02):** n = 136 (suçlu 70, cg 66); ARI medyanı 0,636 vs 0,678; Mann-Whitney p = 0,395;
   rank-biserial −0,085 [−0,28; 0,11]; HL −0,030 [−0,10; 0,04]; yaş + EMG kovaryatlı p = 0,89. NEGATİF.
