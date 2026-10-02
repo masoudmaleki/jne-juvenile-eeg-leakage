@@ -248,3 +248,5 @@ Dayanak: 03 batch negatif kontrolü (analysis/03_batch_negcontrol_v1_2026-10-01_
 - Ekler varsayılan olarak hakemliğe girmez. İddiayı taşıyan içerik ana metinde kalır: 07d/07f karar kuralları, beş transfer AUC'si, p değerleri ve GA'lar. Ek dosya başına ≤50 MB, toplam ≤150 MB.
 - YZ beyanı: Teşekkür bölümünde IOP şablonuyla ayrı beyan. Yöntem'de analizlerde kullanılan araç ve model adları yazılır: Claude Code, model Claude Opus 5.5 (git Co-Authored-By kaydı: 15 commit'in 15'inde; ilk c325305, son 591d126; başka model adı yok). Sohbet tarafındaki denetimlerin modelleri yazar tarafından eklenecek.
 - Açık erişim: TÜBİTAK–IOP Oku-Yayımla 2026–2028 (EKUAL). Sorumlu yazarın kurumu EKUAL üyesi olmalı.
+- 2026-10-02: Makale LaTeX ile yazılacak (IOP iopjournal sınıfı, ioplatextemplate.zip). Bölümleri sohbet tarafı ayrı .tex dosyaları olarak yazar. Tabloların .tex hâlini PyCharm kayıtlı CSV'lerden üretir; hiçbir sayı elle yazılmaz. Kaynaklar manuscript/refs.bib dosyasında (BibTeX, numaralı).
+- Grup etiketleri betikte tek bir sözlükten (LABELS) gelir. Ad kararı verilince yalnız bu sözlük değişir.

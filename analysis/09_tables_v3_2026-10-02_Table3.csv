@@ -1,0 +1,5 @@
+﻿Analysis,n (offenders / cg),"ARI median, offenders","ARI median [Q1–Q3], cg",U,p,Rank-biserial r [95% CI],HL shift [95% CI],Adjusted offender coefficient [95% CI],p (age),p (EMG)
+Primary: Mann–Whitney U,70 / 66,0.636,0.678 [0.493–0.804],2114,0.395,"−0.08 [−0.28, 0.11]","−0.03 [−0.10, 0.04]",–,–,–
+Sensitivity: incl. short-recording sg (C1/O1 only),74 / 66,0.630,0.678 [0.493–0.804],2182,0.279,"−0.11 [−0.29, 0.09]","−0.04 [−0.10, 0.03]",–,–,–
+OLS: ARI ~ offender + age + EMG (HC3),n = 136,–,–,–,0.886,–,–,"0.01 [−0.07, 0.08]",0.032,0.050
+OLS: rank(ARI) ~ offender + age + EMG (HC3),n = 136,–,–,–,0.988,–,–,"−0.10 [−13.81, 13.60]",0.033,0.169

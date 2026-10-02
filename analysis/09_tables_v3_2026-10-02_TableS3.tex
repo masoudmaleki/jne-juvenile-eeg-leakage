@@ -1,0 +1,43 @@
+\begin{table}[htbp]
+\centering
+\caption{[CAPTION]}
+\label{tab:TableS3}
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{p{3.2cm}p{6.5cm}cccl}
+\toprule
+Item & Setting & sg & sg2 & cg & Source \\
+\midrule
+\multicolumn{6}{l}{\textit{A. Parameters (prespecified)}} \\
+Segment & Fixed 465 s from the 3rd eyes-closed marker + 5 s; two halves H1, H2 (232.5 s each) &  &  &  & CLAUDE.md, line 46 \\
+PSD & Welch, 4 s Hann window, 50\% overlap (0.25 Hz resolution) &  &  &  & CLAUDE.md, line 47 \\
+Bands (relative power) & delta 1--4, theta 4--8, alpha 8--13, beta 13--30 Hz; denominator = 1--30 Hz total; gamma not a feature (EMG control only) &  &  &  & CLAUDE.md, line 48 \\
+Aperiodic fit (FOOOF) & fooof 1.1; primary: aperiodic mode 'fixed', 3--30 Hz &  &  &  & CLAUDE.md, line 49 \\
+Aperiodic fit, sensitivity & 'knee' mode, 2--30 Hz; sensitivity analysis only, no post hoc choice &  &  &  & CLAUDE.md, line 50 \\
+IAF & Primary: strongest FOOOF peak in 7--13 Hz; secondary: centre of gravity in 7--13 Hz of the aperiodic-removed spectrum; no PSD argmax &  &  &  & CLAUDE.md, line 51 \\
+EMG index & Slope of log10 PSD vs log10 f, 30--40 Hz (flatter/positive = more muscle); covariate in group analyses &  &  &  & CLAUDE.md, line 53 \\
+Channel exclusion & Primary FOOOF R$^{2}$ $<$ 0.9 OR EMG index robust z $>$ 3 (median + 3$\cdot$1.4826$\cdot$MAD, one-sided); determined on the full segment, same set for halves &  &  &  & CLAUDE.md, line 54 \\
+ROI features & Computed from the mean spectrum of the retained channels &  &  &  & CLAUDE.md, line 55 \\
+Atypical-spectrum rule & $>$ 25\% of channels ($>$ 32/128) excluded $\rightarrow$ subject flagged; only the EMG rule applied, ROI from all remaining channels; included in primary, excluded in sensitivity analyses &  &  &  & CLAUDE.md, line 59 \\
+Vigilance & Theta/alpha ratio in 30 s windows; slope (log10 ratio per min) as vigilance index; features also for H1 and H2 &  &  &  & CLAUDE.md, line 56 \\
+EMG index caveat & Includes the roll-off of the preprocessing low-pass FIR filter; valid as a relative index only &  &  &  & 02\_features\_v2\_rapor\_2026-10-01.md, line 51 \\
+\midrule
+\multicolumn{6}{l}{\textit{B. QC summary, median [Q1--Q3]}} \\
+Subjects processed (n) &  & 45 & 24 & 66 & 02\_features\_v2\_2026-10-01\_subject\_qc.csv \\
+EMG index (channel median, all channels) &  & $-$1.88 [$-$2.37, $-$1.38] & $-$2.56 [$-$3.04, $-$1.71] & $-$2.04 [$-$2.52, $-$1.41] & 02\_descriptive\_by\_group\_v2\_2026-10-01.csv \\
+Excluded channels, total &  & 3 [1--7] & 3.5 [1--8] & 3 [1--6] & 02\_descriptive\_by\_group\_v2\_2026-10-01.csv \\
+\ldots{} due to R$^{2}$ $<$ 0.9 &  & 0 [0--3] & 0 [0--4.25] & 0 [0--1] & 02\_descriptive\_by\_group\_v2\_2026-10-01.csv \\
+\ldots{} due to EMG z $>$ 3 &  & 2 [0--3] & 1 [0--4] & 1 [0--4] & 02\_descriptive\_by\_group\_v2\_2026-10-01.csv \\
+FOOOF R$^{2}$, channel median &  & 0.989 [0.987--0.990] & 0.985 [0.983--0.990] & 0.990 [0.986--0.992] & 02\_descriptive\_by\_group\_v2\_2026-10-01.csv \\
+FOOOF R$^{2}$, posterior ROI &  & 0.991 [0.988--0.994] & 0.983 [0.976--0.992] & 0.990 [0.984--0.994] & 02\_descriptive\_by\_group\_v2\_2026-10-01.csv \\
+Theta/alpha slope, global (log10 ratio/min) &  & 0.014 [$-$0.006, 0.037] & 0.020 [0.008--0.029] & 0.026 [0.005--0.059] & 02\_descriptive\_by\_group\_v2\_2026-10-01.csv \\
+Theta/alpha slope, posterior &  & 0.009 [$-$0.007, 0.024] & 0.017 [0.010--0.032] & 0.029 [0.007--0.070] & 02\_descriptive\_by\_group\_v2\_2026-10-01.csv \\
+Atypical-spectrum subjects ($>$ 32 channels excluded) &  & 0 & 2 & 0 & 02\_features\_v2\_2026-10-01\_subject\_qc.csv \\
+\bottomrule
+\end{tabular}
+}
+\par\smallskip
+\begin{minipage}{\textwidth}\raggedright\scriptsize
+Notes. Panel A: parameters fixed before any group comparison (CLAUDE.md, 'prespecified primary analysis'); line numbers refer to the files at commit time. Panel B: full 465 s segment, primary FOOOF fit; descriptive only, no group test. Subjects without a long eyes-closed block or with a missing data file are not included (Table S-n).
+\end{minipage}
+\end{table}
