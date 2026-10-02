@@ -8,7 +8,7 @@ Hedef: SCI-E Q2 (iyi kurulursa Q1'e yakın) makale. Hazır Excel öznitelikleriy
 - Biosemi ActiveTwo, 128 EEG + 3 ECG + 2 EOG kanalı. 2048 Hz kayıt, 128 Hz'e indirilmiş. Şebeke frekansı 60 Hz. events.tsv yok.
 - Protokol: 4 dk göz kapalı/açık dönüşümlü (C-O-C-O), ardından 8 dk göz kapalı.
 - `*_acq-epochs_eeg.set`: 4 epok (README'ye göre kırpma sonrası yaklaşık 50 s; yan dosyadaki "60 s" bilgisi güvenilmez).
-- `*_desc-preprocessed_eeg.set`: Yan dosyada 720 s yazıyor, yani 12 dakikanın tamamı muhtemelen içeride (README bunun aksini söylüyor). İLK DOĞRULANACAK ŞEY BU.
+- `*_desc-preprocessed_eeg.set`: Yan dosyada 720 s yazıyor, yani 12 dakikanın tamamı muhtemelen içeride (README bunun aksini söylüyor). İLK DOĞRULANACAK ŞEY BU. [Not 2026-10-02: DOĞRULANDI (01 audit) — preprocessed = tam ~740 s kayıt; bkz. "Audit sonuçları".]
   Önişleme: 1–40 Hz FIR, ortalama referans, ASR, ICA + ICLabel.
 - `code/` klasöründe hazır öznitelikler var: 2048 Excel dosyası (4 bant × C/O × 2 epok × 128 kanal) ve `CAR_FREC_DATS.mat`. Pipeline'ı üreten betik yok.
 - Yan JSON dosyalarındaki üstveri şablon halinde: 140 deneğin hepsinde kurum "Oasis" yazıyor, kontroller dahil. Site bilgisi bu dosyalardan çıkarılamaz.
@@ -20,6 +20,7 @@ Hedef: SCI-E Q2 (iyi kurulursa Q1'e yakın) makale. Hazır Excel öznitelikleriy
 - => Ham suçlu/kontrol sınıflandırması büyük olasılıkla madde kullanımını, site farkını ve sosyoekonomik farkı öğrenir. Yüksek doğruluk tek başına bulgu değildir.
 
 ## Şüpheli denekler (annex dosya boyutlarından çıkarıldı, açılıp doğrulanacak)
+[Not 2026-10-02: DOĞRULANDI (01 audit); güncel durum "Audit sonuçları" bölümünde. sub-1084sg2 için "~20 s" bilgisi yanlıştı: veri harici .fdt'de ve dosya yok.]
 - sub-1009sg, 1013sg, 1020sg, 1021sg: epoklu dosya ~7 MB (normali ~13,6 MB, muhtemelen 2 epok), işlenmiş dosya ~11 MB (normali ~50 MB).
 - sub-1084sg2: işlenmiş dosya 1,3 MB (~20 s).
 - Kısa kayıtların hepsi suçlu grupta. Bu denekler dışlanmalı ya da ayrıca raporlanmalı.
@@ -139,6 +140,8 @@ Dayanak: 03 batch negatif kontrolü (analysis/03_batch_negcontrol_v1_2026-10-01_
     4 ardışık örtüşmesiz 116,25 s parçaya bölünür (satır = denek × parça, 400 satır). B seti (128 kanal × 4 bant;
     Welch 4 s Hann %50; payda 1–30 Hz); kanal dışlaması YOK.
     Karar: p < 0,05 → kanal düzeyindeki ayrışma uzun blokta da var; 06'daki null sonuç ROI ve model seçimine özgüdür (açıkça yazılır).
+    [Not 2026-10-02 (DENETIM_RAPORU_2, E2): kuralın ifade hatası — "06" (sg+sg2 vs cg) değil, aynı grupları karşılaştıran
+    03(b) sg vs cg (ROI + LR, 0,53, n = 111) ile 07e (kanal + SVM, 0,746, n = 100) eşleştirilmeli. Sonuç değişmez.]
     p ≥ 0,05 → ayrışma oturum başındaki kapalı/açık epoklarla sınırlı.
   - **SONUÇ (2026-10-02, analysis/07de_transfer_longblock_rapor_v1_2026-10-02.md):**
     07d transfer AUC: A tüm 0,549 (p 0,22), B tüm 0,589 (p 0,19), B açık 0,553 (p 0,29) → hiçbiri transfer etmiyor →
@@ -153,13 +156,19 @@ Dayanak: 03 batch negatif kontrolü (analysis/03_batch_negcontrol_v1_2026-10-01_
   - Karar (tek ölçüt): p < 0,05 → "transfer ediyor"; makaledeki iddia daraltılır. Aksi halde "transfer kanıtı yok" iddiası beş modelin hepsi için geçerli.
     Çoklu karşılaştırma düzeltmesi yok ("transfer kanıtı yok" iddiası açısından tutucu).
   - Zaman kaydı: bu tanım, analiz çalıştırılmadan önce ayrı bir git commit'i ile kaydedildi.
+  - **SONUÇ (2026-10-02; tanım commit 6a4439c, sonuç commit 11790e8; analysis/07f_longblock_transfer_rapor_v1_2026-10-02.md):**
+    transfer AUC 0,582 (tekrarlar 0,526–0,631), sıfır 0,504, p = 0,104 → transfer kanıtı YOK →
+    "no evidence of transfer" iddiası beş modelin hepsi için geçerli (07c, 07d × 3, 07f).
+- 07e betimsel öznitelik haritası (test yok): analysis/07e_feature_map_v1_2026-10-02.csv, figures/FigS_07e_feature_map_v1.*
+  (|g| ≤ 0,58; sg'de göreli delta ↑ (C, D blokları), teta ↓ (en belirgin C bloğu), alfa ≈ 0).
 - DENETIM_RAPORU_2026-10-02.md D1–D12 uygulandı: v2 raporlar (04b, 06, 07, 07abc), 08 v2 şekiller, 09 Tablo 1 / Tablo S-n, iskelet v3.
 - 04-B GD eki tamam (analysis/04b_leakage_gd_v1_2026-10-02_results.csv; AUC'ler kayıtlıyla aynı, maks fark 1e-16).
 - **05 SONUÇ (birincil, 2026-10-02):** n = 136 (suçlu 70, cg 66); ARI medyanı 0,636 vs 0,678; Mann-Whitney p = 0,395;
   rank-biserial −0,085 [−0,28; 0,11]; HL −0,030 [−0,10; 0,04]; yaş + EMG kovaryatlı p = 0,89. NEGATİF.
+- [Not 2026-10-02 (D2): doğru ifade "AUC 0,54 [%95 GA 0,44–0,63]; tekrar ortalaması 0,51"; dışlama yaklaşık.]
 - **06 SONUÇ (2026-10-02):** suçlu (69) vs cg (66), 14 öznitelik: AUC 0,511 (tekrarlar 0,46–0,57); bootstrap GA 0,44–0,63
   (DeLong 0,44–0,64) → AUC > 0,63 (Cohen d ≈ 0,48) %95 güvenle dışlanır.
-- Makale iskeleti: analysis/MAKALE_ISKELETI_v1.md.
+- Makale iskeleti: analysis/MAKALE_ISKELETI_v1.md. [Not 2026-10-02: güncel sürüm analysis/MAKALE_ISKELETI_v4.md.]
 - **GD:** analysis/metrics_gd.py (referans koddan uyarlandı; 7 örnekte fark 0). Girdi [ACC, Duyarlılık, Özgüllük, F1], pozitif = suçlu.
   04-B ve 07 tablolarına ek sütun; ana metrik AUC. NAoSP şimdilik yok.
 - **05 Alfa reaktivitesi: TEK birincil hipotez testi.** Posterior ROI, (göz kapalı alfa − göz açık alfa) / (kapalı + açık),
@@ -171,10 +180,12 @@ Dayanak: 03 batch negatif kontrolü (analysis/03_batch_negcontrol_v1_2026-10-01_
   (Aşağıdaki "Planlanan analizler" listesi bu çerçeveye tabidir; birincil test yalnız 05'tir.)
 
 ## Analiz ilkeleri
-- Birincil veri: 480 s göz kapalı blok (n=135). Duyarlılık analizinde tüm deneklerin ilk 60 s C bloğu kullanılır (n=139).
+- Birincil veri: 480 s göz kapalı blok (n=135). Duyarlılık analizinde tüm deneklerin ilk 60 s C bloğu kullanılır (n=139). [Not 2026-10-02: YAPILMADI — 2026-10-01 çerçeve değişikliği ve "yeni analiz eklenmez" ilkesi; Tablo S2'de planlanıp yapılmayanlar listesinde.]
 - Batch negatif kontrolü ZORUNLU:
   (a) sg ile sg2 ayrılabiliyor mu? İkisi de suçlu, sadece kayıt dönemi farklı. Yüksek doğruluk çıkarsa batch etkisinin kanıtıdır.
+      [Not 2026-10-02: Adım 0 ile GEÇERSİZ — sg ile sg2 şiddet suçu, alkol ve yaşta da farklı; pozitif sonuç "batch" diye yorumlanamaz (03 plan v2).]
   (b) sg + cg üzerinde eğitilen model, sg2 ile cg'yi (zamanca örtüşen kayıtlar) ayırabiliyor mu?
+      [Not 2026-10-02 (D4): "örtüşen" değil "kısmen örtüşen" — aynı ay yalnız Mayıs–Haziran 2022 (sg2 11, cg 9).]
 - Doğrulama denek bazında yapılır (LOSO/LOO). Epok düzeyinde bölme yasak. Öznitelik seçimi ve ölçekleme iç döngüde kalır.
 - Planlanan analizler:
   1. Confound kontrollü tasarım: madde kullanmayan, eşleştirilmiş alt örneklem + regresyonla confound çıkarma.
