@@ -1,0 +1,5 @@
+﻿Analysis,Comparison (n),AUC from mean score [bootstrap 95% CI],DeLong 95% CI,Repeat-mean AUC [2.5–97.5],Significance threshold (null 97.5th pct.),p,α,"Sensitivity variants, range"
+06: offenders vs cg (prespecified null quantification),offenders (sg + sg2) vs cg (69 / 66),0.54 [0.44–0.63],0.44–0.64,0.51 [0.46–0.57],–,–,–,–
+03(b) reference,sg vs cg (sg 45 / cg 66),–,–,0.53 [0.43–0.63],–,–,–,0.50–0.56
+03(a) negative control,sg vs sg2 (sg 45 / sg2 24),–,–,0.63 [0.54–0.71],0.65,0.053,0.025,0.58–0.63
+03(b) transfer (within fold),held-out cg vs sg2 (cg 66 / sg2 24),–,–,0.44 [0.29–0.61],0.65,0.771,0.025,0.42–0.53

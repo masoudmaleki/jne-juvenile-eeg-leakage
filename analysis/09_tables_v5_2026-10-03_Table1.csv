@@ -1,0 +1,19 @@
+﻿Variable,sg (n=49),sg2 (n=25),offenders (sg + sg2) (n=74),cg (n=66),p offenders vs cg,p sg vs sg2,test
+Age (years),17.2 ± 1.1; 17.0 [17.0–18.0] (n=49),16.6 ± 1.0; 17.0 [16.0–17.0] (n=25),17.0 ± 1.1; 17.0 [16.0–18.0] (n=74),16.3 ± 1.1; 16.0 [16.0–17.0] (n=66),< 0.001,0.031,Mann–Whitney U
+Years of education,8.0 ± 2.6; 8.0 [6.0–10.0] (n=49),7.2 ± 2.6; 7.0 [6.0–9.0] (n=25),7.8 ± 2.6; 8.0 [6.0–10.0] (n=74),10.4 ± 0.8; 10.0 [10.0–11.0] (n=66),< 0.001,0.272,Mann–Whitney U
+Socioeconomic stratum (1–3),1.1 ± 0.3; 1.0 [1.0–1.0] (n=49),1.0 ± 0.0; 1.0 [1.0–1.0] (n=25),1.1 ± 0.3; 1.0 [1.0–1.0] (n=74),1.7 ± 0.5; 2.0 [1.0–2.0] (n=66),< 0.001,0.072,Mann–Whitney U
+School dropout,41/49 (84%),19/25 (76%),60/74 (81%),0/66 (0%),< 0.001,0.533,Fisher exact
+Gang member,19/49 (39%),4/25 (16%),23/74 (31%),1/66 (2%),< 0.001,0.063,Fisher exact
+Domestic violence,6/49 (12%),5/25 (20%),11/74 (15%),1/66 (2%),0.005,0.492,Fisher exact
+Displaced by violence,5/49 (10%),2/25 (8%),7/74 (9%),3/66 (5%),0.334,1.000,Fisher exact
+Psychoactive substance use,36/49 (73%),21/25 (84%),57/74 (77%),12/66 (18%),< 0.001,0.389,Fisher exact
+Alcohol,25/49 (51%),20/25 (80%),45/74 (61%),12/66 (18%),< 0.001,0.023,Fisher exact
+Marijuana,34/49 (69%),21/25 (84%),55/74 (74%),0/66 (0%),< 0.001,0.261,Fisher exact
+Cocaine,29/49 (59%),20/25 (80%),49/74 (66%),0/66 (0%),< 0.001,0.118,Fisher exact
+Age of first use (users),13.2 ± 2.3; 14.0 [13.0–14.0] (n=36),13.7 ± 1.7; 14.0 [13.0–14.0] (n=21),13.4 ± 2.1; 14.0 [13.0–14.0] (n=57),14.6 ± 0.5; 15.0 [14.0–15.0] (n=12),0.009,0.505,Mann–Whitney U
+Violent primary offence (offenders),42/49 (86%),6/25 (24%),48/74 (65%),–,–,< 0.001,Fisher exact
+Recidivist (offenders),18/49 (37%),6/25 (24%),24/74 (32%),–,–,0.306,Fisher exact
+Recording clock time (h),11.5 ± 2.3; 10.9 [9.1–14.0] (n=49),11.9 ± 2.2; 11.7 [9.8–14.2] (n=25),11.7 ± 2.2; 10.9 [9.7–14.0] (n=74),11.5 ± 1.7; 10.8 [9.9–13.1] (n=66),0.823,0.248,Mann–Whitney U
+Recording after 14:00,14/49 (29%),7/25 (28%),21/74 (28%),6/66 (9%),0.005,1.000,Fisher exact
+Level of education (coded differently by group; descriptive only),Basic primary: 13; Basic secondary: 36,Basic primary: 6; Basic secondary: 19,Basic primary: 19; Basic secondary: 55,Basic secondary: 6; High school: 1; Middle school: 57; Technical: 1; University: 1,–,–,none
+Recording period (first–last month),2021-07 – 2021-09,2021-12 – 2022-06,2021-07 – 2022-06,2022-02 – 2022-09,–,–,none

@@ -254,3 +254,7 @@ Dayanak: 03 batch negatif kontrolü (analysis/03_batch_negcontrol_v1_2026-10-01_
 - 2026-10-02 (literatür): Rodríguez-Álvarez ve ark. 2023 (IEEE C3, doi 10.1109/c358072.2023.10436269) aynı projeden ve aynı kohorttan: 74 suçlu (50'si ıslah merkezinde, 24'ü kurum dışı pedagojik tedbir altında) ve 66 kontrol. Dinlenim kaydı değil, görev EEG'si (HEP) kullanılmış. EOG ve ECG kaydedilmiş ama yayımlanan dosyalarda yok. sg ve sg2'nin bu iki gruba karşılık gelip gelmediği doğrulanmadı; veri sahiplerine 2026-10-02'de e-posta gönderildi.
 - 2026-10-02: Yöntem taslağı v1 yazıldı (manuscript/sections/methods.tex).
 - 2026-10-02: 09 v4 tabloları (p biçimi: 0.050 görünen ama 0,05'ten küçük değerler ek ondalıkla; tex'te Source sütunu yok); Yöntem bilgi dökümü analysis/09_info_v1_2026-10-02.txt.
+- 2026-10-03: Şekil ve tablo numaraları metindeki ilk atıf sırasına göre verildi. Şekil 1 = kohort (Fig5 dosyası),
+  2 = sızıntı (Fig1), 3 = birincil (Fig3), 4 = ROI (Fig4), 5 = keşifsel (Fig2). Ek tablolar: S1 = karar günlüğü,
+  S2 = TableSn, S3 = TableS3, S4 = TableS5, S5 = TableS_leak, S6 = TableS4. Dosya adları değişmez;
+  yeniden adlandırma yalnız SUBMISSION/ kopyalarında.

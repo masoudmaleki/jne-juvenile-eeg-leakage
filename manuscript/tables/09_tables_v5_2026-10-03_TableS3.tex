@@ -1,0 +1,43 @@
+\begin{table}[htbp]
+\centering
+\caption{Feature and quality-control parameters (A, fixed before any group comparison) and quality-control summary by group (B, descriptive).}
+\label{tab:TableS3}
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{p{3.2cm}p{6.5cm}ccc}
+\toprule
+Item & Setting & sg & sg2 & cg \\
+\midrule
+\multicolumn{5}{l}{\textit{A. Parameters (prespecified)}} \\
+Segment & Fixed 465 s from the 3rd eyes-closed marker + 5 s; two halves H1, H2 (232.5 s each) &  &  &  \\
+PSD & Welch, 4 s Hann window, 50\% overlap (0.25 Hz resolution) &  &  &  \\
+Bands (relative power) & delta 1--4, theta 4--8, alpha 8--13, beta 13--30 Hz; denominator = 1--30 Hz total; gamma not a feature (EMG control only) &  &  &  \\
+Aperiodic fit (FOOOF) & fooof 1.1; primary: aperiodic mode 'fixed', 3--30 Hz &  &  &  \\
+Aperiodic fit, sensitivity & 'knee' mode, 2--30 Hz; sensitivity analysis only, no post hoc choice &  &  &  \\
+IAF & Primary: strongest FOOOF peak in 7--13 Hz; secondary: centre of gravity in 7--13 Hz of the aperiodic-removed spectrum; no PSD argmax &  &  &  \\
+EMG index & Slope of log10 PSD vs log10 f, 30--40 Hz (flatter/positive = more muscle); covariate in group analyses &  &  &  \\
+Channel exclusion & Primary FOOOF R$^{2}$ $<$ 0.9 OR EMG index robust z $>$ 3 (median + 3$\cdot$1.4826$\cdot$MAD, one-sided); determined on the full segment, same set for halves &  &  &  \\
+ROI features & Computed from the mean spectrum of the retained channels &  &  &  \\
+Atypical-spectrum rule & $>$ 25\% of channels ($>$ 32/128) excluded $\rightarrow$ subject flagged; only the EMG rule applied, ROI from all remaining channels; included in primary, excluded in sensitivity analyses &  &  &  \\
+Vigilance & Theta/alpha ratio in 30 s windows; slope (log10 ratio per min) as vigilance index; features also for H1 and H2 &  &  &  \\
+EMG index caveat & Includes the roll-off of the preprocessing low-pass FIR filter; valid as a relative index only &  &  &  \\
+\midrule
+\multicolumn{5}{l}{\textit{B. QC summary, median [Q1, Q3]}} \\
+Participants processed (n) &  & 45 & 24 & 66 \\
+EMG index (channel median, all channels) &  & $-$1.88 [$-$2.37, $-$1.38] & $-$2.56 [$-$3.04, $-$1.71] & $-$2.04 [$-$2.52, $-$1.41] \\
+Excluded channels, total &  & 3 [1, 7] & 3.5 [1, 8] & 3 [1, 6] \\
+\ldots{} due to R$^{2}$ $<$ 0.9 &  & 0 [0, 3] & 0 [0, 4.25] & 0 [0, 1] \\
+\ldots{} due to EMG z $>$ 3 &  & 2 [0, 3] & 1 [0, 4] & 1 [0, 4] \\
+FOOOF R$^{2}$, channel median &  & 0.989 [0.987, 0.990] & 0.985 [0.983, 0.990] & 0.990 [0.986, 0.992] \\
+FOOOF R$^{2}$, posterior ROI &  & 0.991 [0.988, 0.994] & 0.983 [0.976, 0.992] & 0.990 [0.984, 0.994] \\
+Theta/alpha slope, global (log10 ratio/min) &  & 0.014 [$-$0.006, 0.037] & 0.020 [0.008, 0.029] & 0.026 [0.005, 0.059] \\
+Theta/alpha slope, posterior &  & 0.009 [$-$0.007, 0.024] & 0.017 [0.010, 0.032] & 0.029 [0.007, 0.070] \\
+Atypical-spectrum participants ($>$ 32 channels excluded) &  & 0 & 2 & 0 \\
+\bottomrule
+\end{tabular}
+}
+\par\smallskip
+\begin{minipage}{\textwidth}\raggedright\scriptsize
+Notes. Panel A: parameters fixed before any group comparison (analysis log, table~\ref{tab:TableLog}). Panel B: full 465 s segment, primary FOOOF fit; descriptive only, no group test. Participants without a long eyes-closed block or with a missing data file are not included (table~\ref{tab:TableSn}).
+\end{minipage}
+\end{table}

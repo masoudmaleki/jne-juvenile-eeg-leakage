@@ -1,0 +1,15 @@
+# Table S5. Integrity audit of the precomputed spreadsheet features (04-A)
+
+| Item | Finding | Source |
+|---|---|---|
+| File structure | 2048 files = 4 bands (ALFA, BETA, DELTA, THETA) × 4 condition-epochs (C_1, C_2, O_1, O_2) × 128 channels; 7 statistics per file | 04a_excel_audit_v1_2026-10-01_structure.csv |
+| Empty (0-byte) files | 1: FR_Dats_band_THETA_EP_C_2_can_B12.xlsx (values available in CAR_FREC_DATS.mat) | 04a_excel_audit_v1_2026-10-01_structure.csv |
+| Participants in the spreadsheet files | 112 (cg 66, Label = 0; sg 46, Label = 1); no sg2 | 04a_excel_audit_v1_2026-10-01_ids.csv |
+| Spreadsheet IDs absent from the published dataset | 12: cg_rs_2013, cg_rs_2024, cg_rs_2025, cg_rs_2027, cg_rs_2035, cg_rs_2039, cg_rs_2041, cg_rs_2058, cg_rs_2069, cg_rs_2073, cg_rs_2076, sg_rs_1011 | 04a_excel_audit_v1_2026-10-01_ids.csv |
+| Published participants absent from the spreadsheet files | 40 (sg2 25, sg 4, cg 11) | 01_data_audit_v2_2026-10-01.csv; 04a_excel_audit_v1_2026-10-01_ids.csv |
+| Statistics computed from 3 values | Kurtosis 1.49999–1.50001 in every cell (population kurtosis of any 3 unequal values = 1.5); max absolute skewness = 0.707107 (bound for 3 values: 1/√2) | 04a_excel_audit_v1_2026-10-01_n_points.csv |
+| SD convention | Sample SD (n − 1): reconstructed middle value within [Min, Max] in 100.0% of cells vs 47.7% with population SD | 04a_excel_audit_v1_2026-10-01_n_points.csv |
+| ID verification (log-power profile correlation) | Best match = own ID in 100/100; r with own ID median 0.915 (range 0.723–0.984); smallest margin over the second-best match 0.151 | 04a_excel_audit_v1_2026-10-01_id_match.csv |
+| Unknown spreadsheet IDs | None of the 12 matched a published recording: best r 0.25–0.66 | 04a_excel_audit_v1_2026-10-01_id_match.csv |
+
+**Notes.** Spreadsheet feature files are part of the published dataset (code/ folder); no spreadsheet result can be reproduced from the published EEG because the cohorts differ. ID verification: z-scored log-power profiles (4 bands × 4 epochs × 128 channels) from the spreadsheet files vs. the same profile recomputed from the published acq-epochs files; Pearson correlation.

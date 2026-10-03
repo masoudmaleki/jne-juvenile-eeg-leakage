@@ -1,0 +1,10 @@
+﻿table,shape_v4,shape_v5,n_numbers_v4,n_numbers_v5,numbers_identical,cells_with_text_change
+Table2,"(10, 10)","(10, 10)",78,78,True,0
+TableS_leak,"(4, 5)","(4, 5)",18,18,True,1
+Table3,"(4, 11)","(4, 11)",51,51,True,0
+Table4,"(4, 9)","(4, 9)",51,51,True,0
+TableS3,"(22, 7)","(22, 7)",213,213,True,31
+TableS5,"(9, 3)","(9, 3)",108,108,True,4
+Table1,"(18, 8)","(18, 8)",314,314,True,0
+TableSn,"(12, 7)","(12, 7)",121,121,True,6
+TableS4,"(11, 15)","(11, 15)",172,172,True,0
