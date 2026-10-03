@@ -278,3 +278,32 @@ Analiz donmuş; bu iki kontrol dış değerlendirme üzerine tanımlanan istisna
 - b) Yerel v1.0.0 kopyası NEMAR aynasından (on006923). README.md ve dataset_description.json aynanın DOI'sini taşıyor; EEG dosyaları OpenNeuro 1.0.0 ile birebir aynı.
 - c) K2 tanımlandığı biçimde hesaplanamadı: her permütasyonun kendi katlama tohumu var, tanımdaki "aynı tohum" şartı sağlanamaz (tanım hatası, sohbet tarafı). Özgün p değerleri kayıtlı değerlerden birebir yeniden üretildi. Gözlenen istatistik 20 tekrarın (N1: 10), permütasyon istatistikleri 5 tekrarın (N1: 1) ortalaması; bu, testleri temkinli yapar. Makalede Yöntem 2.11'de yazıldı; yeniden hesap yapılmadı.
 - d) Yalnız hakem isterse (şimdi değil): eşleşik tekrar sayısıyla p (kayıtlı 20 tekrar 5'erli 4 bloğa; N1'de tek tekrar) ya da 20 tekrarlı yeni sıfır dağılımı. İkisi de ayrı tanım ve ayrı commit ister.
+
+## 2026-10-03 K3 Eşleşik sıfır dağılımı (13_matched_null_v1) — hakem türü istek
+Gerekçe: Gözlenen istatistik 20 tekrarın ortalaması, permütasyon istatistikleri 5 tekrarın; testler tutucu. "Transfer kanıtı yok"
+iddiası anlamsız p'lere dayandığı için sıfır dağılımı gözlenenle aynı biçimde (20 tekrar) yeniden hesaplanır.
+İstek: Astra (yapay zekâ) değerlendirmesi ve yazar kararı (2026-10-03). Tanım, çalıştırmadan önce ayrı commit ile kaydedildi.
+Kapsam (12 test): 03(a); 07 A, 07 B, 07a kapalı, 07a açık, 07b, 07c, 07d A tüm, 07d B tüm, 07d B açık, 07e, 07f.
+Kapsam dışı: 03(b) (gözlenen 0,436 sıfır ortalamasının altında, anlamlı olamaz); 04-B (hiçbir sonuç α yakınındaki bir p'ye
+dayanmıyor; Yöntem 2.11'deki "tutucu" ifadesi 04-B için kalır).
+Yöntem:
+- Özgün sıfırdaki permütasyonların AYNISI kullanılır (aynı etiket karıştırma üreteci ve sırası; 03(a) N = 1000, 07 ailesi N = 200).
+- Permütasyon i için tekrarlar r = 0..19; katlama tohumu = özgün taban + 50·i + r (03(a): SEED + 100000; 07 ailesi: SEED + 700000).
+  r = 0..4 özgün tekrarlardır.
+- Fonksiyonlar özgün betiklerden içe aktarılır; kopyalanmaz, değiştirilmez. Paralel çalışma ve checkpoint serbest; sonuç işçi
+  sayısına ve kaldığı yerden devam etmeye bağlı olmamalı (her (i, r) kendi tohumuyla).
+- Doğrulama: her test ve her permütasyonda r = 0..4 ortalaması kayıtlı sıfır değerine eşit olmalı (|fark| ≤ 1e-12). Tek
+  uyuşmazlıkta o test için sonuç üretilmez; dur ve raporla.
+- Eşleşik sıfır istatistiği = r = 0..19 ortalaması. Gözlenen = kayıtlı 20 tekrar ortalaması (değişmez).
+  p = (k+1)/(N+1), k = eşleşik sıfır ≥ gözlenen sayısı.
+- Test başına rapor: N; gözlenen; özgün sıfırın ortalaması, eşiği (07: tek yönlü %95'lik; 03(a): %97,5'lik) ve p; aynıları
+  eşleşik sıfır için; α (07: 0,05; 03(a): 0,025); iki karar; doğrulamada en büyük |fark|; süre.
+- Özgün kodda kaynak ve transfer testi aynı permütasyon modellerinden çıkıyorsa tek geçişte hesaplanır.
+Karar kuralı (önceden):
+- Duyarlılık analizi: makalede özgün p'ler kalır, eşleşik p'ler ek tabloda verilir.
+- Bir testin α'ya göre kararı değişirse metinde o test için iki p birlikte verilir.
+- Transfer testlerinde (07c, 07d × 3, 07f) eşleşik p < 0,05 → o model için "transfer kanıtı yok" iddiası daraltılır (07d–07f kuralı).
+- 03(a)'da eşleşik p < 0,025 → ROI düzeyinde sg–sg2 ayrışması olarak raporlanır.
+- K3'ten sonra başka analiz yapılmaz.
+Süre sınırı: önce her betik ailesinde bir permütasyonun süresi ölçülür ve toplam tahmin edilir; toplam 12 saati aşarsa
+çalıştırmadan durulur.
