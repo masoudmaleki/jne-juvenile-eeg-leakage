@@ -27,9 +27,9 @@
 
 \begin{abstract}
 \textit{Objective.} Machine-learning studies report high accuracy for separating offenders from controls with brain data, but such results can arise from data leakage and from confounds of recruitment and recording. We asked how much separability survives correct validation in an open resting-state electroencephalography (EEG) dataset of juvenile offenders, and whether it generalises.
-\textit{Approach.} We analysed 128-channel resting-state EEG of 74 male juvenile offenders, labelled as two subgroups (sg and sg2), and 66 controls; group was confounded with recording period, substance use, schooling, socioeconomic background and age. We audited the data and their precomputed features, quantified leakage with naive and nested subject-wise pipelines and label permutations, tested one primary hypothesis (alpha reactivity), quantified the null result of prespecified region-of-interest features and, in exploratory analyses, tested whether a channel-level separation of sg from controls transferred to sg2. All decisions were recorded in a time-stamped analysis log.
-\textit{Main results.} The precomputed features came from a partly different cohort, and most of their statistics were computed from three values. A naive pipeline reached a subject-level area under the ROC curve (AUC) of 0.89--0.91 and still reached 0.79--0.85 with shuffled labels; nested subject-wise validation gave 0.66--0.73. Alpha reactivity did not differ ($p = 0.395$), and region-of-interest features did not separate the groups (AUC 0.54, 95\% confidence interval 0.44--0.63). Channel-level features separated sg from controls (AUC 0.64--0.75), with the largest effects at frontopolar sites, but none of five models showed evidence of transfer to sg2 (AUC 0.55--0.59; upper confidence limits 0.66--0.70).
-\textit{Significance.} Most of the apparent accuracy in this dataset came from leakage, and the remaining separation could neither be shown to generalise to a second offender subgroup nor be separated from recording confounds. EEG classification studies of forensic groups should split data by participant, report permutation nulls and confidence intervals, and test transfer across subgroups or sites.
+\textit{Approach.} We analysed 128-channel resting-state EEG of 74 male juvenile offenders, labelled as two subgroups (sg and sg2), and 66 controls; group was confounded with recording period, substance use, schooling, socioeconomic background and age. We audited the data and their precomputed features, quantified leakage with naive and nested subject-wise pipelines, tested one hypothesis designated as primary (alpha reactivity), quantified the null result of prespecified region-of-interest features and, in exploratory analyses, tested whether a channel-level separation of sg from controls transferred to sg2. All decisions were recorded in a time-stamped analysis log.
+\textit{Main results.} The precomputed features came from a partly different cohort, and most of their statistics were computed from three values. A naive pipeline, built here to illustrate the error, reached a subject-level area under the ROC curve (AUC) of 0.89--0.91 and still 0.79--0.85 with shuffled labels; nested subject-wise validation gave 0.66--0.73. Alpha reactivity did not differ ($p = 0.395$), and region-of-interest features did not separate the groups (AUC 0.54, 95\% confidence interval 0.44--0.63). Channel-level features separated sg from controls (AUC 0.64--0.75; largest effects at frontopolar sites), but none of five models showed evidence of transfer to sg2 (AUC 0.55--0.59; upper confidence limits 0.66--0.70).
+\textit{Significance.} Leakage markedly inflated the apparent accuracy in this dataset, and the remaining separation could neither be shown to generalise to a second offender subgroup nor be separated from recording confounds. EEG classification studies of forensic groups should split data by participant, report permutation nulls and confidence intervals, and test transfer across subgroups or sites.
 \end{abstract}
 
 \input{sections/introduction}
@@ -51,7 +51,7 @@
 
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{figures/Fig1_leakage_v3}
+  \includegraphics[width=\textwidth]{figures/Fig1_leakage_v4}
   \caption{Data leakage inflated the classification of offenders versus controls (precomputed spreadsheet features, 112 participants). (a) Subject-level AUC of the naive pipelines N1--N4 and the nested subject-wise pipeline P, for the support vector machine (SVM) and the random forest (RF); bars show the 2.5--97.5\% range across cross-validation repeats. Shading marks leakage through row-wise splitting (N1, N2) and through feature selection on all data (N1, N3). (b) Null distributions of the subject-level AUC under 200 subject-level label permutations (violins) and the AUC with the real labels (diamonds). The null of N1 lies at 0.79--0.85, whereas that of P lies near 0.5. (c) Golden Distance computed from accuracy, sensitivity, specificity and F1 (lower is better). (d) Golden Distance polygons of the random forest for N1 and P. Accuracy (ACC), sensitivity (Sen), specificity (Spe) and F1 lie on four axes; the outer square is the ideal model, with all four metrics equal to 1. GD was 0.38 for N1 and 0.64 for P. The naive pipelines were built in this study to illustrate the error; they do not reproduce any published analysis of these data.}
   \label{fig:leakage}
 \end{figure}
@@ -65,8 +65,8 @@
 
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{figures/Fig4_prespecified_null_v3}
-  \caption{Prespecified region-of-interest (ROI) features did not separate the groups. AUC of L2-regularised logistic regression on the 14 ROI features of the long eyes-closed block. Offenders (sg and sg2) versus controls (06): AUC of repeat-averaged scores with subject-bootstrap 95\% CI (filled marker), and repeat-mean AUC with the 2.5--97.5\% range across repeats (open marker; not a CI). AUCs above 0.63 are approximately excluded (shaded). Batch negative control (03): sg versus controls; sg versus sg2 ($p = 0.053$, tested at $\alpha = 0.025$); and transfer of the sg-versus-control model to sg2 (held-out controls versus sg2). For the same groups and block, channel-level features gave an AUC of 0.75 (figure~\ref{fig:cascade}a); the two analyses differ in feature resolution, model, channel exclusion and sample (111 vs 100 participants), and these factors were not separated.}
+  \includegraphics[width=\textwidth]{figures/Fig4_prespecified_null_v4}
+  \caption{Prespecified region-of-interest (ROI) features did not separate the groups. AUC of L2-regularised logistic regression on the 14 ROI features of the long eyes-closed block. Offenders (sg and sg2) versus controls (06): AUC of repeat-averaged scores with subject-bootstrap 95\% CI (filled marker), and repeat-mean AUC with the 2.5--97.5\% range across repeats (open marker; not a CI). AUCs above 0.63 are approximately excluded for these predictions (shaded; participant sampling only). Batch negative control (03): sg versus controls; sg versus sg2 ($p = 0.053$, tested at $\alpha = 0.025$); and transfer of the sg-versus-control model to sg2 (held-out controls versus sg2). For the same groups and block, channel-level features gave an AUC of 0.75 (figure~\ref{fig:cascade}a); the two analyses differ in feature resolution, model, channel exclusion and sample (111 vs 100 participants), and these factors were not separated.}
   \label{fig:roi}
 \end{figure}
 
@@ -87,7 +87,10 @@
 \setlength{\textwidth}{\linewidth}
 \input{tables/09_tables_v5_2026-10-03_Table3}
 \end{landscape}
+\begin{landscape}
+\setlength{\textwidth}{\linewidth}
 \input{tables/09_tables_v5_2026-10-03_Table4}
+\end{landscape}
 
 % ---------------------------------------------------------------- Back matter
 \ack{We thank the creators of the dataset for making their recordings openly available. During the preparation of this manuscript, the authors used Claude Code (Anthropic; model Claude Opus 5.5) to write and run the analysis code, and Claude Opus 5.5 (Anthropic) to audit the analyses and to support the writing. The authors reviewed, validated and critically assessed all AI-assisted outputs and take full responsibility for the content of the manuscript.}
@@ -114,10 +117,7 @@
 \renewcommand{\thetable}{S\arabic{table}}
 \renewcommand{\thefigure}{S\arabic{figure}}
 \setcounter{table}{0}
-\begin{table}[htbp]
-\caption{Analysis log: every plan, decision rule and change, and whether each preceded the relevant result. [IN PREPARATION: English version of the decision log, rows 1--38.]}
-\label{tab:TableLog}
-\end{table}
+\input{tables/10_tableS1_log_v2_2026-10-03}
 \input{tables/09_tables_v5_2026-10-03_TableSn}
 \input{tables/09_tables_v5_2026-10-03_TableS3}
 \input{tables/09_tables_v5_2026-10-03_TableS5}

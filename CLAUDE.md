@@ -258,3 +258,17 @@ Dayanak: 03 batch negatif kontrolü (analysis/03_batch_negcontrol_v1_2026-10-01_
   2 = sızıntı (Fig1), 3 = birincil (Fig3), 4 = ROI (Fig4), 5 = keşifsel (Fig2). Ek tablolar: S1 = karar günlüğü,
   S2 = TableSn, S3 = TableS3, S4 = TableS5, S5 = TableS_leak, S6 = TableS4. Dosya adları değişmez;
   yeniden adlandırma yalnız SUBMISSION/ kopyalarında.
+
+## 2026-10-03 Gönderim öncesi kontroller (dış değerlendirme sonrası)
+Analiz donmuş; bu iki kontrol dış değerlendirme üzerine tanımlanan istisnadır. Tanım, çalıştırmadan önce ayrı commit ile kaydedildi.
+- K1 Bütünlük denetimi (11_integrity_v1): v1.0.0/ içindeki her dosyanın boyutu ve SHA256'sı,
+  analysis/ds006923_v1.0.0_manifest.csv ile karşılaştırılır (OpenNeuro ds006923 1.0.0; 3034 dosya).
+  Karar kuralı yok; yalnız rapor. Uyuşmayan ya da eksik dosya, v1.0.0/ DIŞINDA _redownload/ klasörüne
+  yeniden indirilir (openneuro-py: --dataset ds006923 --tag 1.0.0 --include <yol>, ya da
+  https://data.nemar.org/on006923/v1.0.0/<yol>), SHA256'sı manifestle doğrulanır; Excel dosyasıysa
+  112 x 7 değeri CAR_FREC_DATS.mat'teki karşılığıyla karşılaştırılır (en büyük mutlak fark).
+- K2 Eşleştirilmiş permütasyon p değerleri (12_matched_perm_p_v1): makaledeki her permütasyon testinde
+  gözlenen istatistik, sıfır dağılımında kullanılan tekrarlarla AYNI tekrarlar (aynı CV tohumları)
+  üzerinden yeniden hesaplanır; p = (k+1)/(N+1). Yeni model eğitimi yok; yalnız kayıtlı tekrar başına
+  değerler ve kayıtlı sıfır dağılımları okunur. Önceden belirlenmiş kararlar değişmez; eşleştirilmiş p
+  duyarlılık sonucu olarak raporlanır.
