@@ -1,0 +1,12 @@
+bc227d8 Ek Tablo S1 v3: karar günlüğü v2 (49 satır), commit kimlikleri dolduruldu
+0265f51 CLAUDE.md: K1/K2 sonuç notları
+ef3ef0d yazim v6: Yontem K1/K2 cumleleri, S2->S1 atfi, tablolar v6
+8c22ef7 09 v6: denetim tablosu düzeltmesi (eşleşik p tablosu üretilmedi)
+60bac64 K2 eşleştirilmiş permütasyon p değerleri
+83d1cfb K1 bütünlük denetimi sonucu
+41e3826 Gönderim öncesi kontrollerin tanımı (K1, K2)
+583c8da Ek Tablo S1 (karar günlüğü) v1, şekil 2x2 düzeni, main.tex v5 bağlantıları
+d57d8aa 09 v5 tablolar, 08 v5 şekiller (başlıklar, spreadsheet/participants, Fig1 panel d GD); CLAUDE.md numaralandırma notu
+d4003ab Yazım: Giriş v1, Özet v1, Yöntem (ROI kanalları, sürümler), v4 tablolar
+f462b1f Yazım: Tartışma v3 (yeni kaynaklar), Yöntem güncellemesi, Ek not S1
+6fec745 Yazım: Yöntem/Bulgular/Tartışma v1, Ek not S1, yazar bilgileri
