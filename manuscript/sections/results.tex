@@ -1,0 +1,50 @@
+% sections/results.tex — Bulgular bölümü, taslak v1 (2026-10-02)
+% Sayıların kaynakları: Tablo 1, 2, 3, 4, S4, S5, S_leak (09 v3/v4, kayıtlı CSV'lerden), CLAUDE.md, DENETIM_RAPORU 1–4.
+% Kural: AUC ve güven aralıkları iki ondalık, p değerleri üç ondalık.
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Cohort, confounds and data integrity}
+\label{sec:res-cohort}
+
+Offenders and controls differed in most recorded characteristics (table~\ref{tab:Table1}). Cannabis and cocaine use were reported by 74\% and 66\% of offenders and by no control, and 81\% of offenders but no control had left school. Offenders were older ($17.0 \pm 1.1$ vs $16.3 \pm 1.1$ years) and of lower socioeconomic stratum (both $p < 0.001$).
+
+Group was also confounded with recording period (figure~\ref{fig:cohort}; table~\ref{tab:Table1}). sg was recorded in July--September 2021, sg2 between December 2021 and June 2022, and the controls between February and September 2022. sg and the controls shared no recording month, and sg2 and the controls overlapped only in May--June 2022 (11 sg2 and 9 control recordings). Mean recording clock time was similar across groups (11.5--11.9~h), but recordings after 14:00 were more frequent in sg (29\%) and sg2 (28\%) than in the controls (9\%; offenders vs controls $p = 0.005$). The two offender subgroups also differed in offence profile (violent primary offence: sg 86\%, sg2 24\%; $p < 0.001$), in alcohol use (51\% vs 80\%; $p = 0.023$) and in age ($p = 0.031$).
+
+The precomputed spreadsheet features did not correspond to the published recordings (table~\ref{tab:TableS5}). All 2048 files describe the same 112 participants (66 cg and 46 sg, no sg2), and one file is empty. Twelve spreadsheet identifiers have no published recording, and 40 published participants are absent from the spreadsheets (all 25 sg2, 4 sg and 11 cg). Every statistic in the files except power was computed from exactly three values: kurtosis equals 1.5 in every cell, which is the kurtosis of any three distinct values, and the largest absolute skewness equals the three-value bound of $1/\sqrt{2}$ (supplementary note S1). For the 100 participants present in both sources, each spreadsheet profile correlated best with the participant's own recording (median $r = 0.92$, range 0.72--0.98). None of the 12 unmatched identifiers matched a published recording (best $r$ 0.25--0.66).
+
+\subsection{Data leakage inflates classification performance}
+\label{sec:res-leakage}
+
+With the naive pipeline (N1), the published features separated offenders from controls with a subject-level AUC of 0.91 (random forest) and 0.89 (support vector machine), and a subject-level balanced accuracy of 0.80 and 0.76 (table~\ref{tab:Table2}; figure~\ref{fig:leakage}). Most of this performance did not depend on the labels. After subject-level label shuffling, N1 still reached a subject-level AUC of 0.85 and 0.79 (row-level 0.78 and 0.73; $p \le 0.005$ for the real labels). The correct nested pipeline (P) reached 0.73 with the random forest (repeat range 0.67--0.79) and 0.66 with the support vector machine (repeat range 0.59--0.75; shuffled-label null 0.48, $p = 0.010$).
+
+In the $2 \times 2$ decomposition (row-level AUC; differences computed from unrounded values), splitting by row rather than by participant added 0.21--0.22 (N2 vs N4). Selecting features on all data added 0.01--0.03 with row-wise splits (N1 vs N2) and 0.04--0.09 with subject-wise splits (N3 vs N4). The GD showed the same pattern: 0.38--0.44 for N1 and 0.64--0.68 for P (lower is better). The pattern held when only the 100 identity-verified participants were used (P: 0.69 and 0.62), without the kurtosis features, and with eyes-closed segments only (table~\ref{tab:TableS_leak}). Because the spreadsheet cohort differs from the published cohort and its features depend on absolute amplitude, we do not interpret the above-chance AUC of P as a group difference.
+
+\subsection{Primary test: alpha reactivity did not differ}
+\label{sec:res-primary}
+
+Alpha reactivity did not differ between offenders and controls (table~\ref{tab:Table3}; figure~\ref{fig:primary}). The median ARI was 0.64 in offenders and 0.68 in controls ($U = 2114$, $p = 0.395$). The rank-biserial correlation was $-0.08$ (95\% CI $-0.28$ to 0.11) and the Hodges--Lehmann shift $-0.03$ ($-0.10$ to 0.04). Adjusting for age and the EMG index did not change the result (offender coefficient 0.01, 95\% CI $-0.07$ to 0.08, $p = 0.886$; rank model $p = 0.988$), nor did adding the four short recordings ($n = 140$, $p = 0.279$). Descriptively, the median ARI was 0.64 in sg, 0.62 in sg2 and 0.68 in the controls. Rank-biserial correlations below $-0.28$ or above 0.11 are therefore approximately excluded.
+
+\subsection{Prespecified ROI features did not separate the groups}
+\label{sec:res-roi}
+
+With the 14 prespecified ROI features, offenders could not be distinguished from controls: AUC 0.54 (95\% CI 0.44--0.63; DeLong 0.44--0.64; repeat mean 0.51, range 0.46--0.57; table~\ref{tab:Table4}; figure~\ref{fig:roi}). AUCs above 0.63, corresponding to Cohen's $d \approx 0.48$, are approximately excluded; smaller effects are not.
+
+The null result is not explained by the inclusion of sg2. The same features gave an AUC of 0.53 for sg versus controls (repeat range 0.43--0.63), and descriptively the out-of-fold scores of the offender model gave 0.55 for sg and 0.52 for sg2 against the controls. In the batch negative control, sg versus sg2 reached 0.63 (repeat range 0.54--0.71; $p = 0.053$, against $\alpha = 0.025$ and a significance threshold of 0.65), and a model trained on sg versus controls gave a within-fold AUC of 0.44 for sg2 versus held-out controls ($p = 0.771$). The prespecified sensitivity analyses gave similar values (sg vs controls 0.50--0.56; sg vs sg2 0.58--0.63; transfer 0.42--0.53).
+
+\subsection{Exploratory: channel-level features separated sg from controls}
+\label{sec:res-channel}
+
+Channel-level spectral features separated sg from the controls in the 100 identity-verified participants (figure~\ref{fig:cascade}a; table~\ref{tab:TableS4}). On all four segments, log absolute power (set A) and relative power (set B) reached AUCs of 0.75 and 0.73 (both $p \le 0.005$; null mean 0.48), so the separation was not due to absolute amplitude alone. Relative power gave a higher AUC on the eyes-open segments (0.71, $p \le 0.005$) than on the eyes-closed segments (0.64, $p = 0.015$); the difference was not tested. Removing the 32 channels of the C block lowered the eyes-closed AUC to 0.58 ($p = 0.0498$). Because the eyes-closed AUC fell in the interval that the prespecified rule left undefined, the rule gave no verdict. In the long eyes-closed block, relative power separated sg from the controls with an AUC of 0.75 (repeat range 0.65--0.80; $p \le 0.005$). Across these analyses, the repeat-mean AUCs ranged from 0.64 to 0.75. AUCs computed from repeat-averaged scores are higher; for the long block, 0.78 (95\% CI 0.69--0.87; table~\ref{tab:TableS4}).
+
+Single-feature differences in the long block were small to moderate ($|g| \le 0.58$; figure~\ref{fig:S07e}). All ten largest effects, and 18 of the 20 largest, were at C-block sites over frontopolar and anterior frontal cortex. sg showed higher relative delta power and lower theta and beta power; alpha power did not differ (median $g$ in the posterior A block 0.01).
+
+The same groups in the same block thus gave an AUC of 0.53 with ROI features and logistic regression ($n = 111$) and 0.75 with channel features and the support vector machine ($n = 100$). These analyses differ in feature resolution, model, channel exclusion and sample, and the contributions of these choices were not separated.
+
+\subsection{Exploratory: no evidence of transfer to sg2}
+\label{sec:res-transfer}
+
+None of the five models trained on sg versus controls showed significant transfer to sg2 (figure~\ref{fig:cascade}b; table~\ref{tab:TableS4}). The within-fold transfer AUCs (sg2 vs held-out controls) were 0.57 for the eyes-closed model (95\% CI 0.44--0.69; $p = 0.264$); 0.55 (0.44--0.66; $p = 0.224$), 0.59 (0.48--0.70; $p = 0.194$) and 0.55 (0.45--0.66; $p = 0.289$) for the three strongest segment models; and 0.58 (0.46--0.70; $p = 0.104$) for the long-block model. Under the prespecified rule, the claim of no evidence of transfer therefore holds for all five models.
+
+To be significant, a transfer AUC would have had to exceed 0.59--0.64 (the one-sided 95th percentile of the null). The upper CI limits of 0.66--0.70 approximately exclude transfer AUCs above about 0.70, but moderate transfer cannot be excluded: the data are compatible with anything from no transfer to moderate transfer. Without the two atypical sg2 participants (descriptive; no CI), the transfer AUCs were 0.53--0.57; they rose only for the set-A model (from 0.55 to 0.57) and fell by 0.02--0.03 for the other four. The difference between source and transfer AUCs was not tested.

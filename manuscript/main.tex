@@ -11,13 +11,15 @@
 
 \title{High accuracy without demonstrated generalization: data leakage and recording confounds in resting-state EEG classification of juvenile offenders}
 
-\author{Mesut Melek$^{1,*}$\orcid{0000-0000-0000-0000}}
+\author{Mesut Melek$^{1}$\orcid{0000-0002-7152-7788} and Negin Melek$^{2,*}$\orcid{0000-0001-5297-5545}}
 
-\affil{$^1$Department of Software Engineering, G\"um\"u\c{s}hane University, G\"um\"u\c{s}hane, T\"urkiye}
+\affil{$^1$Department of Software Engineering, Faculty of Engineering, G\"um\"u\c{s}hane University, G\"um\"u\c{s}hane, T\"urkiye}
+
+\affil{$^2$Department of Electrical and Electronics Engineering, Faculty of Engineering, G\"um\"u\c{s}hane University, G\"um\"u\c{s}hane, T\"urkiye}
 
 \affil{$^*$Author to whom any correspondence should be addressed.}
 
-\email{[E-MAIL]}
+\email{negin.melek@gumushane.edu.tr}
 
 \keywords{EEG, data leakage, cross-validation, juvenile offenders, confounds, resting state, generalization}
 
@@ -31,13 +33,9 @@
 
 \input{sections/methods}
 
-\section{Results}
-\label{sec:results}
-[RESULTS]
+\input{sections/results}
 
-\section{Discussion}
-\label{sec:discussion}
-[DISCUSSION]
+\input{sections/discussion}
 
 % ---------------------------------------------------------------- Figures (draft placement)
 \begin{figure}
@@ -84,11 +82,20 @@
 % ---------------------------------------------------------------- Supplementary material (moves to a separate file at submission)
 \clearpage
 \section*{Supplementary material (draft placement)}
+% Taslak numaralandırma: S1 örneklemler, S2 karar günlüğü (henüz yok), S3 parametreler, S4 keşifsel analizler,
+% S5 Excel denetimi, S6 sızıntı duyarlılığı. Son numaralar ilk atıf sırasına göre verilecek.
+\input{sections/supp_note1}
+
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\setcounter{table}{0}
 \input{tables/09_tables_v3_2026-10-02_TableSn}
+\setcounter{table}{2}
 \input{tables/09_tables_v3_2026-10-02_TableS3}
 \input{tables/09_tables_v3_2026-10-02_TableS4}
 \input{tables/09_tables_v3_2026-10-02_TableS5}
 \input{tables/09_tables_v3_2026-10-02_TableS_leak}
+\setcounter{figure}{0}
 
 \begin{figure}
   \centering
@@ -98,11 +105,11 @@
 \end{figure}
 
 % ---------------------------------------------------------------- Back matter
-\ack{[ACKNOWLEDGEMENTS. AI statement (IOP template): During the preparation of this manuscript, the author used Claude Code (Anthropic; model Claude Opus 5.5) to write and run the analysis code and Claude ([MODEL VERSIONS]) to audit the analyses and to support the writing. The author reviewed, validated and critically assessed all AI-assisted outputs and takes full responsibility for the content of the manuscript.]}
+\ack{We thank the creators of the dataset for making their recordings openly available. During the preparation of this manuscript, the authors used Claude Code (Anthropic; model Claude Opus 5.5) to write and run the analysis code, and Claude Opus 5.5 (Anthropic) to audit the analyses and to support the writing. The authors reviewed, validated and critically assessed all AI-assisted outputs and take full responsibility for the content of the manuscript.}
 
-\funding{[FUNDING]}
+\funding{This research received no specific grant from any funding agency in the public, commercial or not-for-profit sectors.}
 
-\roles{[AUTHOR CONTRIBUTIONS, CRediT]}
+\roles{Mesut Melek: conceptualization, methodology, software, formal analysis, writing -- review \& editing. Negin Melek: methodology, software, formal analysis, writing -- original draft.}
 
 \data{The EEG data are openly available on OpenNeuro (ds006923, version 1.0.0) \cite{Polo2025ds006923}. The analysis code, analysis log and result files are available at [REPOSITORY / ZENODO DOI].}
 

@@ -1,0 +1,23 @@
+% sections/supp_note1.tex — Ek not S1 (talimattaki "Kutu 1"), taslak v1 (2026-10-03)
+% Kaynak: 04a_excel_audit_v1_2026-10-01_rapor.md §3 ve 04a_excel_audit_v1_2026-10-01_n_points.csv.
+
+\section*{Supplementary note S1. Statistics computed from three values}
+\label{sec:suppnote1}
+
+For every band, segment and channel, the spreadsheet files report seven statistics per participant: RMS, standard deviation, minimum, maximum, skewness, kurtosis and power (column names \texttt{RMS}, \texttt{Standarddesv}, \texttt{Minimun}, \texttt{Maximun}, \texttt{Symetry}, \texttt{Kurtosis}, \texttt{Power}). All except power are consistent with having been computed from exactly three values.
+
+\paragraph{Kurtosis.} Let $x_1, x_2, x_3$ be three values that are not all equal, with mean $\bar{x}$ and deviations $d_i = x_i - \bar{x}$, so that $d_1 + d_2 + d_3 = 0$. Let $q = d_1 d_2 + d_1 d_3 + d_2 d_3$. Then
+\begin{align*}
+\sum_i d_i^2 &= \Big(\sum_i d_i\Big)^2 - 2q = -2q, \\
+\sum_{i<j} (d_i d_j)^2 &= q^2 - 2\, d_1 d_2 d_3 \sum_i d_i = q^2, \\
+\sum_i d_i^4 &= \Big(\sum_i d_i^2\Big)^2 - 2 \sum_{i<j} (d_i d_j)^2 = 4q^2 - 2q^2 = 2q^2 .
+\end{align*}
+The population moments are therefore $m_2 = -2q/3$ and $m_4 = 2q^2/3$, and the kurtosis is $m_4/m_2^2 = (2q^2/3)/(4q^2/9) = 3/2$, whatever the three values are. In the spreadsheet files, kurtosis lies between 1.49999 and 1.50001 in every cell.
+
+\paragraph{Skewness.} For $n$ values, the absolute population skewness cannot exceed $(n-2)/\sqrt{n-1}$, which is $1/\sqrt{2} \approx 0.7071$ for $n = 3$. Every absolute skewness in the files is within this bound, and the largest equals it (0.70711).
+
+\paragraph{Reconstruction.} If the standard deviation $s$ is the sample standard deviation (denominator $n-1$), the mean of three values follows from the RMS as $\bar{x} = \sqrt{\mathrm{RMS}^2 - 2s^2/3}$ (all values are positive; the smallest is 0.109), and the middle value is $3\bar{x} - \min - \max$. The three values reconstructed in this way reproduce the reported skewness (median absolute error $2 \times 10^{-7}$; 99th percentile $1 \times 10^{-6}$) and standard deviation (median relative error $3 \times 10^{-8}$), and the middle value lies between the minimum and the maximum in every cell. If the population standard deviation is assumed instead, the middle value falls outside this range in 52\% of cells.
+
+\paragraph{Power.} Power is not a function of the same three values: the ratio of power to RMS$^2$ varies across cells (median 0.58, interquartile range 1.0), and the correlation between log power and log RMS is 0.61.
+
+Whether the three values are frequency points or time windows cannot be determined, because the code that produced the files is not part of the dataset. Kurtosis carries no information, and the other five statistics are different summaries of the same three values.

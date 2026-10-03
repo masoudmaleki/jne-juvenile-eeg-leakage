@@ -1,0 +1,87 @@
+% sections/discussion.tex — Tartışma ve Sonuç bölümleri, taslak v1 (2026-10-02)
+% Kaynaklar: iskelet v6 (Tartışma, Sınırlılıklar), talimat §5, DENETIM_RAPORU_4 (G2–G4), Tablo 1, 02 betimsel,
+% 07abc betimsel, 07e haritası, 07g sonuçları. Köşeli parantezli [REF: ...] yerleri henüz doğrulanmadı.
+
+\section{Discussion}
+\label{sec:discussion}
+
+In this open dataset, high classification performance was easy to obtain and difficult to interpret. A naive pipeline separated offenders from controls with a subject-level AUC of 0.89--0.91 and a balanced accuracy of 0.76--0.80, yet it still reached 0.79--0.85 when the labels were shuffled. Without leakage, the single primary test (alpha reactivity) was negative, and the prespecified ROI features did not separate the groups. Exploratory channel-level features separated one offender subgroup, sg, from the controls (repeat-mean AUC 0.64--0.75), but none of five models showed evidence of transfer to the second subgroup, sg2. Group membership was confounded with recording period, substance use, schooling, socioeconomic background, age and time of day, and the two offender subgroups also differed in offence profile. None of these results can therefore be read as evidence of an EEG marker of offending.
+
+\subsection{Leakage accounted for most of the naive performance}
+\label{sec:disc-leakage}
+
+The naive pipeline combined two common errors: segments of the same participant were split across training and test folds, and features were selected on all data. Splitting by row was by far the larger error: it added 0.21--0.22 to the row-level AUC, whereas selection on all data added 0.01--0.09. Both errors are well documented: record-wise splitting in clinical machine learning \cite{Saeb2017} and in EEG studies \cite{Brookshire2024}, and leakage more generally in machine-learning-based science \cite{Kapoor2023}. The shuffled-label control shows the mechanism directly. With labels that carried no group information, the naive pipeline still reached a subject-level AUC of 0.79--0.85. The segments of one participant share participant-specific spectral features, so a row-wise split lets the classifier recognise participants rather than groups. Selecting features or tuning a model on the data used for evaluation biases performance estimates upwards \cite{Varma2006,Cawley2010}; here, this bias was smaller than that of row-wise splitting.
+
+The nested subject-wise pipeline still separated the groups (subject-level AUC 0.66--0.73), clearly above its shuffled-label null (0.48). We do not interpret this as a group difference. The spreadsheet features describe a cohort that differs from the published one, all of their statistics except power were computed from three values, and they depend on absolute amplitude, which also reflects recording conditions. Above-chance performance with these features shows that something separates the groups, not what it is. The leakage demonstration therefore measures the size of the error, not a group difference.
+
+Small samples add uncertainty even without leakage. With about 100 participants, cross-validated estimates of predictive performance have error bars of roughly $\pm 10$ percentage points \cite{Varoquaux2018}. A study from the same research group reported a balanced accuracy of 0.88 for distinguishing offenders from non-offenders with cognitive test scores, based on a single 80/20 split \cite{Bonfante2023}, that is, on a test set of about 26 participants. A single split of this size cannot distinguish such a value from substantially lower performance.
+
+\subsection{What the channel-level separation does and does not show}
+\label{sec:disc-separation}
+
+The exploratory channel-level analyses separated sg from the controls in every segment examined, including the long eyes-closed block. Three findings limit what this separation can mean.
+
+First, the prespecified ROI features did not show it. For the same groups and the same block, the ROI model gave an AUC of 0.53 ($n = 111$) and the channel-level model 0.75 ($n = 100$). The two analyses differed in feature resolution, model, channel exclusion and sample, and we did not separate these factors. The ROI-level null result therefore holds only for those analysis choices. It is not explained by the inclusion of sg2, because the ROI features did not separate sg from the controls either.
+
+Second, the primary test was negative. Alpha reactivity, a ratio in which gain differences cancel, did not differ between offenders and controls, and the CI of the rank-biserial correlation ($-0.28$ to 0.11) approximately excludes medium or large differences in either direction.
+
+Third, none of the five models showed evidence of transfer to sg2. If the separation reflected offending as such, it should also be present in sg2. The transfer AUCs (0.55--0.59) were above 0.5 but below the significance thresholds (0.59--0.64), and their CIs (upper limits 0.66--0.70) are compatible with anything from no transfer to moderate transfer. The difference between source and transfer AUCs was not tested. The data therefore do not show that the separation is absent in sg2; they show that its presence there could not be demonstrated. Transfer asks whether the sg-based model generalises; whether sg2 differs from the controls in other ways was not tested at the channel level.
+
+The channel-level result is best described as a separation observed in one offender subgroup, whose transfer to a second subgroup could not be demonstrated.
+
+\subsection{Possible sources of the channel-level signature}
+\label{sec:disc-source}
+
+The largest single-feature effects in the long block were small to moderate ($|g| \le 0.58$) and concentrated at C-block sites over frontopolar and anterior frontal cortex. At these sites sg had higher relative delta and lower relative theta and beta power, and posterior alpha did not differ. Removing the C block lowered the eyes-closed AUC from 0.64 to 0.58, and the AUC was higher in the eyes-open (0.71) than in the eyes-closed segments; neither difference was tested. The second observation is compatible with a contribution of eye movements with open eyes. The long eyes-closed block nevertheless separated the groups (0.75); it provided more than four times as much data per participant (465~s vs 100~s), which may explain part of its higher AUC compared with the eyes-closed segments. Because relative band powers sum to one, higher relative delta must be offset by lower values in other bands; the theta and beta decreases need not be independent effects.
+
+Eye movements produce large low-frequency potentials that are largest at frontopolar sites \cite{Croft2000}, and skin potentials and neural activity can also contribute at these sites. The data providers recorded electro-oculographic channels \cite{RodriguezAlvarez2023} but did not publish them, so these sources cannot be separated in the published data. Because the long block contained no eyes-open periods, blinks and saccades with open eyes are unlikely to be the sole explanation; eye movements and skin potentials during eye closure are not excluded. One observation argues against drowsiness-related slow eye movements as the only source. The drowsiness index (the slope of the theta/alpha ratio over the block) rose faster in the controls than in sg (median 0.026 vs 0.014 log$_{10}$ units per minute; table~\ref{tab:TableS3}; descriptive, not tested), whereas frontopolar delta was higher in sg.
+
+\subsection{Candidate explanations of the sg--control difference}
+\label{sec:disc-confounds}
+
+The dataset offers several explanations of the sg--control difference that it cannot separate (table~\ref{tab:Table1}; figure~\ref{fig:cohort}).
+
+Recording period is confounded most completely. sg was recorded in July--September 2021 and shares no recording month with the controls, so any change in equipment, staff, room or season between these periods is confounded with group. sg2 was recorded closer in time to the controls and overlapped with them in May--June 2022.
+
+Custody and recording site may also differ. The dataset does not define sg and sg2. A conference report from the same project describes the 74 offenders as 50 confined and 24 under non-custodial measures \cite{RodriguezAlvarez2023}. These numbers are close to the sizes of sg (49) and sg2 (25), and violent primary offences were far more frequent in sg (86\% vs 24\%). Other studies from the same research group recruited offenders from a re-education centre and, in one case, from two further institutions \cite{Bonfante2023,RuizPena2024,SanchezTorres2024}. If sg corresponds to the confined offenders, custody and the recording environment are further candidate explanations. We could not verify this correspondence, and the recording location of each participant is not documented.
+
+Vigilance and time of day differed as well. Recordings after 14:00 were more frequent in sg than in the controls (29\% vs 9\%), and the drowsiness index differed descriptively between the groups (section~\ref{sec:disc-source}).
+
+Age explains at most part of the pattern. sg was on average 0.9 years older than the controls (17.2 vs 16.3 years). Slow-wave power declines steeply during adolescence \cite{Whitford2007}, and relative power shifts from delta and theta towards alpha and beta [REF: Gasser et al.\ 1988; Segalowitz et al.\ 2010; to be verified]. The higher delta and lower beta in sg are opposite to this age expectation, so age would mask rather than explain them. The lower theta is in the expected direction, and age may contribute to this component.
+
+Substance use is an unlikely sole explanation of the frontal delta increase. Alcohol, cannabis and cocaine use were at least as frequent in sg2 as in sg (80\% vs 51\%, 84\% vs 69\% and 80\% vs 59\%). Yet in the eyes-closed segments, relative delta at C-block sites in sg2 was closer to that of the controls than to that of sg (group medians: sg 0.38, sg2 0.33, controls 0.31). This comparison is descriptive and covers only the short segments; no channel map of sg2 was computed for the long block. Schooling and socioeconomic stratum also differed strongly between offenders and controls (table~\ref{tab:Table1}).
+
+Offending itself is one candidate among these, and the design offers no way to isolate it.
+% [LİTERATÜR: Antisosyal ve suçlu gençlerde dinlenim EEG'si bulguları (arama #1; Raine 1990 vb.). PDF'ler gelince bu paragrafa 2–3 cümle eklenecek.]
+[LITERATURE CONTEXT: prior resting-state EEG findings in antisocial and offending youth; pending search and verification.]
+
+\subsection{Strengths and limitations}
+\label{sec:disc-limitations}
+
+The study has three strengths. All analyses used open data, and every plan, decision and result is documented in a time-stamped log together with the code (table~S2). Leakage was quantified with a $2 \times 2$ design and label-permutation nulls rather than only asserted. Generalisation was tested directly, by transfer to a second offender subgroup, and uncertainty was reported as CIs in addition to $p$ values.
+
+The main limitation is the design of the dataset. Group was confounded with recording period, possibly with custody and recording site, and with substance use, schooling, socioeconomic stratum, age and time of day. sg and the controls were never recorded in the same month, and sg2 and the controls only in May--June 2022. Statistical adjustment cannot separate factors that do not overlap, and models trained in such designs may capture confounds that are correlated with the outcome rather than the outcome itself \cite{Chyzhyk2022}. The recording location of each participant is not documented, so we could not verify that all recordings were made under the same conditions.
+
+Moderate effects cannot be excluded. In the batch negative control, sg versus sg2 reached an AUC of 0.63 ($p = 0.053$), just below the significance threshold of 0.65; a moderate difference between the subgroups is possible, and no CI was computed. At the ROI level, AUCs above 0.63 are approximately excluded, but smaller effects are not. Moderate transfer cannot be excluded either: depending on the model, transfer AUCs up to 0.66--0.70 lie within the CIs. The CIs are per model and unadjusted. Not correcting is conservative for the claim of no evidence of transfer, but optimistic for the statements that larger AUCs are approximately excluded, because the joint coverage of the five intervals is below 95\%. The CIs include participant sampling but not model-training variability. For the source models, they surround the AUC of repeat-averaged scores, which is higher than the repeat mean (for example 0.80 vs 0.73 for relative power on all segments).
+
+The data were preprocessed by the providers, and the electro-oculographic and electrocardiographic channels were not published. The drowsiness index rose during the long block in all three groups (positive median slopes; table~\ref{tab:TableS3}), so vigilance was not constant within the analysed segment. The exploratory analyses used the 100 identity-verified participants, for comparability with the leakage analysis; 11 controls with complete recordings were therefore not used. All participants were male adolescents from one Colombian city \cite{RodriguezAlvarez2023}, so none of the findings can be assumed to hold in other populations.
+Results obtained with the precomputed spreadsheet features cannot be reproduced from the published recordings, because 12 of their 112 participants have no published recording and the computation of their statistics is not documented.
+
+The analyses were not preregistered, and the analysis log documents rather than removes the flexibility of the analysis [REF: Gelman \& Loken 2014; to be verified]. The primary status of the alpha-reactivity test was assigned after the batch negative control, and 42 unadjusted univariate comparisons had been inspected before that. The atypical-spectrum rule was added after quality-control inspection, when the subgroup and substance use of the two flagged participants were known. The decision rule of 07a left an interval undefined, the wording of the 07e rule contained an error that did not change its outcome, and 07f and 07g were proposed after earlier results had been seen. Only the definitions of 07f and 07g were committed before their results in separate commits; for earlier steps the order of definition and result rests on the analysis log, and for 07d--e both share one commit. Several planned analyses were not run: confound-reduced analyses (a matched subsample of offenders without substance use, and regression of confounds out of the offender--control comparison), analyses within the offender group (recidivism, gang membership, violent offence), and a sensitivity analysis of the first 60-s eyes-closed block in all 139 readable recordings. The audits were carried out in separate sessions of the same AI model that wrote the code and are not independent. Exploratory $p$ values are unadjusted. All of these points are recorded in table~S2.
+
+\subsection{Recommendations}
+\label{sec:disc-recommendations}
+
+For classification studies of resting-state EEG in forensic or clinical groups, our results suggest five practices:
+\begin{enumerate}
+  \item Split data by participant and keep every data-dependent step (feature selection, scaling, tuning) inside the training folds \cite{Varma2006,Cawley2010}.
+  \item Report a subject-level label-permutation null for the complete pipeline \cite{Ojala2010}; a high AUC under shuffled labels reveals leakage directly.
+  \item Record the groups interleaved in time and place, and publish recording dates, sites and auxiliary channels such as EOG and ECG.
+  \item Test transfer to an independent subgroup or site, and report CIs together with $p$ values.
+  \item When preregistration is not possible, keep a time-stamped analysis log that states for each decision whether it preceded the relevant result.
+\end{enumerate}
+
+\section{Conclusions}
+\label{sec:conclusions}
+
+In this dataset, high classification accuracy for juvenile offenders versus controls was largely a product of data leakage. Without leakage, the primary alpha-reactivity test and the prespecified ROI features showed no group difference. An exploratory channel-level separation of one offender subgroup from the controls showed no evidence of transfer to a second subgroup. Because group was confounded with recording period, substance use, schooling, socioeconomic background, age and time of day, this dataset cannot support an EEG marker of offending, and none of the results should be used for clinical or forensic inference. The dataset remains useful for methodological work, provided that analyses split by participant, treat recording period as a confound and report uncertainty.
