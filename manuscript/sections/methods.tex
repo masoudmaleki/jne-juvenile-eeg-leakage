@@ -5,7 +5,7 @@
 \section{Methods}
 \label{sec:methods}
 
-Analysis identifiers in parentheses (03--07g) refer to the analysis log (table~S2) and to the code repository.
+Analysis identifiers in parentheses (03--07g) refer to the analysis log (table~\ref{tab:TableLog}) and to the code repository.
 
 \subsection{Dataset and participants}
 \label{sec:data}
@@ -35,9 +35,9 @@ The audit also extracted the recording date and clock time of each session from 
 
 The analyses were not preregistered. Every analysis plan, decision rule and change was recorded in a time-stamped analysis log (a project file, written analysis plans and the git history). Table~S2 lists all decisions and states for each whether it was made before the relevant result was seen.
 
-The single primary test (alpha reactivity; section~\ref{sec:primary}) was designated after the batch negative control (section~\ref{sec:negcontrol}) had been run. Before this designation, 42 unadjusted univariate comparisons of the 14 region-of-interest (ROI) features had been inspected; alpha reactivity was not among them, and these comparisons informed no feature selection (table~S2). The definitions of the last two exploratory analyses (07f, 07g) were committed to the repository in separate commits before they were run; the commit contents are provided as supplementary files. For earlier steps, the order of definition and result rests on the analysis log; for 07d and 07e, definition and results share one commit.
+The single primary test (alpha reactivity; section~\ref{sec:primary}) was designated after the batch negative control (section~\ref{sec:negcontrol}) had been run. Before this designation, 42 unadjusted univariate comparisons of the 14 region-of-interest (ROI) features had been inspected; alpha reactivity was not among them, and these comparisons informed no feature selection (table~\ref{tab:TableLog}). The definitions of the last two exploratory analyses (07f, 07g) were committed to the repository in separate commits before they were run; the commit contents are provided as supplementary files. For earlier steps, the order of definition and result rests on the analysis log; for 07d and 07e, definition and results share one commit.
 
-The analysis code was written and executed by an AI coding agent (Claude Code, Anthropic; model Claude Opus 5.5) under the authors' direction. The authors approved every analysis plan, decision rule and interpretation. Four audits of code, numbers and text were carried out in separate sessions of the same model (Claude Opus 5.5); these audits are therefore not independent. Their findings and the resulting corrections are listed in table~S2. The authors take full responsibility for the analyses and the text.
+The analysis code was written and executed by an AI coding agent (Claude Code, Anthropic; model Claude Opus 5.5) under the authors' direction. The authors approved every analysis plan, decision rule and interpretation. Four audits of code, numbers and text were carried out in separate sessions of the same model (Claude Opus 5.5); these audits are therefore not independent. Their findings and the resulting corrections are listed in table~\ref{tab:TableLog}. The authors take full responsibility for the analyses and the text.
 
 \subsection{Spectral features}
 \label{sec:features}
@@ -46,7 +46,7 @@ Feature parameters were fixed before any group comparison (table~\ref{tab:TableS
 
 Channels were excluded within each participant if the FOOOF fit had $R^2 < 0.9$ or if an electromyographic (EMG) index exceeded a robust $z$ score of 3 (one-sided; median $+\,3 \times 1.4826 \times$ median absolute deviation). The EMG index was the slope of log power against log frequency over 30--40~Hz; flatter slopes indicate more muscle activity. Muscle activity is broadband and largest above 20~Hz \cite{Goncharova2003}, so the index targets its high-frequency part and may miss weak contamination at lower frequencies. Because the providers' low-pass filter also shapes this slope, the index was used only as a relative measure. ROI features were computed from the mean spectrum of the retained channels in a posterior ROI (nine BioSemi channels, A19, A10, A17, A21, A30, B7, A15, A23 and A28, approximately Pz, PO7, PO3, POz, PO4, PO8, O1, Oz and O2) and in a global ROI (all retained channels).
 
-One rule was added after inspection of quality-control data but before any group comparison: participants with more than 25\% of channels excluded were flagged as having an atypical spectrum, and only the EMG rule was applied to them. Two sg2 participants were flagged (88 and 57 channels excluded by the $R^2$ rule). They were kept in the primary analyses and excluded in sensitivity analyses. When the rule was adopted, it was known that both belonged to sg2 and used cannabis and cocaine (table~S2).
+One rule was added after inspection of quality-control data but before any group comparison: participants with more than 25\% of channels excluded were flagged as having an atypical spectrum, and only the EMG rule was applied to them. Two sg2 participants were flagged (88 and 57 channels excluded by the $R^2$ rule). They were kept in the primary analyses and excluded in sensitivity analyses. When the rule was adopted, it was known that both belonged to sg2 and used cannabis and cocaine (table~\ref{tab:TableLog}).
 
 Vigilance was indexed by the slope of the log$_{10}$ theta/alpha ratio across consecutive 30-s windows of the long block. Because sleepiness is associated with lower alpha and higher frontal theta power \cite{Strijkstra2003}, a positive slope indicates increasing drowsiness. The 14 ROI features used in the ROI-level analyses were relative delta, theta, alpha and beta power, the aperiodic exponent and offset, and the primary IAF, each in the posterior and global ROIs.
 

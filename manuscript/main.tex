@@ -4,6 +4,8 @@
 
 \usepackage{amsmath}
 \usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{longtable}
 
 \begin{document}
 
@@ -38,72 +40,54 @@
 
 \input{sections/discussion}
 
-% ---------------------------------------------------------------- Figures (draft placement)
+% ---------------------------------------------------------------- Figures (numbered by first citation in the text)
+% Dosya adları eski numaraları taşır (Fig5_cohort = Şekil 1 vb.); teslimde SUBMISSION/ kopyaları yeniden adlandırılır.
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{figures/Fig1_leakage_v2}
-  \caption{[CAPTION: Figure 1, leakage.]}
+  \includegraphics[width=\textwidth]{figures/Fig5_cohort_v3}
+  \caption{Cohort, analysis samples and the recording-period confound. (a) Analysis samples branch from the 140 published participants; they are not successive filtering steps. Each box lists the analyses that used the sample (identifiers as in table~\ref{tab:TableLog}). (b) The precomputed spreadsheet features cover 112 participants; 12 of them match no published recording, and sg2 is absent. (c) Recording dates by group. sg and the controls (cg) were never recorded in the same month; sg2 overlapped with the controls only in May--June 2022.}
+  \label{fig:cohort}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figures/Fig1_leakage_v3}
+  \caption{Data leakage inflated the classification of offenders versus controls (precomputed spreadsheet features, 112 participants). (a) Subject-level AUC of the naive pipelines N1--N4 and the nested subject-wise pipeline P, for the support vector machine (SVM) and the random forest (RF); bars show the 2.5--97.5\% range across cross-validation repeats. Shading marks leakage through row-wise splitting (N1, N2) and through feature selection on all data (N1, N3). (b) Null distributions of the subject-level AUC under 200 subject-level label permutations (violins) and the AUC with the real labels (diamonds). The null of N1 lies at 0.79--0.85, whereas that of P lies near 0.5. (c) Golden Distance computed from accuracy, sensitivity, specificity and F1 (lower is better). (d) Golden Distance polygons of the random forest for N1 and P. Accuracy (ACC), sensitivity (Sen), specificity (Spe) and F1 lie on four axes; the outer square is the ideal model, with all four metrics equal to 1. GD was 0.38 for N1 and 0.64 for P. The naive pipelines were built in this study to illustrate the error; they do not reproduce any published analysis of these data.}
   \label{fig:leakage}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{figures/Fig2_exploratory_cascade_v4}
-  \caption{[CAPTION: Figure 2, exploratory cascade and transfer.]}
-  \label{fig:cascade}
-\end{figure}
-
-\begin{figure}
-  \centering
   \includegraphics[width=\textwidth]{figures/Fig3_primary_alpha_reactivity_v2}
-  \caption{[CAPTION: Figure 3, primary test.]}
+  \caption{Primary test: alpha reactivity did not differ between offenders and controls. (a) Posterior alpha reactivity index, $(C - O)/(C + O)$, by group; boxes show the median and interquartile range. Offenders (sg and sg2, $n = 70$) did not differ from controls ($n = 66$; two-sided Mann--Whitney $p = 0.395$). (b) Rank-biserial correlation (positive when offenders are higher) with bootstrap 95\% CI, in the primary sample ($n = 136$) and with the four short sg recordings added ($n = 140$). (c) Hodges--Lehmann shift ($n = 136$ and $n = 140$) and the offender coefficient adjusted for age and EMG index (ordinary least squares, HC3 standard errors), each with its 95\% CI. All intervals include zero.}
   \label{fig:primary}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{figures/Fig4_prespecified_null_v2}
-  \caption{[CAPTION: Figure 4, ROI-level null.]}
+  \includegraphics[width=\textwidth]{figures/Fig4_prespecified_null_v3}
+  \caption{Prespecified region-of-interest (ROI) features did not separate the groups. AUC of L2-regularised logistic regression on the 14 ROI features of the long eyes-closed block. Offenders (sg and sg2) versus controls (06): AUC of repeat-averaged scores with subject-bootstrap 95\% CI (filled marker), and repeat-mean AUC with the 2.5--97.5\% range across repeats (open marker; not a CI). AUCs above 0.63 are approximately excluded (shaded). Batch negative control (03): sg versus controls; sg versus sg2 ($p = 0.053$, tested at $\alpha = 0.025$); and transfer of the sg-versus-control model to sg2 (held-out controls versus sg2). For the same groups and block, channel-level features gave an AUC of 0.75 (figure~\ref{fig:cascade}a); the two analyses differ in feature resolution, model, channel exclusion and sample (111 vs 100 participants), and these factors were not separated.}
   \label{fig:roi}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{figures/Fig5_cohort_v2}
-  \caption{[CAPTION: Figure 5, cohort and samples.]}
-  \label{fig:cohort}
+  \includegraphics[width=\textwidth]{figures/Fig2_exploratory_cascade_v5}
+  \caption{Exploratory channel-level analyses: sg separated from the controls, but no model showed evidence of transfer to sg2. (a) Subject-level AUC for sg versus controls (100 identity-verified participants; SVM in nested subject-wise cross-validation) with log absolute power on all segments and with relative power on all segments, eyes-open segments, eyes-closed segments, eyes-closed segments without the C block, and the long eyes-closed block. Whiskers show the 2.5--97.5\% range across 20 repeats, not CIs (subject-bootstrap CIs in table~\ref{tab:TableS4}); grey bars show the 95\% range of the shuffled-label null. Filled markers: $p < 0.05$ (exploratory, unadjusted; with 200 permutations the smallest attainable value is $p \le 0.005$). Yellow band: AUCs of 0.60--0.65, for which the eyes-closed decision rule defined no outcome. The C block comprises 32 BioSemi electrodes over frontopolar, anterior frontal and right frontal sites; lateral frontal electrodes outside it remain. (b) Transfer: models trained on sg versus controls, tested on held-out controls versus sg2 ($n = 24$) within each fold. Thick lines: 2.5--97.5\% range across repeats; thin lines: subject-bootstrap 95\% CIs. No model showed evidence of transfer (AUC 0.55--0.59; $p = 0.104$--0.289); significance would have required an AUC above 0.59--0.64. (c) Descriptive: relative delta at C-block sites and relative alpha at A-block sites in the eyes-closed segments ($2 \times 50$~s), median and interquartile range.}
+  \label{fig:cascade}
 \end{figure}
 
 % ---------------------------------------------------------------- Tables (generated from saved CSV files)
-\input{tables/09_tables_v4_2026-10-02_Table1}
-\input{tables/09_tables_v4_2026-10-02_Table2}
-\input{tables/09_tables_v4_2026-10-02_Table3}
-\input{tables/09_tables_v4_2026-10-02_Table4}
-
-% ---------------------------------------------------------------- Supplementary material (moves to a separate file at submission)
-\clearpage
-\section*{Supplementary material (draft placement)}
-% Taslak numaralandırma: S1 örneklemler, S2 karar günlüğü (henüz yok), S3 parametreler, S4 keşifsel analizler,
-% S5 Excel denetimi, S6 sızıntı duyarlılığı. Son numaralar ilk atıf sırasına göre verilecek.
-\input{sections/supp_note1}
-
-\renewcommand{\thetable}{S\arabic{table}}
-\renewcommand{\thefigure}{S\arabic{figure}}
-\setcounter{table}{0}
-\input{tables/09_tables_v4_2026-10-02_TableSn}
-\setcounter{table}{2}
-\input{tables/09_tables_v4_2026-10-02_TableS3}
-\input{tables/09_tables_v4_2026-10-02_TableS4}
-\input{tables/09_tables_v4_2026-10-02_TableS5}
-\input{tables/09_tables_v4_2026-10-02_TableS_leak}
-\setcounter{figure}{0}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{figures/FigS_07e_feature_map_v1}
-  \caption{[CAPTION: Figure S1, 07e feature map.]}
-  \label{fig:S07e}
-\end{figure}
+\input{tables/09_tables_v5_2026-10-03_Table1}
+\begin{landscape}
+\setlength{\textwidth}{\linewidth}
+\input{tables/09_tables_v5_2026-10-03_Table2}
+\end{landscape}
+\begin{landscape}
+\setlength{\textwidth}{\linewidth}
+\input{tables/09_tables_v5_2026-10-03_Table3}
+\end{landscape}
+\input{tables/09_tables_v5_2026-10-03_Table4}
 
 % ---------------------------------------------------------------- Back matter
 \ack{We thank the creators of the dataset for making their recordings openly available. During the preparation of this manuscript, the authors used Claude Code (Anthropic; model Claude Opus 5.5) to write and run the analysis code, and Claude Opus 5.5 (Anthropic) to audit the analyses and to support the writing. The authors reviewed, validated and critically assessed all AI-assisted outputs and take full responsibility for the content of the manuscript.}
@@ -114,9 +98,41 @@
 
 \data{The EEG data are openly available on OpenNeuro (ds006923, version 1.0.0) \cite{Polo2025ds006923}. The analysis code, analysis log and result files are available at [REPOSITORY / ZENODO DOI].}
 
-\suppdata{[SUPPLEMENTARY FILES: tables S1--S5, figure S1, analysis log (table S2), commit records.]}
+\suppdata{Supplementary material (PDF): supplementary note S1; tables S1--S6 (analysis log, analysis samples, feature and quality-control parameters, audit of the spreadsheet features, sensitivity analyses of the leakage demonstration, exploratory analyses); figure S1. The commit records that document the analysis log are available in the code repository.}
 
 \bibliographystyle{unsrt}
 \bibliography{refs}
+
+
+% ---------------------------------------------------------------- Supplementary material (moves to a separate file at submission)
+\clearpage
+\section*{Supplementary material (draft placement)}
+% Numaralar ilk atıf sırasına göre: S1 karar günlüğü (hazırlanıyor), S2 örneklemler, S3 parametreler,
+% S4 Excel/hesap tablosu denetimi, S5 sızıntı duyarlılığı, S6 keşifsel analizler. Etiket adları (TableS3 vb.) iç addır.
+\input{sections/supp_note1}
+
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\setcounter{table}{0}
+\begin{table}[htbp]
+\caption{Analysis log: every plan, decision rule and change, and whether each preceded the relevant result. [IN PREPARATION: English version of the decision log, rows 1--38.]}
+\label{tab:TableLog}
+\end{table}
+\input{tables/09_tables_v5_2026-10-03_TableSn}
+\input{tables/09_tables_v5_2026-10-03_TableS3}
+\input{tables/09_tables_v5_2026-10-03_TableS5}
+\input{tables/09_tables_v5_2026-10-03_TableS_leak}
+\begin{landscape}
+\setlength{\textwidth}{\linewidth}
+\input{tables/09_tables_v5_2026-10-03_TableS4}
+\end{landscape}
+\setcounter{figure}{0}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figures/FigS_07e_feature_map_v2}
+  \caption{Channel-level effect sizes in the long eyes-closed block (descriptive; no test). Hedges' $g$ (sg minus controls; 45 vs 55 participants) for relative delta, theta, alpha and beta power, averaged over the four 116-s parts; C-block electrodes are circled. All ten largest and 18 of the 20 largest $|g|$ values lie at C-block sites over frontopolar and anterior frontal cortex, and all $|g| \le 0.58$. sg had higher relative delta and lower relative theta and beta power; relative alpha did not differ (median $g$ in the A block 0.01). Electro-oculographic channels were not published, so ocular and neural sources at frontopolar sites cannot be distinguished.}
+  \label{fig:S07e}
+\end{figure}
 
 \end{document}
