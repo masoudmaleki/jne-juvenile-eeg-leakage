@@ -9,7 +9,7 @@
 
 \articletype{Paper}
 
-\title{High accuracy without demonstrated generalization: data leakage and recording confounds in resting-state EEG classification of juvenile offenders}
+\title{High accuracy without demonstrated generalisation: data leakage and recording confounds in resting-state EEG classification of juvenile offenders}
 
 \author{Mesut Melek$^{1}$\orcid{0000-0002-7152-7788} and Negin Melek$^{2,*}$\orcid{0000-0001-5297-5545}}
 
@@ -21,15 +21,16 @@
 
 \email{negin.melek@gumushane.edu.tr}
 
-\keywords{EEG, data leakage, cross-validation, juvenile offenders, confounds, resting state, generalization}
+\keywords{EEG, data leakage, cross-validation, juvenile offenders, confounds, resting state, generalisation}
 
 \begin{abstract}
-[ABSTRACT: Objective, Approach, Main results, Significance; at most 300 words. Written last.]
+\textit{Objective.} Machine-learning studies report high accuracy for separating offenders from controls with brain data, but such results can arise from data leakage and from confounds of recruitment and recording. We asked how much separability survives correct validation in an open resting-state electroencephalography (EEG) dataset of juvenile offenders, and whether it generalises.
+\textit{Approach.} We analysed 128-channel resting-state EEG of 74 male juvenile offenders, labelled as two subgroups (sg and sg2), and 66 controls; group was confounded with recording period, substance use, schooling, socioeconomic background and age. We audited the data and their precomputed features, quantified leakage with naive and nested subject-wise pipelines and label permutations, tested one primary hypothesis (alpha reactivity), quantified the null result of prespecified region-of-interest features and, in exploratory analyses, tested whether a channel-level separation of sg from controls transferred to sg2. All decisions were recorded in a time-stamped analysis log.
+\textit{Main results.} The precomputed features came from a partly different cohort, and most of their statistics were computed from three values. A naive pipeline reached a subject-level area under the ROC curve (AUC) of 0.89--0.91 and still reached 0.79--0.85 with shuffled labels; nested subject-wise validation gave 0.66--0.73. Alpha reactivity did not differ ($p = 0.395$), and region-of-interest features did not separate the groups (AUC 0.54, 95\% confidence interval 0.44--0.63). Channel-level features separated sg from controls (AUC 0.64--0.75), with the largest effects at frontopolar sites, but none of five models showed evidence of transfer to sg2 (AUC 0.55--0.59; upper confidence limits 0.66--0.70).
+\textit{Significance.} Most of the apparent accuracy in this dataset came from leakage, and the remaining separation could neither be shown to generalise to a second offender subgroup nor be separated from recording confounds. EEG classification studies of forensic groups should split data by participant, report permutation nulls and confidence intervals, and test transfer across subgroups or sites.
 \end{abstract}
 
-\section{Introduction}
-\label{sec:intro}
-[INTRODUCTION: written after the Methods, Results and Discussion.]
+\input{sections/introduction}
 
 \input{sections/methods}
 
@@ -74,10 +75,10 @@
 \end{figure}
 
 % ---------------------------------------------------------------- Tables (generated from saved CSV files)
-\input{tables/09_tables_v3_2026-10-02_Table1}
-\input{tables/09_tables_v3_2026-10-02_Table2}
-\input{tables/09_tables_v3_2026-10-02_Table3}
-\input{tables/09_tables_v3_2026-10-02_Table4}
+\input{tables/09_tables_v4_2026-10-02_Table1}
+\input{tables/09_tables_v4_2026-10-02_Table2}
+\input{tables/09_tables_v4_2026-10-02_Table3}
+\input{tables/09_tables_v4_2026-10-02_Table4}
 
 % ---------------------------------------------------------------- Supplementary material (moves to a separate file at submission)
 \clearpage
@@ -89,12 +90,12 @@
 \renewcommand{\thetable}{S\arabic{table}}
 \renewcommand{\thefigure}{S\arabic{figure}}
 \setcounter{table}{0}
-\input{tables/09_tables_v3_2026-10-02_TableSn}
+\input{tables/09_tables_v4_2026-10-02_TableSn}
 \setcounter{table}{2}
-\input{tables/09_tables_v3_2026-10-02_TableS3}
-\input{tables/09_tables_v3_2026-10-02_TableS4}
-\input{tables/09_tables_v3_2026-10-02_TableS5}
-\input{tables/09_tables_v3_2026-10-02_TableS_leak}
+\input{tables/09_tables_v4_2026-10-02_TableS3}
+\input{tables/09_tables_v4_2026-10-02_TableS4}
+\input{tables/09_tables_v4_2026-10-02_TableS5}
+\input{tables/09_tables_v4_2026-10-02_TableS_leak}
 \setcounter{figure}{0}
 
 \begin{figure}
