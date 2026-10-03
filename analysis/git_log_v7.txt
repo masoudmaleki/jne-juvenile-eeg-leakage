@@ -1,0 +1,8 @@
+355875e 09 v7: eşleşik p tablosu
+de4cbd4 K3 eşleşik sıfır dağılımı sonucu
+ffab1c3 K3 tanımı (eşleşik sıfır dağılımı); Astra beyanı
+4152e2b git_log_v6.txt (yukleme paketi v6 icin)
+bc227d8 Ek Tablo S1 v3: karar günlüğü v2 (49 satır), commit kimlikleri dolduruldu
+0265f51 CLAUDE.md: K1/K2 sonuç notları
+ef3ef0d yazim v6: Yontem K1/K2 cumleleri, S2->S1 atfi, tablolar v6
+8c22ef7 09 v6: denetim tablosu düzeltmesi (eşleşik p tablosu üretilmedi)
