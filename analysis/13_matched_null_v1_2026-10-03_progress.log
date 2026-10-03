@@ -1,0 +1,102 @@
+2026-10-03 17:49:56  K3 başladı (15 işçi)
+2026-10-03 17:49:56  [süre ölçümü (i = 0)] toplam 12, checkpoint'te 0, kalan 12
+2026-10-03 17:50:53  [süre ölçümü (i = 0)] 1/12; geçen 1.0 dk, kalan ~10.5 dk
+2026-10-03 17:50:58  [süre ölçümü (i = 0)] 2/12; geçen 1.0 dk, kalan ~5.1 dk
+2026-10-03 17:50:59  [süre ölçümü (i = 0)] 3/12; geçen 1.0 dk, kalan ~3.1 dk
+2026-10-03 17:50:59  [süre ölçümü (i = 0)] 4/12; geçen 1.0 dk, kalan ~2.1 dk
+2026-10-03 17:50:59  [süre ölçümü (i = 0)] 5/12; geçen 1.1 dk, kalan ~1.5 dk
+2026-10-03 17:50:59  [süre ölçümü (i = 0)] 6/12; geçen 1.1 dk, kalan ~1.1 dk
+2026-10-03 17:51:32  [süre ölçümü (i = 0)] 7/12; geçen 1.6 dk, kalan ~1.1 dk
+2026-10-03 17:51:34  [süre ölçümü (i = 0)] 8/12; geçen 1.6 dk, kalan ~0.8 dk
+2026-10-03 17:51:35  [süre ölçümü (i = 0)] 9/12; geçen 1.7 dk, kalan ~0.6 dk
+2026-10-03 17:51:37  [süre ölçümü (i = 0)] 10/12; geçen 1.7 dk, kalan ~0.3 dk
+2026-10-03 17:51:37  [süre ölçümü (i = 0)] 11/12; geçen 1.7 dk, kalan ~0.2 dk
+2026-10-03 17:51:40  [süre ölçümü (i = 0)] 12/12; geçen 1.7 dk, kalan ~0.0 dk
+2026-10-03 17:51:40  1 permütasyon (20 tekrar) süresi, s: 03(a) 60; 07 A 99; 07 B 102; 07a closed 62; 07a open 61; 07b 56; 07e 94; 07c 61; 07d A all 98; 07d B all 99; 07d B open 61; 07f 96
+2026-10-03 17:51:40  TAHMİNİ TOPLAM SÜRE: 4.40 saat (15 işçi; sınır 12 saat)
+2026-10-03 17:51:40  erken doğrulama (i = 0, |r = 0..4 ortalaması − kayıtlı|): 03(a) 0.0e+00; 07 A 0.0e+00; 07 B 0.0e+00; 07a closed 0.0e+00; 07a open 0.0e+00; 07b 0.0e+00; 07e 0.0e+00; 07c 0.0e+00; 07d A all 0.0e+00; 07d B all 0.0e+00; 07d B open 0.0e+00; 07f 0.0e+00
+2026-10-03 17:51:40  [eşleşik sıfır] toplam 3188, checkpoint'te 0, kalan 3188
+2026-10-03 18:01:42  [eşleşik sıfır] 79/3188; geçen 10.0 dk, kalan ~395.2 dk
+2026-10-03 18:11:22  [eşleşik sıfır] 158/3188; geçen 19.7 dk, kalan ~378.0 dk
+2026-10-03 18:21:30  [eşleşik sıfır] 237/3188; geçen 29.8 dk, kalan ~371.5 dk
+2026-10-03 18:31:00  [eşleşik sıfır] 316/3188; geçen 39.3 dk, kalan ~357.5 dk
+2026-10-03 18:40:42  [eşleşik sıfır] 395/3188; geçen 49.0 dk, kalan ~346.8 dk
+2026-10-03 18:50:19  [eşleşik sıfır] 474/3188; geçen 58.7 dk, kalan ~335.8 dk
+2026-10-03 18:59:17  [eşleşik sıfır] 553/3188; geçen 67.6 dk, kalan ~322.2 dk
+2026-10-03 19:08:31  [eşleşik sıfır] 632/3188; geçen 76.9 dk, kalan ~310.8 dk
+2026-10-03 19:17:46  [eşleşik sıfır] 711/3188; geçen 86.1 dk, kalan ~300.0 dk
+2026-10-03 19:26:54  [eşleşik sıfır] 790/3188; geçen 95.2 dk, kalan ~289.1 dk
+2026-10-03 19:35:49  [eşleşik sıfır] 869/3188; geçen 104.2 dk, kalan ~278.0 dk
+2026-10-03 19:44:47  [eşleşik sıfır] 948/3188; geçen 113.1 dk, kalan ~267.3 dk
+2026-10-03 19:51:59  K3 başladı (15 işçi)
+2026-10-03 19:51:59  [süre ölçümü (i = 0)] toplam 12, checkpoint'te 12, kalan 0
+2026-10-03 19:51:59  1 permütasyon (20 tekrar) süresi, s: 03(a) 60; 07 A 99; 07 B 102; 07a closed 62; 07a open 61; 07b 56; 07e 94; 07c 61; 07d A all 98; 07d B all 99; 07d B open 61; 07f 96
+2026-10-03 19:51:59  TAHMİNİ TOPLAM SÜRE: 4.40 saat (15 işçi; sınır 12 saat)
+2026-10-03 19:51:59  erken doğrulama (i = 0, |r = 0..4 ortalaması − kayıtlı|): 03(a) 0.0e+00; 07 A 0.0e+00; 07 B 0.0e+00; 07a closed 0.0e+00; 07a open 0.0e+00; 07b 0.0e+00; 07e 0.0e+00; 07c 0.0e+00; 07d A all 0.0e+00; 07d B all 0.0e+00; 07d B open 0.0e+00; 07f 0.0e+00
+2026-10-03 19:51:59  [eşleşik sıfır] toplam 3188, checkpoint'te 991, kalan 2197
+2026-10-03 19:59:19  [eşleşik sıfır] 54/2197; geçen 7.3 dk, kalan ~291.0 dk
+2026-10-03 20:05:55  [eşleşik sıfır] 108/2197; geçen 13.9 dk, kalan ~269.5 dk
+2026-10-03 20:12:01  [eşleşik sıfır] 162/2197; geçen 20.0 dk, kalan ~251.8 dk
+2026-10-03 20:18:07  [eşleşik sıfır] 216/2197; geçen 26.1 dk, kalan ~239.7 dk
+2026-10-03 20:24:44  [eşleşik sıfır] 270/2197; geçen 32.8 dk, kalan ~233.8 dk
+2026-10-03 20:31:38  [eşleşik sıfır] 324/2197; geçen 39.7 dk, kalan ~229.2 dk
+2026-10-03 20:38:43  [eşleşik sıfır] 378/2197; geçen 46.7 dk, kalan ~224.9 dk
+2026-10-03 20:45:31  [eşleşik sıfır] 432/2197; geçen 53.5 dk, kalan ~218.8 dk
+2026-10-03 20:51:41  [eşleşik sıfır] 486/2197; geçen 59.7 dk, kalan ~210.2 dk
+2026-10-03 20:58:17  [eşleşik sıfır] 540/2197; geçen 66.3 dk, kalan ~203.4 dk
+2026-10-03 21:04:24  [eşleşik sıfır] 594/2197; geçen 72.4 dk, kalan ~195.5 dk
+2026-10-03 21:10:43  [eşleşik sıfır] 648/2197; geçen 78.7 dk, kalan ~188.2 dk
+2026-10-03 21:16:54  [eşleşik sıfır] 702/2197; geçen 84.9 dk, kalan ~180.8 dk
+2026-10-03 21:23:04  [eşleşik sıfır] 756/2197; geçen 91.1 dk, kalan ~173.6 dk
+2026-10-03 21:29:57  [eşleşik sıfır] 810/2197; geçen 98.0 dk, kalan ~167.8 dk
+2026-10-03 21:36:51  [eşleşik sıfır] 864/2197; geçen 104.9 dk, kalan ~161.8 dk
+2026-10-03 21:43:54  [eşleşik sıfır] 918/2197; geçen 111.9 dk, kalan ~155.9 dk
+2026-10-03 21:50:51  [eşleşik sıfır] 972/2197; geçen 118.9 dk, kalan ~149.8 dk
+2026-10-03 21:52:16  K3 başladı (15 işçi)
+2026-10-03 21:52:16  [süre ölçümü (i = 0)] toplam 12, checkpoint'te 12, kalan 0
+2026-10-03 21:52:16  1 permütasyon (20 tekrar) süresi, s: 03(a) 60; 07 A 99; 07 B 102; 07a closed 62; 07a open 61; 07b 56; 07e 94; 07c 61; 07d A all 98; 07d B all 99; 07d B open 61; 07f 96
+2026-10-03 21:52:16  TAHMİNİ TOPLAM SÜRE: 4.40 saat (15 işçi; sınır 12 saat)
+2026-10-03 21:52:16  erken doğrulama (i = 0, |r = 0..4 ortalaması − kayıtlı|): 03(a) 0.0e+00; 07 A 0.0e+00; 07 B 0.0e+00; 07a closed 0.0e+00; 07a open 0.0e+00; 07b 0.0e+00; 07e 0.0e+00; 07c 0.0e+00; 07d A all 0.0e+00; 07d B all 0.0e+00; 07d B open 0.0e+00; 07f 0.0e+00
+2026-10-03 21:52:16  [eşleşik sıfır] toplam 3188, checkpoint'te 1972, kalan 1216
+2026-10-03 21:57:28  [eşleşik sıfır] 30/1216; geçen 5.2 dk, kalan ~205.5 dk
+2026-10-03 22:01:15  [eşleşik sıfır] 60/1216; geçen 9.0 dk, kalan ~173.2 dk
+2026-10-03 22:05:12  [eşleşik sıfır] 90/1216; geçen 12.9 dk, kalan ~161.8 dk
+2026-10-03 22:09:00  [eşleşik sıfır] 120/1216; geçen 16.7 dk, kalan ~152.9 dk
+2026-10-03 22:12:57  [eşleşik sıfır] 150/1216; geçen 20.7 dk, kalan ~147.0 dk
+2026-10-03 22:16:42  [eşleşik sıfır] 180/1216; geçen 24.4 dk, kalan ~140.6 dk
+2026-10-03 22:20:37  [eşleşik sıfır] 210/1216; geçen 28.4 dk, kalan ~135.9 dk
+2026-10-03 22:24:23  [eşleşik sıfır] 240/1216; geçen 32.1 dk, kalan ~130.6 dk
+2026-10-03 22:28:06  [eşleşik sıfır] 270/1216; geçen 35.8 dk, kalan ~125.5 dk
+2026-10-03 22:31:24  [eşleşik sıfır] 300/1216; geçen 39.1 dk, kalan ~119.5 dk
+2026-10-03 22:34:59  [eşleşik sıfır] 330/1216; geçen 42.7 dk, kalan ~114.7 dk
+2026-10-03 22:38:22  [eşleşik sıfır] 360/1216; geçen 46.1 dk, kalan ~109.6 dk
+2026-10-03 22:41:57  [eşleşik sıfır] 390/1216; geçen 49.7 dk, kalan ~105.2 dk
+2026-10-03 22:44:58  [eşleşik sıfır] 420/1216; geçen 52.7 dk, kalan ~99.9 dk
+2026-10-03 22:47:12  [eşleşik sıfır] 450/1216; geçen 54.9 dk, kalan ~93.5 dk
+2026-10-03 22:49:26  [eşleşik sıfır] 480/1216; geçen 57.2 dk, kalan ~87.7 dk
+2026-10-03 22:51:38  [eşleşik sıfır] 510/1216; geçen 59.4 dk, kalan ~82.2 dk
+2026-10-03 22:53:52  [eşleşik sıfır] 540/1216; geçen 61.6 dk, kalan ~77.1 dk
+2026-10-03 22:56:03  [eşleşik sıfır] 570/1216; geçen 63.8 dk, kalan ~72.3 dk
+2026-10-03 22:58:15  [eşleşik sıfır] 600/1216; geçen 66.0 dk, kalan ~67.7 dk
+2026-10-03 23:00:24  [eşleşik sıfır] 630/1216; geçen 68.1 dk, kalan ~63.4 dk
+2026-10-03 23:02:34  [eşleşik sıfır] 660/1216; geçen 70.3 dk, kalan ~59.2 dk
+2026-10-03 23:04:48  [eşleşik sıfır] 690/1216; geçen 72.5 dk, kalan ~55.3 dk
+2026-10-03 23:07:00  [eşleşik sıfır] 720/1216; geçen 74.7 dk, kalan ~51.5 dk
+2026-10-03 23:09:13  [eşleşik sıfır] 750/1216; geçen 76.9 dk, kalan ~47.8 dk
+2026-10-03 23:11:27  [eşleşik sıfır] 780/1216; geçen 79.2 dk, kalan ~44.3 dk
+2026-10-03 23:13:39  [eşleşik sıfır] 810/1216; geçen 81.4 dk, kalan ~40.8 dk
+2026-10-03 23:15:52  [eşleşik sıfır] 840/1216; geçen 83.6 dk, kalan ~37.4 dk
+2026-10-03 23:18:06  [eşleşik sıfır] 870/1216; geçen 85.8 dk, kalan ~34.1 dk
+2026-10-03 23:20:17  [eşleşik sıfır] 900/1216; geçen 88.0 dk, kalan ~30.9 dk
+2026-10-03 23:22:27  [eşleşik sıfır] 930/1216; geçen 90.2 dk, kalan ~27.7 dk
+2026-10-03 23:24:38  [eşleşik sıfır] 960/1216; geçen 92.4 dk, kalan ~24.6 dk
+2026-10-03 23:26:49  [eşleşik sıfır] 990/1216; geçen 94.6 dk, kalan ~21.6 dk
+2026-10-03 23:28:59  [eşleşik sıfır] 1020/1216; geçen 96.7 dk, kalan ~18.6 dk
+2026-10-03 23:31:10  [eşleşik sıfır] 1050/1216; geçen 98.9 dk, kalan ~15.6 dk
+2026-10-03 23:33:24  [eşleşik sıfır] 1080/1216; geçen 101.1 dk, kalan ~12.7 dk
+2026-10-03 23:35:37  [eşleşik sıfır] 1110/1216; geçen 103.4 dk, kalan ~9.9 dk
+2026-10-03 23:37:49  [eşleşik sıfır] 1140/1216; geçen 105.5 dk, kalan ~7.0 dk
+2026-10-03 23:40:01  [eşleşik sıfır] 1170/1216; geçen 107.8 dk, kalan ~4.2 dk
+2026-10-03 23:42:13  [eşleşik sıfır] 1200/1216; geçen 110.0 dk, kalan ~1.5 dk
+2026-10-03 23:43:13  [eşleşik sıfır] 1216/1216; geçen 110.9 dk, kalan ~0.0 dk
+2026-10-03 23:43:13  bitti
