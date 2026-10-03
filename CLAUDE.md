@@ -272,3 +272,9 @@ Analiz donmuş; bu iki kontrol dış değerlendirme üzerine tanımlanan istisna
   üzerinden yeniden hesaplanır; p = (k+1)/(N+1). Yeni model eğitimi yok; yalnız kayıtlı tekrar başına
   değerler ve kayıtlı sıfır dağılımları okunur. Önceden belirlenmiş kararlar değişmez; eşleştirilmiş p
   duyarlılık sonucu olarak raporlanır.
+
+## 2026-10-03 K1/K2 sonuç notları
+- a) Düzeltme: FR_Dats_band_THETA_EP_C_2_can_B12.xlsx yayımlanan veri setinde boş DEĞİL (14.215 bayt, SHA-256 manifestle aynı); 0 bayt yalnız yerel kopyadaydı. Değerleri CAR_FREC_DATS.mat ile birebir aynı; hiçbir sonuç etkilenmedi. Bu not önceki "yayımlanan zip'te de 0 bayt" ifadesini düzeltir.
+- b) Yerel v1.0.0 kopyası NEMAR aynasından (on006923). README.md ve dataset_description.json aynanın DOI'sini taşıyor; EEG dosyaları OpenNeuro 1.0.0 ile birebir aynı.
+- c) K2 tanımlandığı biçimde hesaplanamadı: her permütasyonun kendi katlama tohumu var, tanımdaki "aynı tohum" şartı sağlanamaz (tanım hatası, sohbet tarafı). Özgün p değerleri kayıtlı değerlerden birebir yeniden üretildi. Gözlenen istatistik 20 tekrarın (N1: 10), permütasyon istatistikleri 5 tekrarın (N1: 1) ortalaması; bu, testleri temkinli yapar. Makalede Yöntem 2.11'de yazıldı; yeniden hesap yapılmadı.
+- d) Yalnız hakem isterse (şimdi değil): eşleşik tekrar sayısıyla p (kayıtlı 20 tekrar 5'erli 4 bloğa; N1'de tek tekrar) ya da 20 tekrarlı yeni sıfır dağılımı. İkisi de ayrı tanım ve ayrı commit ister.
