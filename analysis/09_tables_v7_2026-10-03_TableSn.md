@@ -1,0 +1,16 @@
+# Table S-n. Sample used in each analysis
+
+| Analysis | Data segment | cg | sg | sg2 | Total | Exclusions / notes |
+|---|---|---|---|---|---|---|
+| 01 Data audit | all files | 66 | 49 | 25 | 140 | – |
+| 02 Features / 03 / 06 | long eyes-closed block, 465 s | 66 | 45 | 24 | 135 | 4 sg (~157 s, no long block), sub-1084sg2 (data file missing) |
+| 03 (a) sg vs sg2 | long block | 0 | 45 | 24 | 69 | as 02 |
+| 03 (b) sg+cg → sg2 transfer | long block | 66 | 45 | 24 | 135 | as 02 |
+| 04-A / 04-B spreadsheet features | Spreadsheet C_1, O_1, C_2, O_2 (derived) | 66 | 46 | 0 | 112 | Spreadsheet cohort: 12 IDs not in published data; sg2 absent |
+| 04-B sensitivity (ID-verified) | Spreadsheet | 55 | 45 | 0 | 100 | 12 unverified spreadsheet IDs |
+| 05 Alpha reactivity (primary) | 4 × 50 s eyes-closed/open epochs | 66 | 45 | 25 | 136 | 4 sg with 2 epochs (included only in n = 140 sensitivity) |
+| 06 Offenders vs cg | long block | 66 | 45 | 24 | 135 | as 02 |
+| 07 / 07a / 07b / 07e | epochs (07–07b) or long block (07e) | 55 | 45 | 0 | 100 | restricted to spreadsheet ∩ published, ID-verified |
+| 07c / 07d transfer test set | same epochs as training (07c: eyes closed; 07d: all / eyes open) | 0 | 0 | 24 | 24 | sub-1084sg2 excluded (25 in extra row) |
+| 07f transfer test set | long eyes-closed block, 465 s (4 × 116.25 s), as 07e | 0 | 0 | 24 | 24 | sub-1084sg2 has no long block (data file missing); training set as 07e (cg 55, sg 45) |
+| 07g 95% CIs (no new model) | as 07–07f | 55 | 45 | 24 | 124 | source models: cg 55 + sg 45; transfer: held-out cg (55) vs sg2 24; descriptive sensitivity without sub-1105sg2 and sub-1114sg2 (sg2 22) |
