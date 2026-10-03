@@ -1,0 +1,10 @@
+﻿table,shape_v5,shape_v6,n_numbers_v5,n_numbers_v6,numbers_identical,cells_changed,expected_to_change,ok
+Table2,"(10, 10)","(10, 10)",78,78,True,0,False,True
+TableS_leak,"(4, 5)","(4, 5)",18,18,True,0,False,True
+Table3,"(4, 11)","(4, 11)",51,51,True,0,False,True
+Table4,"(4, 9)","(4, 9)",51,51,True,0,False,True
+TableS3,"(22, 7)","(22, 7)",213,213,True,0,False,True
+TableS5,"(9, 3)","(9, 3)",108,115,False,3,True,True
+Table1,"(18, 8)","(18, 8)",314,314,True,0,False,True
+TableSn,"(12, 7)","(12, 7)",121,121,True,0,False,True
+TableS4,"(11, 15)","(11, 15)",172,172,True,0,False,True
