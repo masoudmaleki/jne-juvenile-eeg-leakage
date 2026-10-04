@@ -1,0 +1,6 @@
+f4822f6 Ek Tablo S1 v4: karar günlüğü v3 (52 satır), K3 commit kimliği dolduruldu
+609981d CLAUDE.md: K3 sonuç notu
+af3eb92 yazim v8: K3 metne islendi, Tablo S5 (eslesik p) baglandi
+259f44f git_log_v7.txt (yukleme paketi v7 icin)
+355875e 09 v7: eşleşik p tablosu
+de4cbd4 K3 eşleşik sıfır dağılımı sonucu
