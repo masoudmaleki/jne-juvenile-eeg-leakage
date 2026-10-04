@@ -307,3 +307,12 @@ Karar kuralı (önceden):
 - K3'ten sonra başka analiz yapılmaz.
 Süre sınırı: önce her betik ailesinde bir permütasyonun süresi ölçülür ve toplam tahmin edilir; toplam 12 saati aşarsa
 çalıştırmadan durulur.
+
+## 2026-10-03 K3 sonuç notu
+- Doğrulama geçti: 12 testte r = 0..4 ortalaması kayıtlı sıfır değerleriyle aynı (en büyük fark 0).
+- Kararı değişen tek test 07b: p 0,0498 → 0,055 (α = 0,05). Kurala göre metinde iki p birlikte verildi
+  (Bulgular 3.5, Şekil 5 alt yazısı).
+- Transfer p'leri 0,114–0,294 (özgün 0,104–0,289): "transfer kanıtı yok" iddiası beş modelde de geçerli.
+- 03(a): p 0,053 → 0,042 (α = 0,025; karar aynı); Bulgular 3.4 ve Tartışma'da ikisi birlikte verildi.
+- Çalışma iki kez 2 saatlik sınırda kesildi, checkpoint'ten sürdürüldü; toplam duvar saati yaklaşık 5,8 saat (ek rapor).
+- Makalede yeni tablo Ek Tablo S5; eski S5 (sızıntı duyarlılığı) S6, eski S6 (keşifsel analizler) S7 oldu.
