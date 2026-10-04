@@ -73,23 +73,23 @@
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{figures/Fig2_exploratory_cascade_v5}
-  \caption{Exploratory channel-level analyses: sg separated from the controls, but no model showed evidence of transfer to sg2. (a) Subject-level AUC for sg versus controls (100 identity-verified participants; SVM in nested subject-wise cross-validation) with log absolute power on all segments and with relative power on all segments, eyes-open segments, eyes-closed segments, eyes-closed segments without the C block, and the long eyes-closed block. Whiskers show the 2.5--97.5\% range across 20 repeats, not CIs (subject-bootstrap CIs in table~\ref{tab:TableS4}); grey bars show the 95\% range of the shuffled-label null. Filled markers: $p < 0.05$ (exploratory, unadjusted; with 200 permutations the smallest attainable value is $p \le 0.005$). Yellow band: AUCs of 0.60--0.65, for which the eyes-closed decision rule defined no outcome. The C block comprises 32 BioSemi electrodes over frontopolar, anterior frontal and right frontal sites; lateral frontal electrodes outside it remain. (b) Transfer: models trained on sg versus controls, tested on held-out controls versus sg2 ($n = 24$) within each fold. Thick lines: 2.5--97.5\% range across repeats; thin lines: subject-bootstrap 95\% CIs. No model showed evidence of transfer (AUC 0.55--0.59; $p = 0.104$--0.289); significance would have required an AUC above 0.59--0.64. (c) Descriptive: relative delta at C-block sites and relative alpha at A-block sites in the eyes-closed segments ($2 \times 50$~s), median and interquartile range.}
+  \caption{Exploratory channel-level analyses: sg separated from the controls, but no model showed evidence of transfer to sg2. (a) Subject-level AUC for sg versus controls (100 identity-verified participants; SVM in nested subject-wise cross-validation) with log absolute power on all segments and with relative power on all segments, eyes-open segments, eyes-closed segments, eyes-closed segments without the C block, and the long eyes-closed block. Whiskers show the 2.5--97.5\% range across 20 repeats, not CIs (subject-bootstrap CIs in table~\ref{tab:TableS4}); grey bars show the 95\% range of the shuffled-label null. Filled markers: $p < 0.05$ (exploratory, unadjusted; with 200 permutations the smallest attainable value is $p \le 0.005$); for the eyes-closed segments without the C block, $p = 0.0498$, and 0.055 with matched null statistics (table~\ref{tab:TableMatchedP}). Yellow band: AUCs of 0.60--0.65, for which the eyes-closed decision rule defined no outcome. The C block comprises 32 BioSemi electrodes over frontopolar, anterior frontal and right frontal sites; lateral frontal electrodes outside it remain. (b) Transfer: models trained on sg versus controls, tested on held-out controls versus sg2 ($n = 24$) within each fold. Thick lines: 2.5--97.5\% range across repeats; thin lines: subject-bootstrap 95\% CIs. No model showed evidence of transfer (AUC 0.55--0.59; $p = 0.104$--0.289); significance would have required an AUC above 0.59--0.64. (c) Descriptive: relative delta at C-block sites and relative alpha at A-block sites in the eyes-closed segments ($2 \times 50$~s), median and interquartile range.}
   \label{fig:cascade}
 \end{figure}
 
 % ---------------------------------------------------------------- Tables (generated from saved CSV files)
-\input{tables/09_tables_v6_2026-10-03_Table1}
+\input{tables/09_tables_v7_2026-10-03_Table1}
 \begin{landscape}
 \setlength{\textwidth}{\linewidth}
-\input{tables/09_tables_v6_2026-10-03_Table2}
+\input{tables/09_tables_v7_2026-10-03_Table2}
 \end{landscape}
 \begin{landscape}
 \setlength{\textwidth}{\linewidth}
-\input{tables/09_tables_v6_2026-10-03_Table3}
+\input{tables/09_tables_v7_2026-10-03_Table3}
 \end{landscape}
 \begin{landscape}
 \setlength{\textwidth}{\linewidth}
-\input{tables/09_tables_v6_2026-10-03_Table4}
+\input{tables/09_tables_v7_2026-10-03_Table4}
 \end{landscape}
 
 % ---------------------------------------------------------------- Back matter
@@ -101,7 +101,7 @@
 
 \data{The EEG data are openly available on OpenNeuro (ds006923, version 1.0.0) \cite{Polo2025ds006923}. The analysis code, analysis log and result files are available at [REPOSITORY / ZENODO DOI].}
 
-\suppdata{Supplementary material (PDF): supplementary note S1; tables S1--S6 (analysis log, analysis samples, feature and quality-control parameters, audit of the spreadsheet features, sensitivity analyses of the leakage demonstration, exploratory analyses); figure S1. The commit records that document the analysis log are available in the code repository.}
+\suppdata{Supplementary material (PDF): supplementary note S1; tables S1--S7 (analysis log, analysis samples, feature and quality-control parameters, audit of the spreadsheet features, permutation tests with matched null statistics, sensitivity analyses of the leakage demonstration, exploratory analyses); figure S1. The commit records that document the analysis log are available in the code repository.}
 
 \bibliographystyle{unsrt}
 \bibliography{refs}
@@ -111,20 +111,22 @@
 \clearpage
 \section*{Supplementary material (draft placement)}
 % Numaralar ilk atıf sırasına göre: S1 karar günlüğü, S2 örneklemler, S3 parametreler,
-% S4 Excel/hesap tablosu denetimi, S5 sızıntı duyarlılığı, S6 keşifsel analizler. Etiket adları (TableS3 vb.) iç addır.
+% S4 Excel/hesap tablosu denetimi, S5 eşleşik permütasyon testleri (K3), S6 sızıntı duyarlılığı, S7 keşifsel analizler.
+% Etiket adları (TableS3 vb.) iç addır.
 \input{sections/supp_note1}
 
 \renewcommand{\thetable}{S\arabic{table}}
 \renewcommand{\thefigure}{S\arabic{figure}}
 \setcounter{table}{0}
 \input{tables/10_tableS1_log_v3_2026-10-03}
-\input{tables/09_tables_v6_2026-10-03_TableSn}
-\input{tables/09_tables_v6_2026-10-03_TableS3}
-\input{tables/09_tables_v6_2026-10-03_TableS5}
-\input{tables/09_tables_v6_2026-10-03_TableS_leak}
+\input{tables/09_tables_v7_2026-10-03_TableSn}
+\input{tables/09_tables_v7_2026-10-03_TableS3}
+\input{tables/09_tables_v7_2026-10-03_TableS5}
+\input{tables/09_tables_v7_2026-10-03_TableMatchedP}
+\input{tables/09_tables_v7_2026-10-03_TableS_leak}
 \begin{landscape}
 \setlength{\textwidth}{\linewidth}
-\input{tables/09_tables_v6_2026-10-03_TableS4}
+\input{tables/09_tables_v7_2026-10-03_TableS4}
 \end{landscape}
 \setcounter{figure}{0}
 
