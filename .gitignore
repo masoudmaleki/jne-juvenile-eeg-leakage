@@ -1,8 +1,22 @@
-# Ham veri (OpenNeuro ds006923 v1.0.0) — depoya girmez
+# Dataset: not redistributed here (OpenNeuro ds006923 v1.0.0, CC0). Place it in v1.0.0/.
 v1.0.0/
 v1.0.0.zip
+_redownload/
 
-# Python önbelleği ve IDE
+# Upload bundles
+_yukle_*.zip
+
+# Python and IDE
 __pycache__/
 *.pyc
+.venv/
+venv/
 .idea/
+
+# LaTeX build files (manuscript folder)
+**/main.aux
+**/main.log
+**/main.out
+**/main.bbl
+**/main.blg
+**/*.synctex.gz
